@@ -4,6 +4,7 @@ Você já domina `let`, mas existem outras duas muito importantes: **var** e **c
 
 ## **1) var – O antigo**
 
+* var cria variáveis globais e que podem ser acessadas em qualquer local no arquivo ou função onde foram declaradas.
 * Foi a primeira forma de declarar variável.
 * Possui **escopo global ou de função**, o que pode causar problemas.
 * Permite redeclarar a variável (isso gera muitos bugs).
@@ -14,6 +15,7 @@ Você já domina `let`, mas existem outras duas muito importantes: **var** e **c
 
 ## **2) let – A mais usada**
 
+* let permite declarar variáveis que existem apenas no escopo no qual desejamos utilizá-las.
 * Tem **escopo de bloco** (só existe dentro de `{ }`).
 * Não permite redeclaração, mas permite **reatribuição**.
 
@@ -59,6 +61,8 @@ numeros.push(4); // permitido!
 
 ---
 
-Se quiser, posso criar também **gabarito**, ou transformar isso em uma **lista interativa HTML/CSS/JS** para você treinar!
+Quando usar let? Para valores que você sabe que vão mudar (como um contador em um laço for ou a idade de uma pessoa).
+
+Quando usar const? Para valores que você sabe que não vão mudar (como o valor de PI, uma taxa de juros fixa ou, no seu caso, o resultado de um cálculo como o IMC).
 
 https://www.devmedia.com.br/javascript-variaveis-e-constantes/41012

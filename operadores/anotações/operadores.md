@@ -18,3 +18,18 @@
 
 operadores de comparação - maior/menor que ; igual a ; diferente de ....
 operadores aritiméticos - soma ; subtração ; divisão...
+
+let a = 5
+a = a + 3
+
+ao invés de escrever assim, utilize 
+
+let a = 5
+a += 3
+resultado a =  8
+
+let a = 5
+a *= 3
+resultado a = 15
+
+e por ai vai...

@@ -19,6 +19,9 @@
 operadores de comparação - maior/menor que ; igual a ; diferente de ....
 operadores aritiméticos - soma ; subtração ; divisão...
 
+operadores de atribuicão    ------>      += ; -= ; *= ; /= ; ++ ; --
+                            ------> forma resumida de escrever: x = x + y
+
 let a = 5
 a = a + 3
 
@@ -31,5 +34,3 @@ resultado a =  8
 let a = 5
 a *= 3
 resultado a = 15
-
-e por ai vai...

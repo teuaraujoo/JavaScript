@@ -84,11 +84,11 @@ console.log(maior);
 // Maiores que 50 
 
 let nums = [52, 120, 70, 31, 20, 19, 59, 550, 65];
-let maiorNum = 50;
+let maiorNum;
 
 for (i = 0; i < nums.length; i++){
 
-    if(maiorNum < nums[i] || nums[i] > 50){
+    if(nums[i] > 50){
         maiorNum = nums[i];
         console.log(maiorNum);  
     }
@@ -97,7 +97,7 @@ for (i = 0; i < nums.length; i++){
 
 // inverter palavra 
 
-let palavra = 'Mateus';
+let palavra = 'Mateus'.toLowerCase() // ou prompt('Digite uma palavra:').toLowerCase();
 let invertido = ''
 
 for (i = palavra.length - 1; i >= 0; i--){
@@ -109,3 +109,85 @@ console.log(invertido);
 
 // contagem voagis / consoantes
 
+let vogais = 'aeiou';
+let quantV = 0;
+let quantC = 0;
+
+let frase = prompt('Digite uma frase: ');
+
+for (i = 0; i < frase.length; i++){
+    let char = frase[i].toLowerCase();
+
+    if (vogais.includes(char)){
+        quantV++;
+    } else {
+        quantC++;
+    }
+}
+
+console.log(quantV);
+console.log(quantC);
+
+// Maior numero pt2
+
+let nume = [1, 4, 7, 9, 10, 14, 17, 21];
+maiorN1 = 0;
+maiorN2 = 0;
+
+for (i = 0; i < nume.length; i++){
+    if (maiorN1 < nume[i]){
+        maiorN1 = nume[i];
+    } 
+}
+
+for (i = 0; i < nume.length; i++){
+    if (maiorN2 < nume[i] && nume[i] !== maiorN1){
+        maiorN2 = nume[i];
+    }
+}
+
+console.log(maiorN1);
+console.log(maiorN2);
+
+// potência manual
+
+let b = 2;
+let e = 3;
+let calc = 1;
+
+for(i = 0; i < e; i++){
+    calc = calc * b;
+}
+
+console.log(calc);
+
+
+// Soma dos dígitos de um número
+
+let numer = 4029;
+const arrayNumer = [...String(numer)].map(Number);
+let c = null;
+
+for (i = 0; i < arrayNumer.length; i++){
+    c = c + arrayNumer[i];
+}
+
+console.log(c);
+
+// Padrão array
+
+let x = [3];
+let tipo = '';
+
+for(i = 0; i < x.length; i++){
+    x = Number(prompt('Digite um numero'));
+    if(x[i] < x[i + 1]){
+        tipo = 'Crescente';
+    } else if (x[i] > x[i + 1]){
+        tipo = 'Decrescente';
+    } else if (x[i] == x[i + 1]){
+        tipo = 'Constante';
+    }
+}
+
+console.log(tipo);

@@ -31,3 +31,5 @@ while(z < palavra.length){
     console.log(palavra[z]);
     z++;
 }
+
+// 

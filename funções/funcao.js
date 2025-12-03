@@ -4,6 +4,37 @@
 
 // Quando usar  e quando não usar função? 
 
+/*
+REPETIÇAÕ DE CÓDIGO
+REAPROVEITAMENTO DE LÓGICA
+CÓDIGO + ORGANIZADO
+CÓDIGO MAIS LINMPO/LEGÍVEL E FÁCIL DE ENTENDER 
+FACILITAR ALTERAÇÕES
+ORGANIZAR O CÓDIGO EM BLOCOS DE LÓGICA
+/*
+
+// Quando usar parâmetro?
+
+/* 
+Usar parâmetros ==> função precisa de um valor externo para funcionar, mas você não quer que esse valor fique fixo dentro dela.
+
+função seja reutilizável com dados diferentes.
+
+Nao usar parâmetros ==> Quando sua função não precisa de informação externa. Ela sempre faz a mesma coisa
+
+FIXME: PERGUNTAS PARA SE FAZER
+
+Minha função precisa de algum dado para funcionar?
+→ Se sim → use parâmetro.
+
+Eu quero que a função funcione com valores diferentes sem reescrever código?
+→ Se sim → use parâmetro.
+
+A função sempre fará a mesma coisa, sem depender de valores externos?
+→ Se não → não precisa de parâmetro.
+
+ */
+
 // ex: funcao soma
 function soma (a, b){
     return a + b;

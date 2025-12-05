@@ -28,10 +28,10 @@ for (const produtos in loja.estoque){
     if (loja.estoque[produtos] === 0){
         falta.push(produtos);
     }
-    i++
+    i++;
 }
 
-console.log('Produtos em falta', falta);
+console.log('Produtos em falta:', falta);
 console.log('Quantidade de produtos:',i);
 
 

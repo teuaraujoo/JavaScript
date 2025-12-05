@@ -31,12 +31,12 @@ function emFalta (){
 }
 
 function quaseFalta (){
-    let faltando = [];
+    let quaseFaltando = [];
     for (const produto in estoque){
         if (estoque[produto] > 0 && estoque[produto] <= 3)
-            faltando.push(produto);
+            quaseFaltando.push(produto);
     }
-    return faltando;
+    return quaseFaltando;
 }
 
 console.log('Produtos em falta:', emFalta());

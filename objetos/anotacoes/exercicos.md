@@ -183,7 +183,7 @@ const pedidos = [
 
 Some todos os valores total.
 
-17. Ordenar array de objetos
+17. Ordenar array de objetos (ordenar.js)
 
 Com o array de pedidos acima, ordene por valor total (do maior para o menor).
 

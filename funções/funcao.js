@@ -1,6 +1,6 @@
 // função sempre retorna um valor/algo
 
-// estrutura: function + nome da funcao + parâmetros
+// estrutura: function + nome da funcao + parâmetros () + chaves
 
 // Quando usar  e quando não usar função? 
 
@@ -8,7 +8,7 @@
 REPETIÇAÕ DE CÓDIGO
 REAPROVEITAMENTO DE LÓGICA
 CÓDIGO + ORGANIZADO
-CÓDIGO MAIS LINMPO/LEGÍVEL E FÁCIL DE ENTENDER 
+CÓDIGO MAIS LIMPO/LEGÍVEL E FÁCIL DE ENTENDER 
 FACILITAR ALTERAÇÕES
 ORGANIZAR O CÓDIGO EM BLOCOS DE LÓGICA
 /*

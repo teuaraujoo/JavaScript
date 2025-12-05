@@ -23,3 +23,4 @@ console.log(calculo);
 
 //  FIXME:  lembre-se! os arrays comecam do 0 ou seja para acessar o primeiro item você irá colocar [0]
 
+// [] -> índice do array

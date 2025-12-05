@@ -1,5 +1,5 @@
 // Crie uma função chamada analisarNumeros() que:
-// receba quantos números o usuário quiser (parâmetro rest)
+// receba quantos números o usuário quiser
 // retorne um OBJETO com:
 // a quantidade de números
 // a soma de todos
@@ -70,7 +70,7 @@ console.log(analisarNumeros(numbers1));
 // Use null quando você quer representar ausência de valor, algo que:
 // Ainda não existe; Ainda não foi determinado; Está vazio propositalmente
 
-// Não use null quando a variável será usada para fazer cálculos.
+//TODO: Não use null quando a variável será usada para fazer cálculos.
 
 
 // -----------------------------------------------------------------------------------------

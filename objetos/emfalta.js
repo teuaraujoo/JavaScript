@@ -19,6 +19,8 @@ const estoque = {
     manteiga: 7
 };
 
+// for...in -> tipo especial de laço usado para percorrer as chaves de um objeto.
+
 function emFalta (){
     let faltando = [];
     for (const produto in estoque){

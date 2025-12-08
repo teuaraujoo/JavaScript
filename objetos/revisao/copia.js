@@ -4,7 +4,9 @@ const config = {
 };
 
 const shallowCopy = {...config};
+// console.log(shallowCopy);
 const deepCopy = JSON.parse(JSON.stringify(config));
+console.log(deepCopy);
 
 shallowCopy.layout = { largura: 1440 };
 deepCopy.layout = { largura: 1920 };

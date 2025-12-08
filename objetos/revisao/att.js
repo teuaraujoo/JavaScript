@@ -9,9 +9,11 @@ let qtdTenis = 20;
 
 carrinho.forEach(element => {
     
-    if (element.id === 1){
+    // Pelo nome
+    if (element.nome === "Camisa"){
         element.qtd = qtdCamisa;
     } 
+    // Pelo id
     if (element.id === 2){
         element.qtd = qtdTenis;
     }

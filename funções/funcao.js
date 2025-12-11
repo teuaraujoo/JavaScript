@@ -113,7 +113,6 @@ console.log(parImpar(k));
 
 function fatorial (r){
     let f = 1;
-    let i = null;
 
     for (i = 1; i <= r; i++){
         f *= i;

@@ -1,0 +1,27 @@
+funções que não precisam de um nome -> precisam ser associadas a uma variável
+
+são funcoes que sao chamadas em tempo de execução -> elas não ficam instanciadas(armazenadas) -> Só vai ser criada no momento da execução
+
+função cosntrutor -> coloca o new, f maiusculo 'F', os argumentos entre parênteses e o que a função vai retornar também entre parênteses 
+ex: const f = new Funciton (arg1, arg2, "return arg1 + arg2")
+- coisa mais simples/resumida, menos parâmetros 
+
+Quando usar funções anônimas?
+
+Use quando:
+
+✔ A função é simples e usada somente uma vez
+✔ O nome da função não ajuda em nada
+✔ É callback de outra função
+✔ Faz parte de uma operação de array
+✔ Está rodando dentro de outra função
+✔ Você quer deixar o código mais curto
+
+Quando NÃO usar funções anônimas?
+
+Evite quando:
+
+❌ A função será reaproveitada várias vezes
+❌ A função é muito grande
+❌ Você precisa depurar e quer ver o nome dela no console (nomes ajudam em debug)
+❌ O código fica menos claro sem o nome

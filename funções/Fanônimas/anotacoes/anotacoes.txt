@@ -2,7 +2,7 @@ funções que não precisam de um nome -> precisam ser associadas a uma variáve
 
 são funcoes que sao chamadas em tempo de execução -> elas não ficam instanciadas(armazenadas) -> Só vai ser criada no momento da execução
 
-função cosntrutor -> coloca o new, f maiusculo 'F', os argumentos entre parênteses e o que a função vai retornar também entre parênteses 
+função anonima -> coloca o new, f maiusculo 'F', os argumentos entre parênteses e o que a função vai retornar também entre parênteses 
 ex: const f = new Funciton (arg1, arg2, "return arg1 + arg2")
 - coisa mais simples/resumida, menos parâmetros 
 
@@ -25,3 +25,5 @@ Evite quando:
 ❌ A função é muito grande
 ❌ Você precisa depurar e quer ver o nome dela no console (nomes ajudam em debug)
 ❌ O código fica menos claro sem o nome
+
+instanciar = copia

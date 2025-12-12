@@ -22,3 +22,7 @@ for (n of num){
 
 // quer pegar as posições? for in
 // quer pegar os elementos? for of
+
+// objetos não são iteráveis (JS)
+// iteraveis -> qualquer objeto em programação que pode ser percorrido
+// iteráveis -> repetir/loops

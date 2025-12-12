@@ -1,0 +1,8 @@
+forma concisa de representar funcoes anonimas -> pequena função de uma única linha, sem nome, usada para operações simples e rápidas
+
+arrow function -> tipo de declaracao de funcao anônima
+
+ex: const soma = (v1, v2) => {return v1 + v2}
+
+se a funcao tiver apenas um parâmetro não precisa colocar os parenteses 
+ex: const nome = n => {return n}

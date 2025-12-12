@@ -1,0 +1,45 @@
+Um objeto é uma estrutura que guarda informações (atributos) e funcionalidades (métodos).
+
+Exemplo de um objeto (pensando como vida real):
+
+Um carro é um objeto:
+
+Atributos → cor, ano, modelo
+
+Métodos → acelerar(), frear(), virar()
+
+----------------------------------------------
+RESUMO
+
+Atributos = o que o objeto É (dados)
+
+Métodos = o que o objeto FAZ (funções)
+-----------------------------------------------
+
+🧱 2. Arrays são objetos?
+
+Depende da linguagem, mas nas linguagens modernas (como JavaScript, Python, Java):
+
+👉 Sim. Arrays são objetos.
+
+Por quê?
+
+Eles têm atributos, como .length
+
+Eles têm métodos, como .push(), .pop(), .map(), etc.
+
+Eles são “percorríveis” (iteráveis)
+
+Um array é um objeto especial organizado em sequência numerada.
+
+----------------------------------------------------------
+
+Array ->	Guardar valores em ordem (sequência) ->	[10, 20, 30]
+Objeto ->	Guardar valores com nomes/chaves (pares) ->	{ nome: "Mateus", idade: 17 }
+
+-------------------------------------------------------------
+
+Isso fala sobre iteráveis — coisas que você pode loopar (for, forEach, etc).
+
+Arrays são iteráveis.
+Objetos nem sempre são, depende da linguagem.

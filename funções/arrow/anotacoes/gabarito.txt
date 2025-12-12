@@ -1,0 +1,181 @@
+1. Arrow function que retorna o dobro
+const dobrar = num => num * 2;
+
+
+✔ Arrow simples com retorno implícito.
+
+2. Arrow function que retorna o maior número
+const maior = (a, b) => a > b ? a : b;
+
+3. Arrow function que retorna nome em maiúsculas
+const paraMaiusculas = nome => nome.toUpperCase();
+
+4. Arrow function que retorna apenas números pares
+const pares = numeros => numeros.filter(n => n % 2 === 0);
+
+5. Arrow function que retorna quadrados dos números
+const quadrados = numeros => numeros.map(n => n * n);
+
+6. Arrow function que soma todos os valores
+const somar = numeros => numeros.reduce((total, n) => total + n, 0);
+
+7. Arrow function para filtrar maiores de idade
+const maioresDeIdade = pessoas => pessoas.filter(p => p.idade >= 18);
+
+8. Arrow function que conta palavras de uma frase
+const contarPalavras = frase => frase.split(" ").length;
+
+
+✔ split quebra em espaços e retorna array → length dá quantidade de palavras.
+
+9. Arrow function que retorna NOME dos produtos acima de R$100
+const produtosCaros = produtos =>
+  produtos
+    .filter(p => p.preco > 100)
+    .map(p => p.nome);
+
+⭐ 10. DESAFIO — map + filter + reduce + arrow function
+Array base:
+const produtos = [
+  { nome: "Mouse", preco: 80 },
+  { nome: "Teclado", preco: 150 },
+  { nome: "Monitor", preco: 900 },
+  { nome: "Headset", preco: 120 }
+];
+
+Solução completa:
+const calcularTotal = produtos => 
+  produtos
+    // 1. Aplica 15% de desconto
+    .map(p => ({
+      nome: p.nome,
+      preco: p.preco * 0.85
+    }))
+    // 2. Filtra apenas os acima de R$100
+    .filter(p => p.preco > 100)
+    // 3. Soma os preços
+    .reduce((total, p) => total + p.preco, 0)
+    // 4. Arredonda
+    .toFixed(2);
+
+
+✔ Arrow function completa
+✔ Retorno encadeado
+✔ Desafio atendido
+
+
+
+
+
+
+---------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+1. Menor valor de um array
+const menorValor = nums => Math.min(...nums);
+
+
+✔ Usa spread para passar cada número separadamente para Math.min.
+
+2. Strings que começam com "A" (ignorando maiúsculas/minúsculas)
+const comecaComA = arr =>
+  arr.filter(str => str.toLowerCase().startsWith("a"));
+
+
+✔ Converte tudo para minúsculas antes de comparar.
+
+3. Ordenar do maior para o menor
+const ordenarDesc = nums => nums.sort((a, b) => b - a);
+
+
+✔ Ordenação numérica decrescente.
+
+4. Nomes dos alunos com nota > 7
+const aprovados = alunos =>
+  alunos
+    .filter(a => a.nota > 7)
+    .map(a => a.nome);
+
+5. Total de caracteres de todas as palavras
+const totalCaracteres = palavras =>
+  palavras
+    .map(p => p.length)
+    .reduce((total, n) => total + n, 0);
+
+6. Retornar valores únicos
+const valoresUnicos = arr => [...new Set(arr)];
+
+
+✔ Set remove duplicados; spread volta para array.
+
+7. Objeto com chaves em maiúsculas
+const chavesMaiusculas = obj =>
+  Object.fromEntries(
+    Object.entries(obj).map(([chave, valor]) => [chave.toUpperCase(), valor])
+  );
+
+
+✔ Manipulação de objeto funcional: entries → map → fromEntries.
+
+8. Executar um array de funções
+const executarFuncoes = funcoes => funcoes.forEach(fn => fn());
+
+
+✔ Cada função do array é chamada.
+
+9. Estatísticas de um texto
+const analisarTexto = texto => ({
+  palavras: texto.trim().split(/\s+/).length,
+  caracteres: texto.length,
+  frases: texto.split(".").filter(f => f.trim() !== "").length,
+  linhas: texto.split("\n").length
+});
+
+
+✔ Usa regex para palavras
+✔ Ignora frases vazias após split.
+
+⭐ 10. DESAFIO HARD — Agrupar vendas e ranquear vendedores
+Solução completa e comentada
+const analisarVendas = vendas => {
+  
+  // 1 e 2. Agrupar por vendedor e somar total
+  const totais = vendas.reduce((acc, venda) => {
+    acc[venda.vendedor] = (acc[venda.vendedor] || 0) + venda.valor;
+    return acc;
+  }, {});
+
+  // 3. Converter em array de objetos
+  const resultado = Object.entries(totais).map(([vendedor, total]) => ({
+    vendedor,
+    total
+  }));
+
+  // 4. Ordenar do maior para o menor
+  resultado.sort((a, b) => b.total - a.total);
+
+  // 5. Melhor vendedor
+  const melhor = resultado[0];
+
+  return { resultado, melhor };
+};
+
+Retorno final fica assim:
+{
+  resultado: [
+    { vendedor: "Ana", total: 2300 },
+    { vendedor: "Carlos", total: 800 },
+    { vendedor: "Bruno", total: 400 }
+  ],
+  melhor: { vendedor: "Ana", total: 2300 }
+}

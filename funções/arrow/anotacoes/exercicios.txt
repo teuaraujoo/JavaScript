@@ -1,0 +1,134 @@
+1. Crie uma arrow function que receba um número e retorne o dobro dele.
+
+2. Crie uma arrow function que receba dois números e retorne o maior.
+
+3. Crie uma arrow function que receba um nome e retorne esse nome em letras maiúsculas.
+
+4. Crie uma arrow function que receba uma lista de números e retorne apenas os pares (usando filter).
+
+5. Crie uma arrow function que receba uma lista de números e retorne uma nova lista com todos os números ao quadrado (usando map).
+
+6. Crie uma arrow function que receba uma lista e retorne a soma de todos os valores (usando reduce).
+
+7. Crie uma arrow function que receba um array de objetos com nome e idade, e retorne apenas pessoas com idade maior ou igual a 18.
+
+8. Crie uma arrow function que receba uma frase e retorne quantas palavras ela tem.
+
+9. Crie uma arrow function que receba um array de produtos com preço e retorne apenas os nomes dos produtos acima de R$100.
+
+10. ⭐ DESAFIO:
+
+Crie uma arrow function que receba um array de produtos:
+
+const produtos = [
+  { nome: "Mouse", preco: 80 },
+  { nome: "Teclado", preco: 150 },
+  { nome: "Monitor", preco: 900 },
+  { nome: "Headset", preco: 120 }
+];
+
+
+Sua função deve:
+
+aplicar 15% de desconto em todos os produtos (map)
+
+filtrar apenas os produtos com preço acima de R$100 (filter)
+
+somar o valor total dos produtos filtrados (reduce)
+
+retornar o total final arredondado para duas casas decimais
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------
+
+
+
+
+
+
+1.
+
+Crie uma arrow function que receba um array de números e retorne o menor valor usando Math.min + spread.
+
+2.
+
+Crie uma arrow function que receba um array de strings e retorne apenas as strings que começam com a letra "A", ignorando maiúsculas/minúsculas.
+
+3.
+
+Crie uma arrow function que receba um array de números e retorne um novo array com os valores ordenados do maior para o menor (use sort).
+
+4.
+
+Crie uma arrow function que receba um array de objetos representando alunos com nome e nota, e retorne apenas os nomes dos alunos com nota acima de 7.
+
+5.
+
+Crie uma arrow function que receba um array de palavras e retorne o total de caracteres de todas as palavras somadas (use map + reduce).
+
+6.
+
+Crie uma arrow function que receba um array de números e retorne outro array contendo apenas valores únicos (sem repetição).
+
+Dica: use new Set().
+
+7.
+
+Crie uma arrow function que receba um objeto e retorne um novo objeto contendo suas chaves em letras maiúsculas.
+(Dica: use Object.entries, map e Object.fromEntries.)
+
+8.
+
+Crie uma arrow function que receba um array de funções e execute todas elas em ordem.
+Cada função recebe nenhum parâmetro e apenas imprime algo.
+
+9.
+
+Crie uma arrow function que receba um texto e retorne um objeto com a contagem de:
+
+palavras
+
+caracteres
+
+frases (separadas por “.”)
+
+linhas (separadas por \n)
+
+⭐ 10. DESAFIO HARD
+
+Dado o array:
+
+const vendas = [
+  { vendedor: "Ana", valor: 1200, categoria: "eletronicos" },
+  { vendedor: "Carlos", valor: 800, categoria: "moveis" },
+  { vendedor: "Ana", valor: 600, categoria: "eletronicos" },
+  { vendedor: "Bruno", valor: 400, categoria: "moveis" },
+  { vendedor: "Ana", valor: 500, categoria: "eletronicos" }
+];
+
+
+Crie uma arrow function que:
+
+Agrupe as vendas por vendedor
+
+Some o total vendido por cada vendedor
+
+Retorne um array de objetos organizado da seguinte forma:
+
+[
+  { vendedor: "Ana", total: ??? },
+  { vendedor: "Carlos", total: ??? },
+  { vendedor: "Bruno", total: ??? }
+]
+
+
+Ordene o resultado do maior para o menor total
+
+Retorne também o melhor vendedor em um segundo retorno opcional
+(igual quando retornamos dois valores com um objeto)

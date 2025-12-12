@@ -1,0 +1,96 @@
+🧠 O QUE SÃO FUNÇÕES INTERNAS (FUNÇÕES DENTRO DE FUNÇÕES)?
+
+Uma função interna é uma função declarada dentro de outra função.
+
+📌 Ela existe para:
+
+organizar a lógica
+
+reutilizar código
+
+encapsular comportamento
+
+esconder detalhes internos
+
+evitar poluir o escopo global
+
+👉 Em JavaScript, funções são cidadãs de primeira classe:
+podem ser criadas, retornadas, passadas e usadas dentro de outras funções.
+
+🔎 Estrutura básica
+function externa() {
+  function interna() {
+    // lógica interna
+  }
+
+  return interna();
+}
+
+
+A função interna só existe dentro da externa.
+
+🧠 POR QUE USAR FUNÇÕES INTERNAS?
+
+Pensa assim 👇
+
+“Essa lógica só faz sentido dentro dessa função?”
+
+Se a resposta for sim, ela deve ser interna.
+
+
+
+📌 DEMANDA REAL 1 — Cálculo de carrinho (e-commerce)
+🧾 Situação real:
+
+Você tem um carrinho de compras e precisa:
+
+somar valores
+
+aplicar desconto
+
+calcular total
+
+❌ Sem funções internas (bagunçado)
+function calcularCarrinho(valores) {
+  let soma = 0;
+  for (let v of valores) soma += v;
+
+  let desconto = soma * 0.1;
+  return soma - desconto;
+}
+
+✅ Com funções internas (organizado)
+const calcularCarrinho = (...valores) => {
+
+  const somar = val => val.reduce((t, n) => t + n, 0);
+  const aplicarDesconto = total => total * 0.9;
+
+  const total = somar(valores);
+  return aplicarDesconto(total);
+};
+
+
+✔ Cada função faz uma coisa só
+✔ Código limpo
+✔ Fácil de manter
+
+📌 DEMANDA REAL 2 — Validação de formulário
+🧾 Situação:
+
+Cadastro de usuário:
+
+idade mínima
+
+senha válida
+
+const validarUsuario = (idade, senha) => {
+
+  const idadeValida = i => i >= 18;
+  const senhaValida = s => s.length >= 8;
+
+  return idadeValida(idade) && senhaValida(senha);
+};
+
+
+✔ Funções internas encapsulam regras
+✔ Fácil alterar regra depois

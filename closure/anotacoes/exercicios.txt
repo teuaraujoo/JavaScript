@@ -1,0 +1,119 @@
+🟢 1️⃣ Closure básico (entendimento)
+
+Crie uma função mensagem() que declare uma variável texto e retorne uma função interna que imprima esse texto no console.
+
+👉 Objetivo: perceber que a função interna “lembra” da variável.
+
+🟢 2️⃣ Contador simples
+
+Crie uma função criarContador() que:
+
+tenha uma variável contador
+
+retorne uma função que incremente e retorne esse valor
+
+Cada chamada deve aumentar o contador.
+
+🟡 3️⃣ Contador com valor inicial
+
+Crie uma função contadorInicial(valorInicial) que:
+
+receba um número inicial
+
+retorne uma função que incremente a partir desse valor
+
+Exemplo de uso:
+
+const contar = contadorInicial(10);
+
+🟡 4️⃣ Multiplicador com closure
+
+Crie uma função criarMultiplicador(fator) que:
+
+receba um número
+
+retorne uma função que multiplique outro número por esse fator
+
+Exemplo:
+
+const dobrar = criarMultiplicador(2);
+
+🟡 5️⃣ Validador de idade
+
+Crie uma função criarValidadorIdade(idadeMinima) que:
+
+retorne uma função
+
+essa função deve receber uma idade e retornar true ou false
+
+Use operador ternário.
+
+🟠 6️⃣ Controle de saldo (tipo banco)
+
+Crie uma função criarConta() que:
+
+tenha um saldo privado
+
+retorne um objeto com funções:
+
+depositar(valor)
+
+sacar(valor)
+
+verSaldo()
+
+👉 O saldo não pode ser acessado diretamente.
+
+🟠 7️⃣ Contador de cliques (simulação)
+
+Crie uma função criarClique() que:
+
+tenha um contador interno
+
+retorne uma função que simule um clique (incrementa e mostra o total)
+
+Cada chamada representa um “clique”.
+
+🔴 8️⃣ Gerador de mensagens personalizadas
+
+Crie uma função mensagemPersonalizada(nome) que:
+
+receba um nome
+
+retorne uma função que receba uma ação
+
+Exemplo de retorno:
+
+"Mateus realizou login"
+
+🔴 9️⃣ Filtro inteligente
+
+Crie uma função criarFiltro(minimo) que:
+
+receba um valor mínimo
+
+retorne uma função que filtre números maiores ou iguais a esse valor em um array
+
+Exemplo:
+
+const filtrar10 = criarFiltro(10);
+
+⭐ 🔟 DESAFIO FINAL — Sistema de login com closure
+
+Crie uma função sistemaLogin(usuarioCorreto, senhaCorreta) que:
+
+armazene usuário e senha de forma privada
+
+retorne uma função que receba:
+
+usuário digitado
+
+senha digitada
+
+valide os dados e retorne:
+
+"Login autorizado" ou
+
+"Login inválido"
+
+👉 Usuário e senha não podem ficar acessíveis fora da função.

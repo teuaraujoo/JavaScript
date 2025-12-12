@@ -1,0 +1,71 @@
+💡 Regra geral:
+Em todos os exercícios, uma função principal deve conter pelo menos uma função interna que faz parte da lógica.
+
+1️⃣ Soma simples (nível iniciante)
+
+Crie uma função soma() que receba vários números e use uma função interna para calcular a soma.
+
+2️⃣ Média dos valores
+
+Crie uma função media() que receba vários números e use uma função interna para somar os valores e depois calcular a média.
+
+3️⃣ Maior valor do array
+
+Crie uma função maiorNumero() que receba vários números e utilize uma função interna para descobrir o maior valor.
+
+4️⃣ Contar números pares
+
+Crie uma função contarPares() que receba vários números e utilize uma função interna para contar quantos são pares.
+
+5️⃣ Converter para maiúsculas
+
+Crie uma função converter() que receba várias palavras e utilize uma função interna para retornar todas em letras maiúsculas.
+
+6️⃣ Somar apenas números positivos
+
+Crie uma função somarPositivos() que receba vários números e utilize uma função interna que filtre apenas os positivos e depois some.
+
+7️⃣ Verificar se todos são maiores de idade
+
+Crie uma função verificarIdades() que receba várias idades e utilize uma função interna para verificar se todos são maiores ou iguais a 18 anos.
+
+8️⃣ Contar ocorrências de um valor
+
+Crie uma função contarOcorrencias() que receba um array e um valor qualquer, e utilize uma função interna para contar quantas vezes esse valor aparece.
+
+9️⃣ Separar pares e ímpares
+
+Crie uma função separarNumeros() que receba vários números e utilize duas funções internas:
+
+uma para pares
+
+outra para ímpares
+
+Retorne um objeto com os dois resultados.
+
+⭐ 🔟 DESAFIO FINAL — Função Profissional
+
+Crie uma função chamada analisarNumeros() que receba vários números e contenha funções internas para:
+
+Calcular a soma
+
+Calcular a média
+
+Encontrar o maior valor
+
+Encontrar o menor valor
+
+Contar quantos são pares
+
+Retorno esperado:
+{
+  soma: 50,
+  media: 10,
+  maior: 18,
+  menor: 2,
+  pares: 3
+}
+
+🧠 DICA IMPORTANTE (conceito-chave)
+
+Funções internas existem para organizar melhor a lógica, evitar repetição e encapsular comportamento que só faz sentido dentro da função principal.

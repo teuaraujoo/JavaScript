@@ -1,0 +1,153 @@
+1️⃣ Soma simples
+const soma = (...valores) => {
+  const somar = val => {
+    let total = 0;
+    for (let v of val) {
+      total += v;
+    }
+    return total;
+  };
+
+  return somar(valores);
+};
+
+
+✔ Função interna responsável apenas pela soma.
+
+2️⃣ Média dos valores
+const media = (...valores) => {
+  const somar = val => {
+    let total = 0;
+    for (let v of val) {
+      total += v;
+    }
+    return total;
+  };
+
+  return somar(valores) / valores.length;
+};
+
+
+✔ Reutiliza a lógica da soma para calcular a média.
+
+3️⃣ Maior número
+const maiorNumero = (...valores) => {
+  const maior = val => {
+    let maior = val[0];
+    for (let v of val) {
+      if (v > maior) maior = v;
+    }
+    return maior;
+  };
+
+  return maior(valores);
+};
+
+4️⃣ Contar números pares
+const contarPares = (...valores) => {
+  const contar = val => {
+    let cont = 0;
+    for (let v of val) {
+      if (v % 2 === 0) cont++;
+    }
+    return cont;
+  };
+
+  return contar(valores);
+};
+
+5️⃣ Converter palavras para maiúsculas
+const converter = (...palavras) => {
+  const maiusculas = p => {
+    let resultado = [];
+    for (let palavra of p) {
+      resultado.push(palavra.toUpperCase());
+    }
+    return resultado;
+  };
+
+  return maiusculas(palavras);
+};
+
+6️⃣ Somar apenas números positivos
+const somarPositivos = (...valores) => {
+  const filtrarESomar = val => {
+    let total = 0;
+    for (let v of val) {
+      if (v > 0) total += v;
+    }
+    return total;
+  };
+
+  return filtrarESomar(valores);
+};
+
+7️⃣ Verificar maioridade
+const verificarIdades = (...idades) => {
+  const todosMaiores = val => {
+    for (let idade of val) {
+      if (idade < 18) return false;
+    }
+    return true;
+  };
+
+  return todosMaiores(idades);
+};
+
+8️⃣ Contar ocorrências
+const contarOcorrencias = (array, valor) => {
+  const contar = arr => {
+    let cont = 0;
+    for (let item of arr) {
+      if (item === valor) cont++;
+    }
+    return cont;
+  };
+
+  return contar(array);
+};
+
+9️⃣ Separar pares e ímpares
+const separarNumeros = (...valores) => {
+  const pares = val => val.filter(n => n % 2 === 0);
+  const impares = val => val.filter(n => n % 2 !== 0);
+
+  return {
+    pares: pares(valores),
+    impares: impares(valores)
+  };
+};
+
+⭐ 🔟 DESAFIO FINAL — Analisar números
+const analisarNumeros = (...valores) => {
+
+  const soma = val => val.reduce((t, n) => t + n, 0);
+
+  const media = val => soma(val) / val.length;
+
+  const maior = val => Math.max(...val);
+
+  const menor = val => Math.min(...val);
+
+  const contarPares = val => val.filter(n => n % 2 === 0).length;
+
+  return {
+    soma: soma(valores),
+    media: media(valores),
+    maior: maior(valores),
+    menor: menor(valores),
+    pares: contarPares(valores)
+  };
+};
+
+🧠 CONCEITO IMPORTANTE (pra fixar)
+
+👉 Funções internas:
+
+organizam o código
+
+evitam repetição
+
+protegem lógica interna
+
+facilitam manutenção

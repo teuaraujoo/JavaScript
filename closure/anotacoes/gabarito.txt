@@ -1,0 +1,165 @@
+🟢 1️⃣ Closure básico
+function mensagem() {
+  let texto = "Olá, isso é um closure";
+
+  return function () {
+    console.log(texto);
+  };
+}
+
+const mostrar = mensagem();
+mostrar();
+
+
+🧠 O que acontece:
+A função interna continua acessando texto mesmo depois da função externa terminar.
+
+🟢 2️⃣ Contador simples
+function criarContador() {
+  let contador = 0;
+
+  return function () {
+    contador++;
+    return contador;
+  };
+}
+
+const contar = criarContador();
+contar(); // 1
+contar(); // 2
+
+
+✔ Estado mantido
+✔ Variável privada
+
+🟡 3️⃣ Contador com valor inicial
+function contadorInicial(valorInicial) {
+  let contador = valorInicial;
+
+  return function () {
+    contador++;
+    return contador;
+  };
+}
+
+const contar = contadorInicial(10);
+contar(); // 11
+contar(); // 12
+
+🟡 4️⃣ Multiplicador com closure
+function criarMultiplicador(fator) {
+  return function (numero) {
+    return numero * fator;
+  };
+}
+
+const dobrar = criarMultiplicador(2);
+dobrar(5); // 10
+
+
+🔥 Muito usado em configuração de sistemas.
+
+🟡 5️⃣ Validador de idade
+function criarValidadorIdade(idadeMinima) {
+  return function (idade) {
+    return idade >= idadeMinima ? true : false;
+  };
+}
+
+const validar18 = criarValidadorIdade(18);
+validar18(20); // true
+
+
+✔ Closure + ternário
+
+🟠 6️⃣ Controle de saldo (banco)
+function criarConta() {
+  let saldo = 0;
+
+  return {
+    depositar(valor) {
+      saldo += valor;
+    },
+    sacar(valor) {
+      saldo -= valor;
+    },
+    verSaldo() {
+      return saldo;
+    }
+  };
+}
+
+const conta = criarConta();
+conta.depositar(100);
+conta.sacar(30);
+conta.verSaldo(); // 70
+
+
+🧠 saldo é privado, ninguém acessa direto.
+
+🟠 7️⃣ Contador de cliques
+function criarClique() {
+  let cliques = 0;
+
+  return function () {
+    cliques++;
+    console.log(`Cliques: ${cliques}`);
+  };
+}
+
+const clicar = criarClique();
+clicar();
+clicar();
+
+
+✔ Simulação real de eventos no front-end.
+
+🔴 8️⃣ Mensagem personalizada
+function mensagemPersonalizada(nome) {
+  return function (acao) {
+    return `${nome} realizou ${acao}`;
+  };
+}
+
+const msgMateus = mensagemPersonalizada("Mateus");
+msgMateus("login"); // "Mateus realizou login"
+
+
+🔥 Muito comum em logs e auditoria.
+
+🔴 9️⃣ Filtro inteligente
+function criarFiltro(minimo) {
+  return function (numeros) {
+    return numeros.filter(n => n >= minimo);
+  };
+}
+
+const filtrar10 = criarFiltro(10);
+filtrar10([5, 10, 15, 2, 20]); // [10, 15, 20]
+
+
+✔ Closure + arrow function
+✔ Código funcional
+
+⭐ 🔟 DESAFIO — Sistema de login
+function sistemaLogin(usuarioCorreto, senhaCorreta) {
+  return function (usuario, senha) {
+    if (usuario === usuarioCorreto && senha === senhaCorreta) {
+      return "Login autorizado";
+    } else {
+      return "Login inválido";
+    }
+  };
+}
+
+const login = sistemaLogin("admin", "1234");
+
+login("admin", "1234"); // Login autorizado
+login("admin", "0000"); // Login inválido
+
+
+🧠 Usuário e senha:
+
+não são globais
+
+ficam protegidos no closure

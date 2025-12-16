@@ -31,7 +31,7 @@ Mesmo depois da externa terminar, interna ainda consegue acessar mensagem
 
 👉 Isso é closure.
 
-🧠 ANALOGIA SIMPLES (GUANABARA STYLE)
+🧠 ANALOGIA SIMPLES
 
 Imagine:
 

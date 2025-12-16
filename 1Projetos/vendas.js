@@ -17,3 +17,21 @@ const vendas = [
     { vendedor: "Ana", valor: 500, categoria: "eletronicos" }
 ];
 
+const analiseVendas = arr => {
+
+    const agrupar = val => {
+        return val.reduce((chave, valor) => {
+            chave[valor.vendedor] = (chave[valor.vendedor] || 0) + valor.valor;
+            return chave;
+        }, {});
+    }
+
+    const agrupado = agrupar(arr);
+
+    return Object.entries(agrupado).map(([vendedor, total]) => ({
+        vendedor,
+        total
+    }));
+}
+
+console.log(analiseVendas(vendas));

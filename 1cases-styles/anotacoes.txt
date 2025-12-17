@@ -1,0 +1,214 @@
+🧠 O QUE SÃO CASE STYLES?
+
+Case styles são padrões de escrita de nomes usados em:
+
+variáveis
+
+funções
+
+classes
+
+arquivos
+
+constantes
+
+URLs
+
+Eles existem para:
+✔ melhorar leitura
+✔ padronizar código
+✔ facilitar manutenção
+✔ permitir trabalho em equipe
+
+🟢 1️⃣ camelCase
+📌 O que é?
+
+Primeira palavra minúscula
+
+Palavras seguintes com primeira letra maiúscula
+
+Sem espaços, hífens ou underlines
+
+🧠 Exemplo:
+nomeUsuario
+totalDeVendas
+calcularMediaFinal
+
+🧠 Por que “camel”?
+
+Porque lembra as corcovas de um camelo 🐪
+nomeUsuarioFinal
+
+✅ Casos de uso gerais
+
+variáveis
+
+funções
+
+métodos
+
+parâmetros
+
+✅ Casos de uso em JavaScript
+
+👉 PADRÃO OFICIAL
+
+let idadeUsuario = 18;
+
+function calcularMedia(notas) {}
+
+const criarContaBancaria = () => {};
+
+❌ Onde NÃO usar
+
+classes
+
+constantes
+
+arquivos (geralmente)
+
+🟢 2️⃣ PascalCase
+📌 O que é?
+
+Todas as palavras começam com letra maiúscula
+
+Sem separadores
+
+🧠 Exemplo:
+Usuario
+ContaBancaria
+CalculadoraFinanceira
+
+✅ Casos de uso gerais
+
+classes
+
+construtores
+
+tipos
+
+componentes (React)
+
+✅ Casos de uso em JavaScript
+class Usuario {}
+function Produto(nome, preco) {}
+
+📌 Em JS, PascalCase indica que algo é “instanciável”.
+
+❌ Onde NÃO usar
+
+variáveis comuns
+
+funções normais
+
+⭐ Importância
+
+PascalCase comunica intenção.
+Quem lê sabe: “isso aqui é uma classe / construtor”.
+
+🟡 3️⃣ kebab-case
+📌 O que é?
+
+Todas as letras minúsculas
+
+Palavras separadas por hífen (-)
+
+🧠 Exemplo:
+meu-projeto-js
+pagina-login
+botao-enviar
+
+❗ Importante
+
+❌ NÃO pode ser usado em variáveis JS
+
+// inválido
+let nome-usuario = "Mateus";
+
+✅ Casos de uso gerais
+
+nomes de arquivos
+
+URLs
+
+classes CSS
+
+atributos HTML
+
+✅ Casos de uso com JavaScript
+<button class="botao-enviar"></button>
+
+document.querySelector(".botao-enviar");
+
+⭐ Importância
+
+kebab-case é padrão da web (HTML, CSS, URLs).
+
+🔵 4️⃣ snake_case
+📌 Exemplo:
+nome_usuario
+total_vendas
+
+Uso:
+
+muito comum em Python
+
+bancos de dados
+
+APIs
+
+Em JavaScript:
+
+⚠️ Não é padrão, mas aparece em APIs externas.
+
+🔴 5️⃣ UPPER_SNAKE_CASE
+📌 Exemplo:
+TAXA_JUROS
+PI
+MAX_USUARIOS
+
+Uso:
+
+constantes
+
+valores fixos
+
+configurações
+
+Em JavaScript:
+const TAXA_DESCONTO = 0.1;
+
+✔ Isso comunica: não deve ser alterado
+
+🟠 6️⃣ flatcase
+📌 Exemplo:
+nomeusuario
+totalvendas
+
+❌ Evite
+
+difícil leitura
+
+não é padrão
+
+🧠 PADRÃO PROFISSIONAL EM JAVASCRIPT
+
+Guarde isso 👇
+
+Tipo	Padrão
+Variável	camelCase
+Função	camelCase
+Parâmetro	camelCase
+Classe	PascalCase
+Construtor	PascalCase
+Constante	UPPER_SNAKE_CASE
+Arquivo JS	camelCase ou kebab-case
+HTML / CSS	kebab-case
+
+🚀 DICA DE OURO
+
+Quando você olha um nome e já sabe o que ele é, o código está certo.
+
+class Usuario {}
+const calcularMedia = () => {}
+const TAXA_JUROS = 0.05;

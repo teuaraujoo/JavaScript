@@ -1,0 +1,98 @@
+Exercício 1
+function* numerosBasicos() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+________________________________________
+Exercício 2
+function* contarAte(n) {
+  for (let i = 1; i <= n; i++) {
+    yield i;
+  }
+}
+________________________________________
+Exercício 3
+function* paresAte(n) {
+  for (let i = 0; i <= n; i++) {
+    if (i % 2 === 0) {
+      yield i;
+    }
+  }
+}
+________________________________________
+Exercício 4
+function* contagemRegressiva(inicio) {
+  for (let i = inicio; i >= 0; i--) {
+    yield i;
+  }
+}
+________________________________________
+Exercício 5
+function* letras(palavra) {
+  for (let letra of palavra) {
+    yield letra;
+  }
+}
+
+---
+
+## Exercício 6
+```js
+function* geradorId() {
+  let id = 1;
+  while (true) {
+    yield id++;
+  }
+}
+
+---
+
+## Exercício 7
+```js
+function* pontuacao() {
+  let pontos = 0;
+  while (true) {
+    pontos += 10;
+    yield pontos;
+  }
+}
+________________________________________
+Exercício 8
+function* paginar(array, tamanhoPagina) {
+  let i = 0;
+  while (i < array.length) {
+    yield array.slice(i, i + tamanhoPagina);
+    i += tamanhoPagina;
+  }
+}
+________________________________________
+Exercício 9
+function* semaforo() {
+  while (true) {
+    yield "Verde";
+    yield "Amarelo";
+    yield "Vermelho";
+  }
+}
+________________________________________
+Exercício 10 — DESAFIO FINAL
+function* processarTarefas(tarefas) {
+  for (let tarefa of tarefas) {
+    yield `Processando: ${tarefa}`;
+  }
+  return "Todas as tarefas concluídas";
+}
+
+// Uso com next()
+const tarefas = processarTarefas(["Login", "Pagamento", "Relatório"]);
+console.log(tarefas.next().value);
+console.log(tarefas.next().value);
+console.log(tarefas.next().value);
+console.log(tarefas.next());
+
+// Uso com for...of
+for (let status of processarTarefas(["Upload", "Download"])) {
+  console.log(status);
+}
+________________________________________

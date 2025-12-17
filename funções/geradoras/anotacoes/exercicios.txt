@@ -1,0 +1,42 @@
+🟢 Exercício 1 — Gerador simples
+Crie uma função geradora chamada numerosBasicos que produza os números 1, 2 e 3, um por vez, usando yield.
+________________________________________
+🟢 Exercício 2 — Gerador com loop
+Crie uma função geradora contarAte(n) que gere números de 1 até n.
+Exemplo de uso:
+for (let valor of contarAte(5)) {
+  console.log(valor);
+}
+________________________________________
+🟡 Exercício 3 — Números pares
+Crie uma função geradora paresAte(n) que gere apenas números pares de 0 até n.
+________________________________________
+🟡 Exercício 4 — Contagem regressiva
+Crie uma função geradora contagemRegressiva(inicio) que gere números do valor inicial até 0.
+________________________________________
+🟡 Exercício 5 — Gerador de letras
+Crie uma função geradora letras(palavra) que gere uma letra por vez da string recebida.
+________________________________________
+🟠 Exercício 6 — Gerador de IDs
+Crie uma função geradora geradorId() que gere IDs sequenciais começando em 1, sem limite.
+Use .next() manualmente.
+________________________________________
+🟠 Exercício 7 — Gerador com estado interno
+Crie uma função geradora pontuacao() que comece em 0 e a cada next() incremente 10 pontos.
+________________________________________
+🔴 Exercício 8 — Paginação
+Crie uma função geradora paginar(array, tamanhoPagina) que retorne partes do array conforme o tamanho da página.
+Exemplo:
+[1,2,3,4,5] com página 2 → [1,2] → [3,4] → [5]
+________________________________________
+🔴 Exercício 9 — Fluxo de estados
+Crie uma função geradora semaforo() que gere os estados: - “Verde” - “Amarelo” - “Vermelho”
+Depois reinicie o ciclo automaticamente.
+________________________________________
+🔥 Exercício 10 — DESAFIO FINAL
+Crie uma função geradora chamada processarTarefas(tarefas) onde:
+•	Recebe um array de tarefas (strings)
+•	Cada yield representa o processamento de uma tarefa
+•	Ao final, retorna a mensagem: “Todas as tarefas concluídas”
+Regras: - Use for...of - Controle corretamente o estado interno - Mostre o uso com .next() e com for...of
+________________________________________

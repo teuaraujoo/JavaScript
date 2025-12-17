@@ -1,0 +1,11 @@
+camelCase -> variáveis, funcões, métodos, parâmetros - CASE STYLE PADRÃO DO JAVASCRIPT
+
+PascalCase -> classes + funções construtoras
+
+kebab-case -> nome de arquivos, CSS, atributos HTML - CASE STYLE PADRÃO DA WEB (HTML, CSS, URLs)
+
+snake_case -> Bancdo de dados, python, APIs 
+
+UPPER_SNAKE_CASE -> constantes, valores fixos
+
+flatcasae -> tudo minúsculo sem separadores (*evitar*) -> dificulta a leitura do código

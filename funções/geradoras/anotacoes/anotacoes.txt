@@ -1,0 +1,8 @@
+tem seu retorno adiado até o momento que precisa desse retorno
+pode ir retornando coisas ao longo da execução
+quem tem o controle da funcao é a propria função
+
+declaração yield ->  pausa a execução de uma função e retorna um valor
+pilar da programação assíncrona em js
+
+function* -> o asterisco indica que a função é geradora

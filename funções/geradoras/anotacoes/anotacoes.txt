@@ -1,8 +1,13 @@
-tem seu retorno adiado até o momento que precisa desse retorno
-pode ir retornando coisas ao longo da execução
-quem tem o controle da funcao é a propria função
+1. não executa tudo de uma vez
+2. pausa e continua a execução
+3. devolve valores sob demanda
+
+1. tem seu retorno adiado até o momento que precisa desse retorno
+2. pode ir retornando coisas ao longo da execução
+3. quem tem o controle da funcao é a propria função
 
 declaração yield ->  pausa a execução de uma função e retorna um valor
-pilar da programação assíncrona em js
+
+* pilar da programação assíncrona em js
 
 function* -> o asterisco indica que a função é geradora

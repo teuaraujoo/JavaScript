@@ -4,6 +4,8 @@ function* cores (){
     yield 'Verde'
 }
 
+// yield = "pause + retunr"
+
 const itc = cores();
 
 console.log(itc.next().value);
@@ -39,9 +41,11 @@ function* contador (){
 const itcc = contador();
 
 // for (i = 0; i < 10; i++){
-//     console.log(itcc.next().value);
-// }
+    //     console.log(itcc.next().value);
+    // }
+    
+    for (c of itcc){
+        console.log(c);
+    }
 
-for (c of itcc){
-    console.log(c);
-}
+// a variável i não reinicia ao acabar a função

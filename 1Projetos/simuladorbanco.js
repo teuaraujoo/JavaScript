@@ -10,6 +10,7 @@ numero + titular
 depositar, sacar, ver saldo
 */
 
+// Validação do cpf
 function validarCPF(cpf){
 
     cpf = cpf.replace(/\D/g, '');
@@ -55,6 +56,7 @@ function validarCPF(cpf){
     return true;
 };
 
+// Validação da senha
 function validarSenha(senha){
 
     if (senha.length < 8) return false;
@@ -66,6 +68,7 @@ function validarSenha(senha){
     return true;
 };
 
+// Gerador de conta
 const geradorConta = () => {
     
     numero = '';
@@ -80,12 +83,16 @@ const geradorConta = () => {
 let user = {};
 let saldo = 500;
 
+// Criação da conta
 function criarConta(){
     
+    // Entrada de dados
+
     // const NOME = prompt('Digite seu nome:');
     const NOME = 'Mateus Santos de Araujo';
     // const DATA_NASCIMENTO = prompt('Digite sua data de nascimento');
     const DATA_NASCIMENTO = 19;
+    // verificacao data de nascimento
     if(DATA_NASCIMENTO < 18){
         return 'Você é menor de idade!';
     };
@@ -93,6 +100,7 @@ function criarConta(){
     // const CPF = prompt('Digite seu cpf');
     const CPF = '346.092.930-80';
     let situacaoCPF = validarCPF(CPF);
+    // verificação cpf
     if (situacaoCPF === false){
         return 'Digite um CPF válido!';
     };
@@ -100,6 +108,7 @@ function criarConta(){
     // const SENHA = prompt('Digite sua senha');
     const SENHA = 'aA3@xya!';
     let situacaoSenha = validarSenha(SENHA);
+    // verificação senha 
     if (situacaoSenha === false){
         return 'Digite uma senha válida! Deve conter ao menos um caractere maiúsculo, minúsculo, especial e número.';
     };
@@ -107,6 +116,7 @@ function criarConta(){
     const ID = crypto.randomUUID();
     const NUMERO_CONTA = geradorConta();
 
+    // criação do user
     return user = {
         ID,
         numeroConta: NUMERO_CONTA,
@@ -120,6 +130,7 @@ function criarConta(){
 
 criarConta();
 
+// Funcao para depositar
     function depositar (){
         
         // const VALOR = Number(prompt("Qual valor do depósito?"));
@@ -130,6 +141,7 @@ criarConta();
     
     };
     
+    // Funcao para sacar
     function sacar (){
         
         // const VALOR = Number(prompt('Digite o valor do saque:'));
@@ -142,10 +154,12 @@ criarConta();
         return  `Saque de R$${VALOR}; Saldo Atual: R$${user.saldo}`
     }
     
+    // Funcao para ver saldo
     const verSaldo = () => {
         return user.saldo;
     }
 
+    // Menu de opções
     while (true){
 
         // let pergunta = prompt('O que deseja fazer (depositar/sacar/ver saldo)?').toLowerCase();

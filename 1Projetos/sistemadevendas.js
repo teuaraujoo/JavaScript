@@ -65,7 +65,7 @@ function compra (){
     for (i of produtos){
         
     }
-    const arrayCarrinho = carrinho.map((nome, indice) => {
+    const arrayCarrinho = carrinho.map((nome, indice) => { // colocar quantidade ao invés di ID
         return {
             produtoId: produtos[1].id,
             nome: PRODUTO

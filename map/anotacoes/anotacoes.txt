@@ -1,0 +1,27 @@
+utilizado para percorrer arrays
+
+quando precisar trabalhar elemento por elemento da coleção
+
+vai iterar toda a coleção, não tem como "parar no meio" -> vai manipular dados de toda a coleção
+
+arr.map(elemento, índice);
+
+
+---------------------------
+quiser transformar dados
+
+gerar novo array
+
+Não altera o array original
+
+formatar dados
+---------------------------
+
+❓ Quero criar outro array transformado?
+👉 map
+
+❓ Quero percorrer valores e decidir coisas?
+👉 for...of
+
+❓ Quero percorrer propriedades de um objeto?
+👉 for...in

@@ -1,0 +1,125 @@
+🟢 Exercício 1 — Dobro dos números
+const numeros = [1, 2, 3, 4, 5];
+
+const dobro = numeros.map(n => n * 2);
+
+console.log(dobro);
+
+
+📌 map cria um novo array com cada elemento transformado.
+
+🟢 Exercício 2 — Quadrado
+const valores = [2, 4, 6, 8];
+
+const quadrado = valores.map(n => n ** 2);
+
+console.log(quadrado);
+
+🟡 Exercício 3 — Maiúsculas
+const nomes = ['mateus', 'joão', 'ana'];
+
+const maiusculas = nomes.map(nome => nome.toUpperCase());
+
+console.log(maiusculas);
+
+🟡 Exercício 4 — Formatação de preços
+const precos = [10, 25, 50];
+
+const formatados = precos.map(preco => `R$ ${preco}`);
+
+console.log(formatados);
+
+🟡 Exercício 5 — Valor + índice
+const produtos = ['Camisa', 'Calça', 'Tênis'];
+
+const frases = produtos.map((produto, index) => {
+    return `Produto ${index + 1}: ${produto}`;
+});
+
+console.log(frases);
+
+
+📌 map recebe: (valor, índice, array)
+
+🟠 Exercício 6 — Extraindo propriedades
+const usuarios = [
+    { nome: 'Mateus', idade: 18 },
+    { nome: 'Ana', idade: 22 },
+    { nome: 'João', idade: 30 }
+];
+
+const nomes = usuarios.map(usuario => usuario.nome);
+
+console.log(nomes);
+
+🟠 Exercício 7 — Transformando objetos
+const usuarios = [
+    { nome: 'Mateus', idade: 18 },
+    { nome: 'Ana', idade: 22 }
+];
+
+const anoAtual = new Date().getFullYear();
+
+const resultado = usuarios.map(usuario => {
+    return {
+        nome: usuario.nome,
+        nascimento: anoAtual - usuario.idade
+    };
+});
+
+console.log(resultado);
+
+🔵 Exercício 8 — Regra de negócio
+const valores = [50, 120, 80, 200];
+
+const comDesconto = valores.map(valor => {
+    if (valor > 100) {
+        return valor * 0.9;
+    }
+    return valor;
+});
+
+console.log(comDesconto);
+
+🔵 Exercício 9 — Objeto derivado
+const precos = [100, 200, 300];
+
+const resultado = precos.map(preco => {
+    return {
+        original: preco,
+        comImposto: preco * 1.15
+    };
+});
+
+console.log(resultado);
+
+🔴 Exercício 10 — Carrinho de compras
+const carrinho = [
+    { produto: 'Camisa', preco: 50, qtd: 2 },
+    { produto: 'Tênis', preco: 200, qtd: 1 }
+];
+
+const resumo = carrinho.map(item => {
+    return {
+        produto: item.produto,
+        total: item.preco * item.qtd
+    };
+});
+
+console.log(resumo);
+
+🏆 DESAFIO FINAL — STATUS DO CLIENTE
+const clientes = [
+    { nome: 'Mateus', saldo: 500 },
+    { nome: 'Ana', saldo: 1200 },
+    { nome: 'João', saldo: 300 }
+];
+
+const statusClientes = clientes.map(cliente => {
+    return {
+        nome: cliente.nome,
+        status: cliente.saldo >= 1000 ? 'VIP' : 'Comum'
+    };
+});
+
+console.log(statusClientes);

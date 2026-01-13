@@ -1,0 +1,127 @@
+🟢 Exercício 1 — Básico
+
+Dado um array de números, crie um novo array com o dobro de cada número.
+
+const numeros = [1, 2, 3, 4, 5];
+
+🟢 Exercício 2 — Operação matemática
+
+Crie um array com o quadrado de cada número.
+
+const valores = [2, 4, 6, 8];
+
+🟡 Exercício 3 — String
+
+Transforme todos os nomes para letras maiúsculas usando map.
+
+const nomes = ['mateus', 'joão', 'ana'];
+
+🟡 Exercício 4 — Formatação
+
+Crie um novo array adicionando "R$ " antes de cada preço.
+
+const precos = [10, 25, 50];
+
+
+Resultado esperado (exemplo):
+
+["R$ 10", "R$ 25", "R$ 50"]
+
+🟡 Exercício 5 — Índice
+
+Use o map para gerar frases usando o valor e o índice.
+
+const produtos = ['Camisa', 'Calça', 'Tênis'];
+
+
+Exemplo:
+
+["Produto 1: Camisa", "Produto 2: Calça", ...]
+
+🟠 Exercício 6 — Array de objetos
+
+Crie um novo array apenas com os nomes dos usuários.
+
+const usuarios = [
+    { nome: 'Mateus', idade: 18 },
+    { nome: 'Ana', idade: 22 },
+    { nome: 'João', idade: 30 }
+];
+
+🟠 Exercício 7 — Transformação de objetos
+
+Crie um novo array onde cada usuário tenha:
+
+nome
+
+ano de nascimento (use o ano atual)
+
+const usuarios = [
+    { nome: 'Mateus', idade: 18 },
+    { nome: 'Ana', idade: 22 }
+];
+
+🔵 Exercício 8 — Regra de negócio
+
+Dado um array de preços, aplique:
+
+10% de desconto se o valor for maior que 100
+
+mantenha o valor se for menor ou igual
+
+const valores = [50, 120, 80, 200];
+
+🔵 Exercício 9 — Encadeamento mental
+
+Crie um array de objetos com:
+
+valor original
+
+valor com imposto de 15%
+
+const precos = [100, 200, 300];
+
+
+Exemplo de saída:
+
+[
+  { original: 100, comImposto: 115 },
+  ...
+]
+
+🔴 Exercício 10 — Situação real (banco/vendas)
+
+Dado um carrinho de compras, gere um novo array contendo:
+
+nome do produto
+
+total do item (preço × quantidade)
+
+const carrinho = [
+    { produto: 'Camisa', preco: 50, qtd: 2 },
+    { produto: 'Tênis', preco: 200, qtd: 1 }
+];
+
+🏆 DESAFIO FINAL — NÍVEL PROJETO REAL
+
+Você tem um array de clientes:
+
+const clientes = [
+    { nome: 'Mateus', saldo: 500 },
+    { nome: 'Ana', saldo: 1200 },
+    { nome: 'João', saldo: 300 }
+];
+
+
+👉 Use map para gerar um novo array onde:
+
+quem tem saldo ≥ 1000 recebe status "VIP"
+
+quem tem saldo < 1000 recebe status "Comum"
+
+Formato final esperado:
+
+[
+  { nome: 'Mateus', status: 'Comum' },
+  { nome: 'Ana', status: 'VIP' }
+]

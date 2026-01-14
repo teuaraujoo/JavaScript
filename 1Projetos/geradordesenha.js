@@ -57,14 +57,14 @@ function gerarSenha(){
 const senha = gerarSenha();
 
 function embaralharSenha(str) {
-  let array = str.split('');
-  for (let i = array.length - 1; i > 0; i--) {
-    // Escolhe um índice aleatório de 0 a i
-    const j = Math.floor(Math.random() * (i + 1));
-    // Troca os elementos em i e j
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array.join('');
+    let array = str.split('');
+    for (let i = array.length - 1; i > 0; i--) {
+        // Escolhe um índice aleatório de 0 a i
+        const j = Math.floor(Math.random() * (i + 1));
+        // Troca os elementos em i e j
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array.join('');
 }
 
 console.log(embaralharSenha(senha)); 

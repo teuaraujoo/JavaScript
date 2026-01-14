@@ -1,0 +1,92 @@
+1. Escopo Global 
+
+variáveis declaradas fora de qualquer função ou bloco
+
+let nome = 'Mateus';
+
+function mostrar() {
+    console.log(nome);
+}
+
+mostrar(); // Mateus
+
+
+------------------------------------------------------------------
+
+
+2. Escopo de Função
+
+variáveis criadas dentro da função, só existem ali
+
+function teste() {
+    let idade = 18;
+    console.log(idade);
+}
+
+teste();
+console.log(idade); // ❌ erro
+
+
+------------------------------------------------------------------
+
+
+3. Escopo de Bloco
+
+Introduzido com let e const
+
+if (true) {
+    let x = 10;
+    const y = 20;
+}
+
+console.log(x); // ❌ erro
+console.log(y); // ❌ erro
+
+for (let i = 0; i < 10; i++) {
+    console.log(i);
+}
+
+console.log(i); // ❌ erro
+
+
+------------------------------------------------------------------
+
+
+4. Escopo Léxico
+
+Uma função lembra do lugar onde foi criada, não onde foi executada.
+
+function externa() {
+    let valor = 100;
+
+    function interna() {
+        console.log(valor);
+    }
+
+    interna();
+}
+
+externa(); // 100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

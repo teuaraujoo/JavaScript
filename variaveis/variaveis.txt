@@ -66,3 +66,7 @@ Quando usar let? Para valores que você sabe que vão mudar (como um contador em
 Quando usar const? Para valores que você sabe que não vão mudar (como o valor de PI, uma taxa de juros fixa ou, no seu caso, o resultado de um cálculo como o IMC).
 
 https://www.devmedia.com.br/javascript-variaveis-e-constantes/41012
+
+
+Toda variável deve ser declarada com const ou let
+Nunca confie em variável sem declaração

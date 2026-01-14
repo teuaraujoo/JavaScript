@@ -1,5 +1,6 @@
 const d = new Function("v1", "return v1 * 2");
 
+// setTimeout = atraso de execução
 setTimeout(function() {
     console.log("Carregando...");
 }, 2000);

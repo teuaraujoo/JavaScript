@@ -2,19 +2,17 @@
 // cliente -> id, nome, cpf, telefone
 // cartão -> numero
 
-// verficar estoque, verificar se o produto existe
-// verificar cpf
+// verficar estoque(quantidade), verificar se o produto existe
+// verificar cpf + nome
 
-// verificar compra - existência do produto
 // verificar desconto (acima de 200 - 10% de desconto)
-// verificar compra (cpf, existência do produto)
-// verificar cartao
 
 const produtos = [
     { id: 1, nome: 'camisa', preco: 50, quantidade: 10 },
     { id: 2, nome: 'tênis', preco: 200, quantidade: 20 },
     { id: 3, nome: 'boné', preco: 30, quantidade: 5 }
 ];
+
 
 const clientes = [
     { id: 1, nome: 'césar', cpf: '12345678900' },
@@ -27,106 +25,42 @@ const clientes = [
 //     { produtoId: 3, quantidade: 1 }
 // ];
 
-// const NOME = prompt('Digite seu nome:').toLowerCase();
-const NOME = 'mateus';
+function compra(){
 
-const carrinho = [];
-// const PRODUTO = prompt('Qual produto você quer?').toLowerCase();
-const PRODUTO = 'boné';
-carrinho.push(PRODUTO);
+    const verificarDesconto = v => {
 
+    if (v > 200){ return v *= 0.9 };
+    };
 
-// const QTD = Number(prompt('Quantas unidades desse produto?'))
-const QTD = 2;
+    function verificarProduto(arr){
 
-let preco = 0;
-
-function compra (){
-
-    const carrinho = [];
-
-    while(true){
-        
-        // const PRODUTO = prompt('Qual produto você quer?').toLowerCase();
-        const PRODUTO = 'boné';
-
-        let situacaoP = verificarProduto(produtos);
-        if (situacaoP === 'true'){
-            carrinho.push(PRODUTO);
+        for (n of arr){
+            if (n.nome === NOME.toLowerCase()){
+                return true;
+            };
         };
+        return false;
+    };
 
-        // let resp = prompt('Deseja adicionar outra produto?(sim/nao)').toLowerCase();
-        let resp = 'nao';
-        if (resp === 'nao'){
-            break;
-        }
-    }
+    function verificarQuantidade(arr){
 
-    for (i of produtos){
-        
-    }
-    const arrayCarrinho = carrinho.map((nome, indice) => { // colocar quantidade ao invés di ID
-        return {
-            produtoId: produtos[1].id,
-            nome: PRODUTO
+        for (n of arr){
+            if (n.quantidade > QTD){
+                return true;
+            };
         };
-    });
+        return false;
+    };
 
+    const NOME = 'mateus';
+    const PRODUTO = 'camisa';
+    if (!verificarProduto(PRODUTO)){
+        return false;
+    };
+
+    const QTD = 2;
+    if (!verificarQuantidade(QTD)){
+        return false;
+    };
 
 };
-
-
-
-
-
-
-
-
-
-
-
-
-function montarCarrrinho(){
-
-}
-
-function verificarCliente (arr){
-    for (c of arr){
-        if (c.nome === NOME){
-            return true;
-        } else {
-            return false;
-        }
-    }
-}
-
-function verificarProduto (arr){
-    for (p of arr){
-        if (p.nome === PRODUTO){
-            return true;
-        } else {
-            return false;
-        }
-    }
-}
-
-function verificarCompra (){
-
-}
-function desconto (){
-
-}
-
-/*
-const nomes = ['Ana', 'Bruno', 'Carlos'];
-
-const arrayDeObjetos = nomes.map((nome, indice) => {
-  return {
-    id: indice + 1,
-    nome: nome
-  };
-});
-
-console.log(arrayDeObjetos);
-
-*/

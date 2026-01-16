@@ -1,0 +1,1 @@
+funções ligadas a objetos ou classes que definem seus comportamentos

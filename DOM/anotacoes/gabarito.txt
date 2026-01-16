@@ -1,0 +1,144 @@
+🟢 Exercício 1 — Alterar texto ao carregar
+const paragrafo = document.querySelector('p');
+paragrafo.textContent = 'Texto alterado via JavaScript';
+
+
+✔️ Seleção simples
+✔️ Manipulação direta do DOM
+
+🟢 Exercício 2 — Clique simples
+const botao = document.querySelector('button');
+
+botao.addEventListener('click', () => {
+    console.log('Botão clicado!');
+});
+
+
+✔️ Evento básico
+✔️ Arrow function
+
+🟡 Exercício 3 — Alterar estilo
+const botao = document.querySelector('button');
+const box = document.querySelector('.box');
+
+botao.addEventListener('click', () => {
+    box.style.backgroundColor = 'blue';
+});
+
+
+✔️ .style
+✔️ Interação visual
+
+🟡 Exercício 4 — Contador visual
+const botao = document.querySelector('button');
+const contador = document.querySelector('span');
+
+let valor = 0;
+
+botao.addEventListener('click', () => {
+    valor++;
+    contador.textContent = valor;
+});
+
+
+✔️ Estado interno
+✔️ Atualização do DOM
+
+🟡 Exercício 5 — Capturar valor do input
+const input = document.querySelector('input');
+const botao = document.querySelector('button');
+const resultado = document.querySelector('p');
+
+botao.addEventListener('click', () => {
+    resultado.textContent = input.value;
+});
+
+
+✔️ .value
+✔️ Comunicação input → DOM
+
+🟠 Exercício 6 — Lista dinâmica
+const input = document.querySelector('input');
+const botao = document.querySelector('button');
+const lista = document.querySelector('ul');
+
+botao.addEventListener('click', () => {
+    const li = document.createElement('li');
+    li.textContent = input.value;
+
+    lista.appendChild(li);
+    input.value = '';
+});
+
+
+✔️ createElement
+✔️ appendChild
+
+🟠 Exercício 7 — Remover item da lista
+const input = document.querySelector('input');
+const botao = document.querySelector('button');
+const lista = document.querySelector('ul');
+
+botao.addEventListener('click', () => {
+    const li = document.createElement('li');
+    li.textContent = input.value;
+
+    li.addEventListener('click', () => {
+        li.remove();
+    });
+
+    lista.appendChild(li);
+    input.value = '';
+});
+
+
+✔️ Evento em elemento dinâmico
+✔️ .remove()
+
+🔵 Exercício 8 — Validação simples
+const input = document.querySelector('input');
+const botao = document.querySelector('button');
+const mensagem = document.querySelector('p');
+
+botao.addEventListener('click', () => {
+    if (input.value.trim() === '') {
+        mensagem.textContent = 'Campo obrigatório!';
+        mensagem.style.color = 'red';
+    } else {
+        mensagem.textContent = 'Dados enviados com sucesso!';
+        mensagem.style.color = 'green';
+    }
+});
+
+
+✔️ Validação real
+✔️ Feedback visual
+
+🔵 Exercício 9 — Classe CSS dinâmica
+const botao = document.querySelector('button');
+const box = document.querySelector('.box');
+
+botao.addEventListener('click', () => {
+    box.classList.toggle('ativo');
+});
+
+
+✔️ .classList.toggle()
+✔️ Muito usado em sistemas reais
+
+🔴 Exercício 10 — DESAFIO (Sistema de pontuação)
+const botao = document.querySelector('button');
+const texto = document.querySelector('p');
+
+let pontos = 0;
+
+botao.addEventListener('click', () => {
+    if (pontos < 100) {
+        pontos += 10;
+        texto.textContent = `Pontuação: ${pontos}`;
+    }
+
+    if (pontos === 100) {
+        texto.textContent = 'Parabéns! Pontuação máxima atingida!';
+    }
+});

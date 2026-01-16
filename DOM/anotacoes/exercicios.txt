@@ -1,0 +1,158 @@
+🟢 Exercício 1 — Seleção básica
+
+Crie um HTML com um <p> contendo um texto qualquer.
+Usando JavaScript, selecione esse parágrafo e altere o texto ao carregar a página.
+
+📌 Objetivo:
+
+document.querySelector
+
+.textContent
+
+🟢 Exercício 2 — Clique simples
+
+Crie um botão.
+Ao clicar nele, exiba no console a mensagem:
+
+Botão clicado!
+
+
+📌 Objetivo:
+
+addEventListener
+
+Evento click
+
+🟡 Exercício 3 — Alterar estilo
+
+Crie um botão e um <div>.
+Ao clicar no botão, mude a cor de fundo da div.
+
+📌 Objetivo:
+
+.style
+
+Interação básica
+
+🟡 Exercício 4 — Contador visual
+
+Crie:
+
+Um botão +
+
+Um <span> com valor inicial 0
+
+Cada clique no botão deve incrementar o número exibido.
+
+📌 Objetivo:
+
+Estado em variável
+
+Atualização do DOM
+
+🟡 Exercício 5 — Capturar valor de input
+
+Crie um input de texto e um botão.
+Ao clicar no botão, mostre o texto digitado dentro de um <p>.
+
+📌 Objetivo:
+
+.value
+
+Comunicação input → DOM
+
+🟠 Exercício 6 — Lista dinâmica
+
+Crie:
+
+Um input
+
+Um botão
+
+Uma <ul>
+
+Ao clicar no botão, o texto do input deve virar um <li> dentro da lista.
+
+📌 Objetivo:
+
+createElement
+
+appendChild
+
+🟠 Exercício 7 — Remover elemento
+
+Adapte o exercício anterior para que:
+
+Cada <li> possa ser removido ao ser clicado
+
+📌 Objetivo:
+
+Eventos em elementos criados dinamicamente
+
+remove()
+
+🔵 Exercício 8 — Validação simples
+
+Crie um formulário com:
+
+Input de nome
+
+Botão enviar
+
+Se o campo estiver vazio:
+
+Mostre uma mensagem de erro no DOM
+Caso contrário:
+
+Mostre “Dados enviados com sucesso”
+
+📌 Objetivo:
+
+Condicionais
+
+Feedback visual
+
+🔵 Exercício 9 — Classe CSS dinâmica
+
+Crie um botão que:
+
+Ao clicar, adicione ou remova uma classe CSS de um elemento
+
+📌 Objetivo:
+
+.classList.toggle()
+
+🔴 Exercício 10 — Desafio (nível projeto)
+
+Crie um mini sistema de pontuação:
+
+Um botão “Ganhar pontos”
+
+Um <p> mostrando a pontuação
+
+Cada clique soma +10 pontos
+
+Quando chegar a 100 pontos, exiba:
+
+Parabéns! Pontuação máxima atingida!
+
+
+📌 Objetivo:
+
+Estado
+
+Condições
+
+DOM dinâmico
+
+Organização de código
+
+🔒 Regras (importante)
+
+Use const e let
+
+Use arrow functions
+
+Não use alert (tudo no DOM)
+
+Separe lógica e manipulação visual

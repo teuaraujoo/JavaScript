@@ -1,0 +1,11 @@
+Documente Object Model
+
+cópia do html
+
+representação do HTML em forma de árvore de objetos, que o JavaScript consegue ler, alterar e reagir.
+
+Interface que representa uma pággina web como uma árvore de objetos, permitindo o js acessar e 
+manipular sua estrutura, conteudo, estilo dinamicamente sem recarregar a página
+
+innerHTML = conteúdo 
+

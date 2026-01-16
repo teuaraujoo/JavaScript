@@ -1,0 +1,125 @@
+🟢 Exercício 1 — this no objeto
+
+Crie um objeto pessoa com:
+
+nome
+
+um método falar que imprime o nome usando this
+
+📌 Objetivo:
+Entender que this aponta para o objeto que chamou o método.
+
+🟢 Exercício 2 — this e propriedades
+
+Crie um objeto conta com:
+
+saldo
+
+método mostrarSaldo() que exibe o saldo usando this
+
+Teste chamando o método.
+
+🟡 Exercício 3 — this fora de objetos
+
+Crie uma função normal que imprime this no console.
+Execute essa função fora de qualquer objeto.
+
+📌 Objetivo:
+Observar o comportamento do this no escopo global.
+
+🟡 Exercício 4 — this dentro de método + função interna
+
+Crie um objeto com:
+
+uma propriedade
+
+um método
+
+dentro do método, uma função normal interna que tenta acessar this
+
+Observe o comportamento.
+
+📌 Objetivo:
+Perceber perda de contexto.
+
+🟡 Exercício 5 — Corrigir this com variável auxiliar
+
+Resolva o problema do exercício anterior usando:
+
+const self = this;
+
+
+📌 Objetivo:
+Entender solução clássica (pré-arrow function).
+
+🟠 Exercício 6 — this com arrow function
+
+Refaça o exercício 4, mas usando arrow function na função interna.
+
+📌 Objetivo:
+Entender que arrow function não cria seu próprio this.
+
+🟠 Exercício 7 — this com addEventListener
+
+Crie um botão no HTML.
+Ao clicar:
+
+use this para alterar o próprio botão (texto ou estilo)
+
+📌 Objetivo:
+Ver this apontando para o elemento HTML.
+
+🔵 Exercício 8 — this e bind
+
+Crie:
+
+um objeto com um método
+
+atribua esse método a uma variável
+
+chame a variável
+
+Depois:
+
+use .bind() para corrigir o this
+
+📌 Objetivo:
+Entender perda de referência e correção.
+
+🔵 Exercício 9 — this em função construtora
+
+Crie uma função construtora Usuario que:
+
+recebe nome
+
+cria um método que usa this.nome
+
+Instancie com new.
+
+📌 Objetivo:
+Entender this em objetos criados dinamicamente.
+
+🔴 Exercício 10 — DESAFIO (nível real)
+
+Crie um objeto banco com:
+
+saldo
+
+método depositar(valor)
+
+método sacar(valor)
+
+método mostrarSaldo()
+
+Use this corretamente em todos.
+
+📌 Extra:
+
+Garanta que sacar não permita saldo negativo.
+
+🧠 Regra de ouro do this
+
+❗ this NÃO aponta para onde a função foi criada
+✔️ Aponta para quem chamou a função
+
+Você vai comprovar isso fazendo esses exercícios.c

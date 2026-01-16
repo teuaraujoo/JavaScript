@@ -1,0 +1,3 @@
+fora de escopos locais o this se refere ao objeto global window
+
+this vai se referir a instância e pode acessar suas propriedades

@@ -1,0 +1,167 @@
+🟢 Exercício 1 — this no objeto
+const pessoa = {
+    nome: 'Mateus',
+    falar() {
+        console.log(this.nome);
+    }
+};
+
+pessoa.falar(); // Mateus
+
+
+🔎 this aponta para quem chamou o método → pessoa
+
+🟢 Exercício 2 — this e propriedades
+const conta = {
+    saldo: 500,
+    mostrarSaldo() {
+        console.log(`Saldo: ${this.saldo}`);
+    }
+};
+
+conta.mostrarSaldo(); // Saldo: 500
+
+
+✔️ this.saldo acessa a propriedade do próprio objeto
+
+🟡 Exercício 3 — this fora de objetos
+function teste() {
+    console.log(this);
+}
+
+teste();
+
+
+Resultado (navegador):
+
+window
+
+
+📌 Fora de objeto, this aponta para o objeto global
+(em strict mode, seria undefined)
+
+🟡 Exercício 4 — Perda de contexto
+const usuario = {
+    nome: 'Ana',
+    mostrar() {
+        function interna() {
+            console.log(this.nome);
+        }
+        interna();
+    }
+};
+
+usuario.mostrar(); // undefined
+
+
+🚨 A função interna não pertence ao objeto, então perde o this.
+
+🟡 Exercício 5 — Corrigindo com self = this
+const usuario = {
+    nome: 'Ana',
+    mostrar() {
+        const self = this;
+
+        function interna() {
+            console.log(self.nome);
+        }
+        interna();
+    }
+};
+
+usuario.mostrar(); // Ana
+
+
+📌 Técnica antiga, mas importante de conhecer.
+
+🟠 Exercício 6 — Arrow function resolve
+const usuario = {
+    nome: 'Ana',
+    mostrar() {
+        const interna = () => {
+            console.log(this.nome);
+        };
+        interna();
+    }
+};
+
+usuario.mostrar(); // Ana
+
+
+✔️ Arrow function herda o this do escopo externo
+
+🟠 Exercício 7 — this no DOM
+const botao = document.querySelector('button');
+
+botao.addEventListener('click', function () {
+    this.textContent = 'Clicado!';
+});
+
+
+📌 Aqui, this aponta para o elemento que disparou o evento
+
+⚠️ Se fosse arrow function, this não funcionaria aqui.
+
+🔵 Exercício 8 — this e bind
+const pessoa = {
+    nome: 'Carlos',
+    falar() {
+        console.log(this.nome);
+    }
+};
+
+const falar = pessoa.falar;
+falar(); // undefined
+
+const falarCorreto = pessoa.falar.bind(pessoa);
+falarCorreto(); // Carlos
+
+
+✔️ bind fixa o valor de this
+
+🔵 Exercício 9 — this em função construtora
+function Usuario(nome) {
+    this.nome = nome;
+
+    this.mostrar = function () {
+        console.log(this.nome);
+    };
+}
+
+const u1 = new Usuario('Mateus');
+u1.mostrar(); // Mateus
+
+
+📌 this aponta para o objeto criado com new
+
+🔴 Exercício 10 — DESAFIO (Banco)
+const banco = {
+    saldo: 0,
+
+    depositar(valor) {
+        this.saldo += valor;
+        console.log(`Depósito: ${valor}`);
+    },
+
+    sacar(valor) {
+        if (valor > this.saldo) {
+            console.log('Saldo insuficiente');
+            return;
+        }
+        this.saldo -= valor;
+        console.log(`Saque: ${valor}`);
+    },
+
+    mostrarSaldo() {
+        console.log(`Saldo atual: ${this.saldo}`);
+    }
+};
+
+banco.depositar(100);
+banco.sacar(30);
+banco.mostrarSaldo();
+
+
+✔️ Uso real
+✔️ this bem aplicado
+✔️ Código de nível projeto

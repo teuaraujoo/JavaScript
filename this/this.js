@@ -15,3 +15,18 @@ pessoa.dizerNome();
 console.log(pessoa);
 pessoa.aniversario();
 console.log(pessoa);
+
+
+
+class Usuario {
+    constructor(nome) {
+        this.nome = nome;
+    }
+
+    mostrar() {
+        console.log(this.nome);
+    }
+}
+
+const u1 = new Usuario('Mateus');
+u1.mostrar(); // Mateus

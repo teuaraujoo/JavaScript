@@ -1,0 +1,96 @@
+// ==============================
+// CRIAÇÃO DE DATAS
+// ==============================
+new Date()
+new Date(milliseconds)
+new Date(dateString)
+new Date(year, month, day, hour, minute, second, ms)
+
+// ==============================
+// GET – DATA LOCAL
+// ==============================
+getFullYear()
+getMonth()        // 0–11
+getDate()         // 1–31
+getDay()          // 0–6 (domingo = 0)
+
+// ==============================
+// GET – HORA LOCAL
+// ==============================
+getHours()
+getMinutes()
+getSeconds()
+getMilliseconds()
+
+// ==============================
+// GET – TIMESTAMP
+// ==============================
+getTime()
+
+// ==============================
+// GET – UTC
+// ==============================
+getUTCFullYear()
+getUTCMonth()
+getUTCDate()
+getUTCDay()
+getUTCHours()
+getUTCMinutes()
+getUTCSeconds()
+getUTCMilliseconds()
+
+// ==============================
+// SET – DATA LOCAL
+// ==============================
+setFullYear(year)
+setMonth(month)
+setDate(day)
+
+// ==============================
+// SET – HORA LOCAL
+// ==============================
+setHours(hour)
+setMinutes(minute)
+setSeconds(second)
+setMilliseconds(ms)
+
+// ==============================
+// SET – TIMESTAMP
+// ==============================
+setTime(milliseconds)
+
+// ==============================
+// SET – UTC
+// ==============================
+setUTCFullYear(year)
+setUTCMonth(month)
+setUTCDate(day)
+setUTCHours(hour)
+setUTCMinutes(minute)
+setUTCSeconds(second)
+setUTCMilliseconds(ms)
+
+// ==============================
+// CONVERSÃO PARA STRING
+// ==============================
+toString()
+toDateString()
+toTimeString()
+toISOString()
+toUTCString()
+toLocaleString()
+toLocaleDateString()
+toLocaleTimeString()
+
+// ==============================
+// MÉTODOS ESTÁTICOS
+// ==============================
+Date.now()
+Date.parse(dateString)
+Date.UTC(year, month, day, hour, minute, second, ms)
+
+// ==============================
+// UTILITÁRIOS
+// ==============================
+valueOf()
+getTimezoneOffset()

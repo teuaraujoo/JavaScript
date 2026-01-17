@@ -91,9 +91,10 @@ function criarConta(){
     // const NOME = prompt('Digite seu nome:');
     const NOME = 'Mateus Santos de Araujo';
     // const DATA_NASCIMENTO = prompt('Digite sua data de nascimento');
-    const DATA_NASCIMENTO = 19;
+    const IDADE = 19;
     // verificacao data de nascimento
-    if(DATA_NASCIMENTO < 18){
+    const situacaoNasc = IDADE >= 18;
+    if (!situacaoNasc){
         return 'Você é menor de idade!';
     };
 
@@ -121,7 +122,7 @@ function criarConta(){
         ID,
         numeroConta: NUMERO_CONTA,
         titular: NOME,
-        dataNascimento: DATA_NASCIMENTO,
+        idade: IDADE,
         CPF,
         saldo,
         senha: SENHA

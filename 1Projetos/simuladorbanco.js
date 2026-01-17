@@ -81,7 +81,7 @@ const geradorConta = () => {
 };
 
 let user = {};
-let saldo = 500;
+let saldo = 0;
 
 // Criação da conta
 function criarConta(){
@@ -130,53 +130,82 @@ function criarConta(){
 
 criarConta();
 
-// Funcao para depositar
-    function depositar (){
+// // Funcao para depositar
+//     function depositar (){
         
-        // const VALOR = Number(prompt("Qual valor do depósito?"));
-        const VALOR = 200;
-        user.saldo  += VALOR;
+//         // const VALOR = Number(prompt("Qual valor do depósito?"));
+//         const VALOR = 200;
+//         user.saldo  += VALOR;
 
-        return `Depósito de R$${VALOR}; Saldo Atual: R$${user.saldo}`;
+//         return `Depósito de R$${VALOR}; Saldo Atual: R$${user.saldo}`;
     
-    };
+//     };
     
-    // Funcao para sacar
-    function sacar (){
+//     // Funcao para sacar
+//     function sacar (){
         
-        // const VALOR = Number(prompt('Digite o valor do saque:'));
-        const VALOR = 300;
-        if (VALOR > user.saldo){
-            let aviso = console.log('SALDO INSUFICIENTE');
-            return aviso;
-        } 
-        user.saldo -= VALOR;
-        return  `Saque de R$${VALOR}; Saldo Atual: R$${user.saldo}`
-    }
+//         // const VALOR = Number(prompt('Digite o valor do saque:'));
+//         const VALOR = 300;
+//         if (VALOR > user.saldo){
+//             let aviso = console.log('SALDO INSUFICIENTE');
+//             return aviso;
+//         } 
+//         user.saldo -= VALOR;
+//         return  `Saque de R$${VALOR}; Saldo Atual: R$${user.saldo}`
+//     }
     
-    // Funcao para ver saldo
-    const verSaldo = () => {
-        return user.saldo;
-    }
+//     // Funcao para ver saldo
+//     const verSaldo = () => {
+//         return user.saldo;
+//     }
+
+    /* Ações do usuário - sacar, depositar, verSaldo*/
+    const acoes = {
+
+        saldo: user.saldo,
+
+        depositar(valor){
+            user.saldo += valor;
+        },
+
+        sacar(valor){
+            user.saldo -= valor;
+        },
+
+        verSaldo(){
+            return user.saldo;
+        }
+    };
+
 
     // Menu de opções
     while (true){
 
         // let pergunta = prompt('O que deseja fazer (depositar/sacar/ver saldo)?').toLowerCase();
-        let pergunta = 'sacar';
+        let pergunta = 'Depositar'.toLowerCase();
 
-        if (pergunta === 'depositar') console.log(depositar());
-        if (pergunta === 'sacar') console.log(sacar());
-        if (pergunta === 'ver saldo') console.log(`Saldo Atual: ${verSaldo()}`);
+        // const VALOR = Number(prompt(`Qual valor deseja ${pergunta}?`));
+        const VALOR = 200;
+
+        if (pergunta === 'depositar'){
+            acoes.depositar(VALOR);
+            console.log(`Valor do depósito: R$${VALOR},00`);
+        }
+        if (pergunta === 'sacar'){
+            if (VALOR > user.saldo){
+                console.log(`SALDO INSUFICIENTE! -> Tentativa de saque no valor de R$${VALOR},00`);
+            } else {
+                acoes.sacar(VALOR);
+                console.log(`Valor do saque: R$${VALOR},00`);
+            }
+        };
+        if (pergunta === 'ver saldo') console.log(`Saldo Atual: R$${acoes.verSaldo()},00`);
 
         // let resp = prompt('Deseja continuar? (s/n)').toLowerCase();
         let resp = 'n';
         if (resp === 'n'){
             break;
-        }
-    }
+        };
+    };
 
     console.log(user);
-
-// slice / Math.floor / Math.random / regex
-// funcoes / arrow / UUID

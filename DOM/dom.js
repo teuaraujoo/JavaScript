@@ -17,7 +17,7 @@ let teste = document.querySelector('.titulo2');
 
 // -------------------------------------------------------------------------
 
-let nome = prompt('Digite seu nome');
+// let nome = prompt('Digite seu nome');
 let newTitle = document.getElementById('titulo1').innerHTML = `Seja bem vindo ${prompt("Qual seu nome?") /* ou ${nome} */}`;
 
 let novoElemento = document.createElement("h2");

@@ -1,0 +1,3 @@
+str.split([separator[, limit]]);
+
+O método split() divide uma String em uma lista ordenada de substrings, coloca essas substrings em um array e retorna o array.

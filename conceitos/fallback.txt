@@ -1,0 +1,11 @@
+Fallback em JavaScript é uma estratégia de contingência para fornecer uma alternativa funcional quando a opção principal falha, garantindo que o sistema continue operando, evitando travamentos e melhorando a experiência do usuário
+
+ex: 
+
+function processarPagamento(pagamentoAprovado) {
+  if (pagamentoAprovado) {
+    console.log("Pagamento aprovado ✅");
+  } else {
+    console.log("Pagamento recusado ❌"); // fallback
+  }
+}

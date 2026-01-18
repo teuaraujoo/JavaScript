@@ -9,33 +9,33 @@
 
 // 2026-01-17T18:03:08.468Z -> formato de saída new Date();
 
-const VALIDADE = "16/08/27";
+const VALIDITY = "16/08/27";
 
-function situacaoProduto (validade) {
+function productCondition (validity) {
 
-    const validarProduto = () => {
+    const productValidate = () => {
 
-        const hoje = new Date();
+        const today = new Date();
 
-        const [diaV, mesV, anoV] = validade.split('/');
+        const [dayV, monthV, yearV] = validity.split('/');
 
-        const dia = Number(diaV);
-        const mes = Number(mesV);
-        const ano = Number('20' + anoV);
+        const day = Number(dayV);
+        const month = Number(monthV);
+        const year = Number('20' + yearV);
 
-        const DATA_VALIDADE = new Date(ano, mes - 1, dia);
+        const VALIDITY_DATE = new Date(year, month - 1, day);
 
-        return DATA_VALIDADE > hoje;
+        return VALIDITY_DATE > today;
     };
 
 
-    return validarProduto();
+    return productValidate();
 };
 
-const situacao = situacaoProduto(VALIDADE);
+const condition = productCondition(VALIDITY);
 
-if (!situacao){
-    console.log("Produto inválido!");
+if (!condition){
+    console.log("Invalid Product!");
 } else {
-    console.log("Produto válido!");
+    console.log("Valid Product!");
 };

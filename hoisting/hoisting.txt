@@ -1,0 +1,3 @@
+ comportamento padrão de "içar" (mover para o topo) as declarações de variáveis (var) e funções para o topo do seu escopo (função ou global) durante a fase de compilação, permitindo seu uso antes da declaração no código
+
+ funções são totalmente elevadas, var é elevado com valor undefined, enquanto let e const são elevadas para uma Zona Morta Temporal (TDZ), causando erro se usadas antes da inicialização, o que previne bugs comuns.

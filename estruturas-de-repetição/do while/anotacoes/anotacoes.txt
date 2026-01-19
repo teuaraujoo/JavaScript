@@ -1,0 +1,34 @@
+while -> verifica a condição e executa o laço - VERIFICA ANTES
+
+do while -> executa o laço e depois verifica a condição -> executa pelo menos 1 vez sempre - VERIFICA DEPOIS
+
+
+EXEMPLOS:
+
+💼 Exemplo real — sistema bancário
+while (senhaDigitada !== senhaCorreta) {
+    senhaDigitada = prompt("Digite a senha novamente:");
+}
+
+
+✔️ Se a senha estiver certa de primeira, não repete
+✔️ Controle total antes de executar
+
+
+-----------------------------------------------------------------
+
+
+💼 Exemplo real — menu de sistema
+let escolha;
+
+do {
+    console.log("1 - Sacar");
+    console.log("2 - Depositar");
+    console.log("3 - Sair");
+
+    escolha = prompt("Escolha uma opção");
+} while (escolha !== "3");
+
+
+✔️ Menu sempre aparece
+✔️ Só sai quando o usuário escolhe

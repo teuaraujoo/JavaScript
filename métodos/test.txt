@@ -1,0 +1,9 @@
+O método test() executa uma busca por uma correspondência entre uma expressão regular e uma string
+Retorna booleano
+
+
+
+
+Sintaxe: 
+
+regexObj.test(str)

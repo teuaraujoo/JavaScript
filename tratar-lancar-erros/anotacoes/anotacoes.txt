@@ -1,0 +1,59 @@
+StackTrace - rastreamento de pilha
+- é um relatório detalhado da sequência de chamadas de funções (o "caminho" do código) que um programa executou até o momento em que um erro ou exceção ocorreu, mostrando a hierarquia de chamadas, como funções que chamaram outras, e a linha de código exata onde o problema surgiu, sendo essencial para a depuração
+
+
+1- try (tentar) - tente fazer tal coisa...
+2- catch (pegar) - decidir o que o sistema vai fazer quando algo der errado / se tal coisa der erro, faça isso (informar ao user, armazenar log, retornar um valor alternativo, corrigir/contornar problema)
+
+try {
+    console.log(nao);
+} catch (error){
+    console.log('Variável indefinida')
+}
+
+3- throw - lançar
+
+function somar(x, y){
+    if (typeof x !== 'number' || typeof y !== 'number'){
+        throw('X e Y precisa ser números');
+    };
+
+    return x + y;
+};
+
+4- finally - executado sempre, independente de dar erro ou nao, o finally será executado
+
+
+- pode colocar try dentro de outro try, e por ai vai...
+- não expor o erro para o usuário (no front end)
+- não utilizar o console.log, apenas para teste
+
+✅ Quando você DEVE usar try/catch
+
+Use quando:
+
+Trabalhar com dados externos
+
+Usar JSON
+
+Trabalhar com Date
+
+Trabalhar com requisições
+
+Validar entradas do usuário
+
+👉 Erros previsíveis → if
+👉 Erros imprevisíveis → try/catch
+
+Faça essas perguntas:
+
+❓ Isso depende do usuário?
+
+❓ Isso depende de sistema externo?
+
+❓ Isso pode falhar sem eu controlar?
+
+❓ Se falhar, quebra o programa?
+
+Se sim → try/catch
+Se não → if

@@ -1,0 +1,45 @@
+setInterval - > intervalo de tempo, quanto tempo aquilo vai ficar rodando?
+setTimeout -> executa apenas uma vez
+
+setTimeout(funcao, tempoEmMs);
+setInterval(funcao, tempoEmMs);
+
+clearInterval()
+clearTimeout()
+
+Executar repetidamente -> setInterval
+Atualização constante -> setInterval
+
+Executar uma vez -> setTimeout
+Delay -> setTimeout
+
+
+Exemplos de uso
+
+✅1- Logout automático por inatividade (setTimeout)
+
+📌 Muito comum em bancos e sistemas internos
+
+setTimeout(() => {
+    console.log("Sessão expirada. Faça login novamente.");
+}, 900000); // 15 minutos
+
+✅2- Delay antes de redirecionar usuário
+
+📌 Após pagamento ou cadastro:
+
+console.log("Pagamento aprovado!");
+
+setTimeout(() => {
+    console.log("Redirecionando...");
+}, 2000)
+
+✅3- Bloqueio temporário por erro
+
+📌 Segurança (ex: tentativas de senha)
+
+console.log("Muitas tentativas!");
+
+setTimeout(() => {
+    console.log("Você pode tentar novamente");
+}, 30000);

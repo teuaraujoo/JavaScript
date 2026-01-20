@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Text:wght@200..700&display=swap');
+
+        :root {
+            --font-family: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-image: linear-gradient(to right top, #936bd1, #8f6fd6, #8a72da, #8576df, #8079e3, #7c7ae6, #787bea, #737ced, #6f7bf0, #6a7bf4, #657af7, #5f7afb);
+        }
+
+        body h1 {
+            font-family: var(--font-family);
+            font-size: 2rem;
+            color: white;
+        }
+
+        .container {
+            width: 600px;
+            height: 300px;
+            display: flex;
+            /* flex-direction: column; */
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border-radius: 10px;
+
+        }
+
+        .buttons {
+            position: absolute;
+            bottom: -20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .buttons button {
+            padding: 0.5rem 3rem 0.5rem 3rem;
+            border-radius: 10px;
+            border: 0px none;
+            color: black;
+            font-family: var(--font-family);
+            font-size: 0.8rem;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: black;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .timer h1 {
+            font-size: 10vw;
+            font-family: var(--font-family);
+            font-weight: 600;
+            color: rgb(235, 235, 235);
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+</head>
+
+<body> 
+    <h1> TIMER </h1>
+    <div class="container">
+        <div class="timer">
+            <h1 class="timer-text">00:00:00</h1>
+        </div>
+        <div class="buttons">
+            <button class="start">Iniciar</button>
+            <button class="pause">Pausar</button>
+            <button class="reset">Resetar</button>
+        </div>
+    </div>
+
+    <script src="./cronometro.js"></script>
+</body>
+
+</html>

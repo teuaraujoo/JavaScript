@@ -1,0 +1,129 @@
+🟢 Exercício 1 — Erro simples
+
+Crie uma função que:
+
+Receba um valor
+
+Tente converter para número
+
+Se não for número, lance um erro
+
+Retorne o número se for válido
+
+📌 Use try, catch e throw.
+
+🟢 Exercício 2 — Validação de idade
+
+Crie uma função que:
+
+Receba uma idade
+
+Lance um erro se a idade for menor que 0 ou maior que 120
+
+Retorne "Idade válida" se estiver correta
+
+🟡 Exercício 3 — Divisão segura
+
+Crie uma função que:
+
+Receba dois números
+
+Lance erro se o divisor for 0
+
+Retorne o resultado da divisão
+
+Use finally para exibir "Operação finalizada"
+
+🟡 Exercício 4 — Leitura de JSON
+
+Crie uma função que:
+
+Receba uma string
+
+Tente converter para objeto usando JSON.parse
+
+Retorne null se o JSON for inválido
+
+Mostre uma mensagem de erro no catch
+
+🟡 Exercício 5 — Validação de CPF (simplificada)
+
+Crie uma função que:
+
+Lance erro se o CPF não tiver 11 números
+
+Lance erro se o CPF não for informado
+
+Retorne true se passar nas validações
+
+(Não precisa validar dígitos ainda)
+
+🟠 Exercício 6 — Sistema de saque
+
+Crie uma função que:
+
+Receba saldo e valor
+
+Lance erro se o valor for maior que o saldo
+
+Lance erro se o valor for negativo
+
+Retorne o novo saldo
+
+Use finally para registrar "Tentativa de saque concluída"
+
+🟠 Exercício 7 — Execução de função externa
+
+Crie uma função que:
+
+Receba outra função como parâmetro
+
+Execute essa função dentro de um try
+
+Capture erros caso a função falhe
+
+Mostre "Erro ao executar função"
+
+🔴 Exercício 8 — Validação de data de nascimento
+
+Crie uma função que:
+
+Receba uma data (string)
+
+Lance erro se a data for inválida
+
+Lance erro se a pessoa tiver menos de 18 anos
+
+Retorne "Acesso permitido" se estiver tudo certo
+
+🔴 Exercício 9 — Cadastro de produto
+
+Crie uma função que:
+
+Receba nome e preço
+
+Lance erro se o nome estiver vazio
+
+Lance erro se o preço for menor ou igual a zero
+
+Retorne um objeto produto válido
+
+🔥 Exercício 10 — DESAFIO (nível projeto)
+
+Crie uma função processarVenda que:
+
+Receba preço, saldo e validade do produto
+
+Lance erro se:
+
+Produto estiver vencido
+
+Saldo for insuficiente
+
+Preço for inválido
+
+Use finally para sempre exibir "Processo encerrado"
+
+Retorne "Venda realizada" se tudo estiver correto
+
+📌 Use try, catch, throw e finally obrigatoriamente.

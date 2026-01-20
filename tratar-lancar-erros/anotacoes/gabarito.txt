@@ -1,0 +1,182 @@
+🟢 Exercício 1 — Converter para número
+function converterNumero(valor) {
+    try {
+        const numero = Number(valor);
+
+        if (Number.isNaN(numero)) {
+            throw new Error("Valor não é um número");
+        }
+
+        return numero;
+    } catch (erro) {
+        console.log(erro.message);
+        return null;
+    }
+}
+
+
+📌 Uso real: entrada de formulários.
+
+🟢 Exercício 2 — Validação de idade
+function validarIdade(idade) {
+    try {
+        if (idade < 0 || idade > 120) {
+            throw new Error("Idade inválida");
+        }
+
+        return "Idade válida";
+    } catch (erro) {
+        return erro.message;
+    }
+}
+
+🟡 Exercício 3 — Divisão segura
+function dividir(a, b) {
+    try {
+        if (b === 0) {
+            throw new Error("Divisão por zero");
+        }
+
+        return a / b;
+    } catch (erro) {
+        console.log(erro.message);
+        return null;
+    } finally {
+        console.log("Operação finalizada");
+    }
+}
+
+🟡 Exercício 4 — Leitura de JSON
+function lerJSON(texto) {
+    try {
+        return JSON.parse(texto);
+    } catch {
+        console.log("JSON inválido");
+        return null;
+    }
+}
+
+
+📌 JSON.parse sempre deve estar em try/catch.
+
+🟡 Exercício 5 — Validação de CPF (simples)
+function validarCPF(cpf) {
+    try {
+        if (!cpf) {
+            throw new Error("CPF não informado");
+        }
+
+        cpf = cpf.replace(/\D/g, '');
+
+        if (cpf.length !== 11) {
+            throw new Error("CPF inválido");
+        }
+
+        return true;
+    } catch (erro) {
+        console.log(erro.message);
+        return false;
+    }
+}
+
+🟠 Exercício 6 — Sistema de saque
+function sacar(saldo, valor) {
+    try {
+        if (valor <= 0) {
+            throw new Error("Valor inválido");
+        }
+
+        if (valor > saldo) {
+            throw new Error("Saldo insuficiente");
+        }
+
+        return saldo - valor;
+    } catch (erro) {
+        console.log(erro.message);
+        return saldo;
+    } finally {
+        console.log("Tentativa de saque concluída");
+    }
+}
+
+🟠 Exercício 7 — Execução de função externa
+function executar(funcao) {
+    try {
+        funcao();
+    } catch {
+        console.log("Erro ao executar função");
+    }
+}
+
+
+📌 Muito usado em callbacks e eventos.
+
+🔴 Exercício 8 — Data de nascimento
+function validarNascimento(data) {
+    try {
+        const nascimento = new Date(data);
+
+        if (isNaN(nascimento.getTime())) {
+            throw new Error("Data inválida");
+        }
+
+        const hoje = new Date();
+        const idade = hoje.getFullYear() - nascimento.getFullYear();
+
+        if (idade < 18) {
+            throw new Error("Menor de idade");
+        }
+
+        return "Acesso permitido";
+    } catch (erro) {
+        return erro.message;
+    }
+}
+
+🔴 Exercício 9 — Cadastro de produto
+function cadastrarProduto(nome, preco) {
+    try {
+        if (!nome) {
+            throw new Error("Nome inválido");
+        }
+
+        if (preco <= 0) {
+            throw new Error("Preço inválido");
+        }
+
+        return {
+            nome,
+            preco
+        };
+    } catch (erro) {
+        console.log(erro.message);
+        return null;
+    }
+}
+
+🔥 Exercício 10 — DESAFIO (nível projeto)
+function processarVenda(preco, saldo, validade) {
+    try {
+        if (preco <= 0) {
+            throw new Error("Preço inválido");
+        }
+
+        if (saldo < preco) {
+            throw new Error("Saldo insuficiente");
+        }
+
+        const hoje = new Date();
+        const [mes, ano] = validade.split('/');
+        const dataValidade = new Date(Number('20' + ano), Number(mes), 0);
+
+        if (dataValidade < hoje) {
+            throw new Error("Produto vencido");
+        }
+
+        return "Venda realizada";
+    } catch (erro) {
+        return erro.message;
+    } finally {
+        console.log("Processo encerrado");
+    }
+}

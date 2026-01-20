@@ -1,6 +1,7 @@
 // cadastrar jogadores ✅
 // verificar senha ✅
 // verificar email - já existe? 
+// cadastrar pontos
 
 const users = [];
 

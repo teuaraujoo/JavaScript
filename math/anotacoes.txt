@@ -1,0 +1,12 @@
+É um objeto pórém não é um objeto global, você não pode usá-lo com o new.... Os métodos e propriedades do Math são estáticos
+
+const test  = new Math();
+console.log(test); TypeError: Math is not a constructor
+
+Mais usados:
+
+1 - Math.random()
+Retorna um número pseudoaleatório entre 0 e 1.
+
+2- Math.floor()
+sempre arredonda para baixo e retorna o maior inteiro menor ou igual a um número dado.

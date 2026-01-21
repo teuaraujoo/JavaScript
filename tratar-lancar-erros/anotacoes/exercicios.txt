@@ -56,8 +56,6 @@ Lance erro se o CPF não for informado
 
 Retorne true se passar nas validações
 
-(Não precisa validar dígitos ainda)
-
 🟠 Exercício 6 — Sistema de saque
 
 Crie uma função que:

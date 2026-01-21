@@ -1,0 +1,1 @@
+JavaScript ES6 (ou ECMAScript 2015) é a sexta edição do padrão oficial da linguagem JavaScript

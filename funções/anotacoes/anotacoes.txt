@@ -1,0 +1,27 @@
+- funções retornam valores/alguma coisa
+
+1- first-class-expression -> expressao de primeira classe -> é algo que pode ser tratado como qualquer outra variável: pode ser atribuído a uma variável, passado como argumento para outras funções e retornado por funções
+- tratar as funções como dados
+
+2- function expression -> é uma função criada e atribuída a uma variável, podendo ser anônima (sem nome) ou nomeada
+
+ex: 
+
+function ola (){
+    console.log(    'ola');
+}
+
+const saudar = ola;
+
+saudar();
+
+ex:
+
+const ola = function (){
+    console.log('ola')
+}
+
+
+argumentos (arguments) -> onde guarda todos os valores dos argumentos enviados
+
+- arrow functions não possuem argumentos

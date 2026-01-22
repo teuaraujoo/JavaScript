@@ -25,3 +25,16 @@ const ola = function (){
 argumentos (arguments) -> onde guarda todos os valores dos argumentos enviados
 
 - arrow functions não possuem argumentos
+
+
+
+🔁 Retorno da função
+
+funcoes que nao retornam nada tem valor undefined 
+
+ex: 
+
+function teste(){ 
+}
+const t = teste();
+console.log(t) // undefined

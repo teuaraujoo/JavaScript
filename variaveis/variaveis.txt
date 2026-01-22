@@ -70,3 +70,9 @@ https://www.devmedia.com.br/javascript-variaveis-e-constantes/41012
 
 Toda variável deve ser declarada com const ou let
 Nunca confie em variável sem declaração
+
+
+constantes em maisculo são para dados imutáveis.
+ex: 
+const PI = 3.14;
+const DESCONTO = 0.5;

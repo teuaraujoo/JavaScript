@@ -100,7 +100,7 @@ function notaFiscal() {
     try {
         validarCliente(nome, cpf);
     } catch (e){
-        console.log(e.message);
+        console.error(e.message);
         return;
     }
 
@@ -112,7 +112,7 @@ function notaFiscal() {
         try {
             adicionarCarrinho(produto, quantidade);
         } catch (e) {
-            console.log(e.message);
+            console.error(e.message);
             return;
         };
 
@@ -127,7 +127,7 @@ function notaFiscal() {
     try {
         validarFormaPagamento(FORMA_PAGAMENTO);
     } catch (e){
-        console.log(e.message);
+        console.error(e.message);
         return;
     }
 

@@ -21,12 +21,17 @@ const ola = function (){
     console.log('ola')
 }
 
+📃 argumentos (arguments) -> onde guarda todos os valores dos argumentos enviados
 
-argumentos (arguments) -> onde guarda todos os valores dos argumentos enviados
+❌ Argumento x Parâmetro
 
-- arrow functions não possuem argumentos
+function saudacao(*nome* -> 'nome' é um PARÂMETRO){
+    print("Olá " + nome);
+};
 
+saudacao(*'Maria'*);  ->  # "Maria" é o ARGUMENTO
 
+-------------------------------------------------------------------------------------------------
 
 🔁 Retorno da função
 

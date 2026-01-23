@@ -6,3 +6,19 @@ ex: const soma = (v1, v2) => {return v1 + v2}
 
 se a funcao tiver apenas um parâmetro não precisa colocar os parenteses 
 ex: const nome = n => {return n}
+
+🔴 arrow functions não possuem seu prórpio objeto (argumento)
+ex: 
+1️⃣
+const test = () => {
+    console.log(arguments)
+};
+console.log(test(1, 2, 3, 4)) // Saída -> '0': {}, '1': [Function: require] ......
+
+❌
+
+2️⃣
+function test (){
+    console.log(arguments);
+};
+console.log(test(1, 2, 3, 4)) //Saída -> [Arguments] { '0': 1, '1': 2, '2': 3, '3': 4 }

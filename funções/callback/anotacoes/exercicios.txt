@@ -1,0 +1,70 @@
+🟢 Exercício 1 — Callback básica
+
+Crie uma função executarMensagem que receba uma função callback.
+A callback deve apenas exibir no console a mensagem "Olá, callback!".
+
+🟢 Exercício 2 — Callback com parâmetro
+
+Crie uma função mostrarValor(valor, callback) que receba um número e uma callback.
+A callback deve exibir o valor recebido no console.
+
+🟢 Exercício 3 — Operação matemática
+
+Crie uma função calcular(a, b, operacao)
+A callback operacao deve receber a e b e retornar o resultado.
+
+Teste com:
+
+soma
+
+subtração
+
+🟡 Exercício 4 — Validação simples
+
+Crie uma função validarIdade(idade, callback)
+Se a idade for maior ou igual a 18, chame a callback exibindo "Acesso permitido", senão "Acesso negado".
+
+🟡 Exercício 5 — Simulação de erro
+
+Crie uma função dividir(a, b, sucesso, erro)
+
+Se b === 0, chame a callback de erro
+
+Caso contrário, chame a callback de sucesso com o resultado
+
+🟡 Exercício 6 — Callback com tempo
+
+Use setTimeout dentro de uma função esperar(callback)
+Após 2 segundos, execute a callback exibindo "Tempo finalizado".
+
+🟠 Exercício 7 — Percorrendo array
+
+Crie uma função processarArray(array, callback)
+Ela deve chamar a callback para cada elemento do array.
+
+🟠 Exercício 8 — Filtro manual
+
+Crie uma função filtrarNumeros(array, callback)
+A callback deve decidir se o número entra ou não no novo array.
+
+Exemplo:
+
+filtrar apenas números pares
+
+🔴 Exercício 9 — Fluxo de cadastro
+
+Crie uma função cadastrarUsuario(nome, callback)
+
+Se o nome tiver menos de 3 letras, chame a callback com erro
+
+Caso contrário, chame a callback com sucesso
+
+🏆 Exercício 10 — Desafio: Simulador de banco
+
+Crie uma função operacaoBancaria(saldo, valor, sucesso, erro) que:
+
+Permite saque se houver saldo
+
+Bloqueia se não houver
+
+Usa callbacks para tratar sucesso e erro

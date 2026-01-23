@@ -1,0 +1,60 @@
+funcoes que sao passadas como parametros(argumento) para outras funcoes, que então é invocado dentro da função externa para completar alguma ação.
+
+ex:
+
+function greeting(name) {
+  alert("Olá " + name);
+}
+
+function processUserInput(callback) {
+  var name = prompt("Por favor insira seu nome.");
+  callback(name);
+}
+
+processUserInput(greeting);
+
+
+ex: 
+
+function executar(callback) {
+    callback();
+}
+
+function digaOi() {
+    console.log("Oi!");
+}
+
+executar(digaOi);
+
+
+🧠 Por que callbacks existem?
+
+Porque JavaScript é assíncrono.
+
+Muitas coisas não acontecem imediatamente, como:
+
+Esperar um tempo ⏱️
+
+Clicar em um botão 🖱️
+
+Buscar dados de uma API 🌐
+
+Ler arquivos 📄
+
+O callback diz ao JS:
+
+“Quando isso terminar, faz isso aqui”.
+
+------------------------------------------------
+
+📌 Regra prática pra saber quando usar callback
+
+Use callback quando:
+
+1- Algo depende de outra coisa terminar
+
+2- Você quer flexibilidade
+
+3- Você não quer “travar” o código
+
+4- Está lidando com eventos ou tempo

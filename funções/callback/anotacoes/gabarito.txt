@@ -1,0 +1,156 @@
+🟢 Exercício 1 — Callback básica
+function executarMensagem(callback) {
+    callback();
+}
+
+executarMensagem(() => {
+    console.log("Olá, callback!");
+});
+
+
+📌 Ideia-chave: função passada como argumento e executada depois.
+
+🟢 Exercício 2 — Callback com parâmetro
+function mostrarValor(valor, callback) {
+    callback(valor);
+}
+
+mostrarValor(10, (num) => {
+    console.log(num);
+});
+
+
+📌 Callback recebe dados enviados pela função principal.
+
+🟢 Exercício 3 — Operação matemática
+function calcular(a, b, operacao) {
+    return operacao(a, b);
+}
+
+const soma = (x, y) => x + y;
+const sub = (x, y) => x - y;
+
+console.log(calcular(10, 5, soma));
+console.log(calcular(10, 5, sub));
+
+
+📌 Muito usado em código reutilizável.
+
+🟡 Exercício 4 — Validação simples
+function validarIdade(idade, callback) {
+    if (idade >= 18) {
+        callback("Acesso permitido");
+    } else {
+        callback("Acesso negado");
+    }
+}
+
+validarIdade(20, (msg) => {
+    console.log(msg);
+});
+
+
+📌 A callback reage ao resultado da validação.
+
+🟡 Exercício 5 — Simulação de erro
+function dividir(a, b, sucesso, erro) {
+    if (b === 0) {
+        erro("Erro: divisão por zero");
+    } else {
+        sucesso(a / b);
+    }
+}
+
+dividir(
+    10,
+    2,
+    (resultado) => console.log("Resultado:", resultado),
+    (msgErro) => console.log(msgErro)
+);
+
+
+📌 Aqui você já vê o padrão sucesso / erro, muito comum em APIs.
+
+🟡 Exercício 6 — Callback com tempo
+function esperar(callback) {
+    setTimeout(() => {
+        callback();
+    }, 2000);
+}
+
+esperar(() => {
+    console.log("Tempo finalizado");
+});
+
+
+📌 Callback + assincronicidade 🔥
+
+🟠 Exercício 7 — Percorrendo array
+function processarArray(array, callback) {
+    for (let item of array) {
+        callback(item);
+    }
+}
+
+processarArray([1, 2, 3], (num) => {
+    console.log(num * 2);
+});
+
+
+📌 Isso é a base mental do forEach.
+
+🟠 Exercício 8 — Filtro manual
+function filtrarNumeros(array, callback) {
+    const resultado = [];
+
+    for (let n of array) {
+        if (callback(n)) {
+            resultado.push(n);
+        }
+    }
+
+    return resultado;
+}
+
+const pares = filtrarNumeros([1, 2, 3, 4, 5], (num) => num % 2 === 0);
+console.log(pares);
+
+
+📌 Aqui você recriou o filter, usando callback 👏
+
+🔴 Exercício 9 — Fluxo de cadastro
+function cadastrarUsuario(nome, callback) {
+    if (nome.length < 3) {
+        callback("Erro: nome inválido");
+    } else {
+        callback(`Usuário ${nome} cadastrado com sucesso`);
+    }
+}
+
+cadastrarUsuario("Jo", (msg) => console.log(msg));
+
+
+📌 Muito usado em formulários e validações.
+
+🏆 Exercício 10 — Desafio: Simulador de banco
+function operacaoBancaria(saldo, valor, sucesso, erro) {
+    if (valor <= saldo) {
+        sucesso(saldo - valor);
+    } else {
+        erro("Saldo insuficiente");
+    }
+}
+
+operacaoBancaria(
+    100,
+    40,
+    (novoSaldo) => console.log("Novo saldo:", novoSaldo),
+    (msgErro) => console.log(msgErro)
+);
+
+
+📌 Callback separa:
+
+regra de negócio
+
+reação ao resultado

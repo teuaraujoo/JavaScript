@@ -1,0 +1,74 @@
+O que é  estado (state)?
+- Estado é o valor atual de algo ao longo do tempo.
+
+Em programação:
+Estado = dados que podem mudar conforme o programa roda
+
+
+
+ex: 
+
+let saldo = 100; // estado inicial
+
+saldo -= 20;    // estado mudou
+saldo += 50;    // estado mudou de novo
+
+console.log(saldo);
+
+ex:
+
+let pontos = 0;
+
+function ganharPontos() {
+    pontos += 10;
+}
+
+ganharPontos();
+ganharPontos();
+
+console.log(pontos); // 20
+
+
+🔹 Estado controlado (Closure entra aqui 👀)
+
+function criarConta() {
+    let saldo = 0; // estado privado
+
+    return {
+        depositar(valor) {
+            saldo += valor;
+            return saldo;
+        },
+        sacar(valor) {
+            saldo -= valor;
+            return saldo;
+        }
+    };
+}
+
+const conta = criarConta();
+
+console.log(conta.depositar(100));
+console.log(conta.sacar(40));
+📌 Aqui:
+saldo é estado, mas ninguém acessa direto, só muda via funções -> Isso é controle de estado
+
+
+
+TIPOS DE ESTADO
+
+🔸 Estado local
+
+Dentro de uma função
+Curta duração
+
+🔸 Estado global
+
+Variáveis globais
+Deve ser evitado quando possível
+
+🔸 Estado persistente
+
+Banco de dados
+localStorage
+cookies

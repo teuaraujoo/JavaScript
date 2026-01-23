@@ -12,7 +12,7 @@ function mostrar() {
 
 mostrar(); // Mateus
 
-
+❗ tentamos sempre fugir do escopo global no browser para não serem manipualdas
 ------------------------------------------------------------------
 
 

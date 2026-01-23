@@ -1,0 +1,60 @@
+funções imediatas = funções autoinvocadas = Immediately Invoked Function Expression = IIFE
+- função que é executada assim que definida, ajuda a fugir do escopo global
+- Previne o acesso externo a variáveis locais (variáveis declaradas dentro da IIFE) e também evita que elas poluam o escopo global 
+
+🔴 SINTAXE: 
+(function (parametros){
+    // código da função
+})(argumentos); -> invocação da função
+
+
+- também pode ser utilizado arrow function 
+ex:
+
+(() => {
+    console.log('Executou imediatamente');
+})();
+
+ex:
+
+(function () {
+  var nome = "Felipe";
+  console.log(nome)
+})(); // SAÍDA -> Felipe
+// A variável nome não é acessível fora do escopo da expressão
+nome; // gerará o erro "Uncaught ReferenceError: nome is not defined"
+
+
+❓ Porque IIFE existem?
+
+Antes de let e const, não existia escopo de bloco, só escopo global e de função.
+
+Então a IIFE era usada para:
+
+- Evitar poluir o escopo global
+
+- Isolar variáveis
+
+- Criar “mini módulos”
+
+❓Clousure X IIFE
+
+🟦 IIFE
+
+- É sobre QUANDO a função executa
+Executa imediatamente
+Cria um escopo isolado
+Normalmente não guarda estado
+executar agora e encerrar -> executar algo uma vez
+inicializar sistema
+proteger variáveis temporárias
+
+🟧 Closure
+
+- É sobre O QUE a função consegue lembrar
+
+Uma função lembra variáveis do escopo onde foi criada, mesmo depois desse escopo “ter acabado”
+memória + acesso contínuo
+manter dados privados
+controlar estado (saldo, pontos, sessão)
+criar contadores, criar serviços, simular classes

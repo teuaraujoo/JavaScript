@@ -1,4 +1,5 @@
 - associa uma propriedade de um objeto a uma função que será chamada quando tal propriedade é acessada.
+- get -> obter
 
 SINTAXE:
 

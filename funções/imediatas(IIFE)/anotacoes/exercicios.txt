@@ -1,0 +1,99 @@
+🟢 Exercício 1 — IIFE básica
+
+Crie uma IIFE que apenas exiba no console a mensagem:
+
+"Função imediata executada"
+
+🟢 Exercício 2 — IIFE com variável interna
+
+Crie uma IIFE que:
+
+declare uma variável nome
+
+atribua um valor a ela
+
+exiba no console
+
+🟢 Exercício 3 — IIFE com parâmetros
+
+Crie uma IIFE que receba dois números como parâmetro e exiba a soma deles no console.
+
+🟡 Exercício 4 — IIFE retornando valor
+
+Crie uma IIFE que:
+
+calcule dois números
+
+retorne o resultado
+
+armazene o retorno em uma variável externa
+
+exiba essa variável no console
+
+🟡 Exercício 5 — IIFE para inicialização
+
+Crie uma IIFE que:
+
+exiba "Sistema iniciado"
+
+simule uma configuração inicial (ex: versão, modo debug, etc.)
+
+🟡 Exercício 6 — IIFE + função interna
+
+Crie uma IIFE que contenha:
+
+uma função interna
+
+essa função interna deve ser chamada dentro da IIFE
+
+a função interna deve exibir uma mensagem no console
+
+🟠 Exercício 7 — IIFE com retorno de função
+
+Crie uma IIFE que:
+
+tenha uma variável interna contador
+
+retorne uma função que incrementa esse contador
+
+use essa função fora da IIFE duas vezes
+
+(observe o comportamento)
+
+🟠 Exercício 8 — IIFE simulando módulo
+
+Crie uma IIFE que:
+
+tenha duas funções internas (somar e subtrair)
+
+retorne um objeto com essas funções
+
+use as funções fora da IIFE
+
+🔴 Exercício 9 — IIFE + validação
+
+Crie uma IIFE que:
+
+receba um valor
+
+valide se ele é maior que zero
+
+retorne true ou false
+
+armazene o retorno e exiba no console
+
+🏆 Exercício 10 — DESAFIO (nível real)
+
+Crie uma IIFE que simule um sistema de pontos:
+
+tenha um estado interno pontos
+
+retorne funções para:
+
+adicionar pontos
+
+consultar pontos
+
+não permita acesso direto à variável pontos
+
+(pense em proteção de estado)

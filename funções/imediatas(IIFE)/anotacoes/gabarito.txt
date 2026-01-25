@@ -1,0 +1,148 @@
+🟢 Exercício 1 — IIFE básica
+(function () {
+    console.log("Função imediata executada");
+})();
+
+
+📌 Ponto-chave: a função executa no momento em que é criada.
+
+🟢 Exercício 2 — Variável interna (escopo)
+(function () {
+    let nome = "Mateus";
+    console.log(nome);
+})();
+
+
+❌ Fora da IIFE:
+
+// console.log(nome); // erro
+
+
+📌 A variável está isolada no escopo da IIFE.
+
+🟢 Exercício 3 — IIFE com parâmetros
+(function (a, b) {
+    console.log(a + b);
+})(5, 3);
+
+
+📌 Parâmetros funcionam normalmente.
+
+🟡 Exercício 4 — IIFE retornando valor
+const resultado = (function () {
+    return 10 * 2;
+})();
+
+console.log(resultado);
+
+
+📌 IIFE pode retornar valores.
+
+🟡 Exercício 5 — Inicialização de sistema
+(function () {
+    const versao = "1.0.0";
+    const debug = true;
+
+    console.log("Sistema iniciado");
+    console.log("Versão:", versao);
+})();
+
+
+📌 Muito usado para setup inicial.
+
+🟡 Exercício 6 — IIFE com função interna
+(function () {
+    function mensagem() {
+        console.log("Função interna executada");
+    }
+
+    mensagem();
+})();
+
+
+📌 Funções internas ajudam a organizar o código.
+
+🟠 Exercício 7 — IIFE retornando função (estado)
+const contador = (function () {
+    let valor = 0;
+
+    return function () {
+        valor++;
+        return valor;
+    };
+})();
+
+console.log(contador());
+console.log(contador());
+
+
+📌 Aqui você já tem:
+
+IIFE
+
+estado
+
+closure
+
+🔥 Exemplo clássico.
+
+🟠 Exercício 8 — IIFE simulando módulo
+const calculadora = (function () {
+
+    function somar(a, b) {
+        return a + b;
+    }
+
+    function subtrair(a, b) {
+        return a - b;
+    }
+
+    return {
+        somar,
+        subtrair
+    };
+
+})();
+
+console.log(calculadora.somar(10, 5));
+console.log(calculadora.subtrair(10, 5));
+
+
+📌 Isso é o Module Pattern.
+
+🔴 Exercício 9 — IIFE com validação
+const valido = (function (valor) {
+    return valor > 0;
+})(10);
+
+console.log(valido);
+
+
+📌 Validação encapsulada.
+
+🏆 Exercício 10 — DESAFIO: Sistema de pontos
+const sistemaPontos = (function () {
+    let pontos = 0;
+
+    return {
+        adicionar(valor) {
+            pontos += valor;
+        },
+        consultar() {
+            return pontos;
+        }
+    };
+})();
+
+sistemaPontos.adicionar(10);
+sistemaPontos.adicionar(20);
+
+console.log(sistemaPontos.consultar());
+
+
+📌 pontos:
+
+não é acessível diretamente
+
+só muda via funções
+➡️ controle de estado real

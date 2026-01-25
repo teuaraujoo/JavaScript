@@ -1,0 +1,3 @@
+- uma função de fábrica é simplesmente uma função que cria objetos e os retorna (métodos).
+
+- É uma forma simples e poderosa de criar sistemas sem classes 

@@ -1,0 +1,110 @@
+🟢 Exercício 1 — Usuário básico
+
+Crie uma factory function criarUsuario(nome, idade) que retorne um objeto com:
+
+nome
+
+idade
+
+método apresentar() que use this para exibir:
+
+"Olá, meu nome é X e tenho Y anos"
+
+🟢 Exercício 2 — Produto
+
+Crie uma factory function criarProduto(nome, preco) que tenha:
+
+nome
+
+preco
+
+método desconto(percentual) que altere o preço usando this
+
+🟡 Exercício 3 — Conta bancária simples
+
+Crie uma factory function criarConta(saldoInicial) que retorne:
+
+saldo
+
+método depositar(valor)
+
+método sacar(valor)
+Todos devem usar this.saldo.
+
+🟡 Exercício 4 — Validação interna
+
+Crie uma factory function criarPessoa(nome, idade) que tenha:
+
+método ehMaiorDeIdade()
+Usar this.idade para retornar true ou false.
+
+🟡 Exercício 5 — Carrinho de compras
+
+Crie uma factory function criarCarrinho() que tenha:
+
+array itens
+
+método adicionarItem(nome, preco)
+
+método total() que soma os preços usando this.itens
+
+🟠 Exercício 6 — Sistema de pontos
+
+Crie uma factory function criarJogador(nome) que tenha:
+
+nome
+
+pontos
+
+método ganharPontos(valor)
+
+método perderPontos(valor)
+Tudo controlado com this.
+
+🟠 Exercício 7 — Controle de acesso
+
+Crie uma factory function criarSistemaLogin(usuario, senha) que tenha:
+
+método login(user, pass)
+
+método logout()
+Use this para controlar se o usuário está logado.
+
+🔴 Exercício 8 — Agenda de contatos
+
+Crie uma factory function criarAgenda() que tenha:
+
+array contatos
+
+método adicionarContato(nome, telefone)
+
+método listarContatos()
+
+🔴 Exercício 9 — Validador de produto
+
+Crie uma factory function criarProdutoValido(nome, validade) que tenha:
+
+método estaValido()
+Use this.validade e Date para validar.
+
+🏆 Exercício 10 — DESAFIO (nível real)
+
+Crie uma factory function criarContaBancaria(titular) que tenha:
+
+titular
+
+saldo
+
+método depositar
+
+método sacar
+
+método extrato()
+
+Regras:
+
+não permitir saque maior que o saldo
+
+todas as operações devem usar this
+
+simular um sistema real

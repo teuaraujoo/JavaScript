@@ -1,0 +1,29 @@
+- associa uma propriedade de um objeto a uma função que será chamada quando tal propriedade é acessada.
+
+SINTAXE:
+
+{get prop() { ... } }
+
+prop
+O nome da propriedade à qual a função dada será associada.
+
+Pode haver um identificador que seja um número ou uma string;
+Deve haver exatamente zero parâmetros
+Não deve haver mais de um getter para a mesma propriedade nem uma propriedade comum como o mesmo nome do getter
+
+
+- Às vezes é desejável que se permita acesso a uma propriedade que retorna um valor computado dinamicamente, ou você pode querer refletir o status de uma variável interna sem requerer o uso de chamadas de método explícitas
+
+- Não é possível simultaneamente ter um getter associado a uma propriedade e a mesma possuir um valor, embora seja possível usar um getter e um setter em conjunto para criar algo como uma pseudo-propriedade.
+
+ex: 
+
+var expr = "foo";
+
+var obj = {
+  get [expr]() {
+    return "bar";
+  },
+};
+
+console.log(obj.foo); // "bar"

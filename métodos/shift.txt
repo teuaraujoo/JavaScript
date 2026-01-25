@@ -1,0 +1,11 @@
+remove o primeiro elemento de um array e retorna esse elemento. Este método muda o tamanho do array.
+
+ex: 
+
+const array1 = [1, 2, 3];
+
+const firstElement = array1.shift();
+
+console.log(array1); // [2, 3]
+
+console.log(firstElement); // 1

@@ -1,0 +1,189 @@
+🟢 Exercício 1 — Usuário básico
+function criarUsuario(nome, idade) {
+    return {
+        nome,
+        idade,
+        apresentar() {
+            console.log(`Olá, meu nome é ${this.nome} e tenho ${this.idade} anos`);
+        }
+    };
+}
+
+const user = criarUsuario("Mateus", 18);
+user.apresentar();
+
+
+📌 this aponta para o objeto retornado.
+
+🟢 Exercício 2 — Produto
+function criarProduto(nome, preco) {
+    return {
+        nome,
+        preco,
+        desconto(percentual) {
+            this.preco -= this.preco * (percentual / 100);
+        }
+    };
+}
+
+const produto = criarProduto("Tênis", 200);
+produto.desconto(10);
+console.log(produto.preco);
+
+🟡 Exercício 3 — Conta bancária simples
+function criarConta(saldoInicial) {
+    return {
+        saldo: saldoInicial,
+        depositar(valor) {
+            this.saldo += valor;
+        },
+        sacar(valor) {
+            this.saldo -= valor;
+        }
+    };
+}
+
+const conta = criarConta(100);
+conta.depositar(50);
+conta.sacar(30);
+console.log(conta.saldo);
+
+🟡 Exercício 4 — Validação interna
+function criarPessoa(nome, idade) {
+    return {
+        nome,
+        idade,
+        ehMaiorDeIdade() {
+            return this.idade >= 18;
+        }
+    };
+}
+
+const pessoa = criarPessoa("Ana", 17);
+console.log(pessoa.ehMaiorDeIdade());
+
+🟡 Exercício 5 — Carrinho de compras
+function criarCarrinho() {
+    return {
+        itens: [],
+        adicionarItem(nome, preco) {
+            this.itens.push({ nome, preco });
+        },
+        total() {
+            let soma = 0;
+            for (const item of this.itens) {
+                soma += item.preco;
+            }
+            return soma;
+        }
+    };
+}
+
+const carrinho = criarCarrinho();
+carrinho.adicionarItem("Camisa", 50);
+carrinho.adicionarItem("Calça", 100);
+console.log(carrinho.total());
+
+🟠 Exercício 6 — Sistema de pontos
+function criarJogador(nome) {
+    return {
+        nome,
+        pontos: 0,
+        ganharPontos(valor) {
+            this.pontos += valor;
+        },
+        perderPontos(valor) {
+            this.pontos -= valor;
+        }
+    };
+}
+
+const jogador = criarJogador("Player 1");
+jogador.ganharPontos(20);
+jogador.perderPontos(5);
+console.log(jogador.pontos);
+
+🟠 Exercício 7 — Controle de acesso
+function criarSistemaLogin(usuario, senha) {
+    return {
+        usuario,
+        senha,
+        logado: false,
+        login(user, pass) {
+            if (user === this.usuario && pass === this.senha) {
+                this.logado = true;
+                return true;
+            }
+            return false;
+        },
+        logout() {
+            this.logado = false;
+        }
+    };
+}
+
+const sistema = criarSistemaLogin("admin", "123");
+console.log(sistema.login("admin", "123"));
+
+🔴 Exercício 8 — Agenda de contatos
+function criarAgenda() {
+    return {
+        contatos: [],
+        adicionarContato(nome, telefone) {
+            this.contatos.push({ nome, telefone });
+        },
+        listarContatos() {
+            for (const contato of this.contatos) {
+                console.log(`${contato.nome} - ${contato.telefone}`);
+            }
+        }
+    };
+}
+
+const agenda = criarAgenda();
+agenda.adicionarContato("João", "9999-9999");
+agenda.listarContatos();
+
+🔴 Exercício 9 — Validador de produto
+function criarProdutoValido(nome, validade) {
+    return {
+        nome,
+        validade,
+        estaValido() {
+            const hoje = new Date();
+            const [mes, ano] = this.validade.split('/');
+            const dataValidade = new Date(`20${ano}`, mes, 0);
+            return dataValidade >= hoje;
+        }
+    };
+}
+
+const produto = criarProdutoValido("Leite", "08/27");
+console.log(produto.estaValido());
+
+🏆 Exercício 10 — DESAFIO: Conta bancária completa
+function criarContaBancaria(titular) {
+    return {
+        titular,
+        saldo: 0,
+        depositar(valor) {
+            this.saldo += valor;
+        },
+        sacar(valor) {
+            if (valor > this.saldo) {
+                console.log("Saldo insuficiente");
+                return;
+            }
+            this.saldo -= valor;
+        },
+        extrato() {
+            console.log(`Titular: ${this.titular}`);
+            console.log(`Saldo: R$ ${this.saldo}`);
+        }
+    };
+}
+
+const conta = criarContaBancaria("Mateus");
+conta.depositar(500);
+conta.sacar(200);
+conta.extrato();

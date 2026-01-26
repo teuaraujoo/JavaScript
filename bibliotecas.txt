@@ -1,3 +1,8 @@
 sweet alert
 gsap
 21st.dev
+particle.js
+apexcharts
+sccrollreveal
+typed.js
+animes.js

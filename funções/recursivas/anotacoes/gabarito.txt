@@ -1,0 +1,134 @@
+🟢 Exercício 1 — Contagem regressiva
+function contagem(n) {
+    if (n < 0) return;          // caso base
+    console.log(n);
+    contagem(n - 1);            // chamada recursiva
+}
+
+contagem(5);
+
+🟢 Exercício 2 — Soma de 1 até n
+function soma(n) {
+    if (n === 1) return 1;      // caso base
+    return n + soma(n - 1);     // problema menor
+}
+
+console.log(soma(5)); // 15
+
+🟢 Exercício 3 — Fatorial
+function fatorial(n) {
+    if (n === 0) return 1;
+    return n * fatorial(n - 1);
+}
+
+console.log(fatorial(5)); // 120
+
+🟡 Exercício 4 — Contar elementos de um array
+function contarArray(arr) {
+    if (arr[0] === undefined) return 0;
+    return 1 + contarArray(arr.slice(1));
+}
+
+console.log(contarArray([1, 2, 3, 4]));
+
+
+📌 slice(1) reduz o problema a cada chamada.
+
+🟡 Exercício 5 — Soma de array
+function somarArray(arr) {
+    if (arr.length === 0) return 0;
+    return arr[0] + somarArray(arr.slice(1));
+}
+
+console.log(somarArray([1, 2, 3, 4]));
+
+🟠 Exercício 6 — Par ou ímpar (sem %)
+function parOuImpar(n) {
+    if (n === 0) return "Par";
+    if (n === 1) return "Ímpar";
+    return parOuImpar(n - 2);
+}
+
+console.log(parOuImpar(7));
+
+🟠 Exercício 7 — Potência
+function potencia(base, expoente) {
+    if (expoente === 0) return 1;
+    return base * potencia(base, expoente - 1);
+}
+
+console.log(potencia(2, 4)); // 16
+
+🔴 Exercício 8 — Array aninhado
+function somarAninhado(arr) {
+    let soma = 0;
+
+    for (const item of arr) {
+        if (Array.isArray(item)) {
+            soma += somarAninhado(item);
+        } else {
+            soma += item;
+        }
+    }
+
+    return soma;
+}
+
+console.log(somarAninhado([1, [2, 3], [4, [5]]]));
+
+
+📌 Recursão natural para estruturas aninhadas.
+
+🔴 Exercício 9 — Contar propriedades de objeto
+function contarProps(obj) {
+    let total = 0;
+
+    for (const chave in obj) {
+        total++;
+        if (typeof obj[chave] === 'object' && obj[chave] !== null) {
+            total += contarProps(obj[chave]);
+        }
+    }
+
+    return total;
+}
+
+const dados = {
+    nome: "Ana",
+    endereco: {
+        rua: "A",
+        cidade: "B"
+    }
+};
+
+console.log(contarProps(dados));
+
+🏆 Exercício 10 — DESAFIO: árvore de pastas
+function navegar(pasta, nivel = 0) {
+    const espaco = " ".repeat(nivel * 2);
+
+    for (const item of pasta) {
+        if (typeof item === "string") {
+            console.log(espaco + item);
+        } else {
+            console.log(espaco + item.nome);
+            navegar(item.conteudo, nivel + 1);
+        }
+    }
+}
+
+const sistema = [
+    "arquivo1.txt",
+    {
+        nome: "docs",
+        conteudo: [
+            "doc1.pdf",
+            {
+                nome: "imagens",
+                conteudo: ["img1.png", "img2.png"]
+            }
+        ]
+    }
+];
+
+navegar(sistema);

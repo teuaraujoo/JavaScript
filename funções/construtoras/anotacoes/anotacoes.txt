@@ -1,0 +1,11 @@
+tanto construct functions, tanto factory functions constroem objetos (molde)
+
+construct functions -> retornar e criam os objetos altomaticamente 
+- Mudar a convenção de como escrever funções
+1. Iniciar nome com letra maiúscula
+ex: 
+ factory functions = function criaPessoa(){...}
+ const pessoa = criaPessoa();
+
+ construct function = function Pessoa (){...}
+ const pessoa = new Pessoa();  

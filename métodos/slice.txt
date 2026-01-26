@@ -1,0 +1,7 @@
+O método slice() retorna uma cópia de parte de um array a partir de um subarray criado entre as posições início e fim.
+O arrary original não é modificado
+slice = fatiar
+
+SINTAXE:
+
+arr.slice([início[,fim]])

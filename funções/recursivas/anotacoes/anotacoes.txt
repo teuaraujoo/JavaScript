@@ -1,0 +1,50 @@
+uma funçaõ que ela mesma se chama de volta 
+
+Dois elementos obrigatórios:
+
+1️⃣ Caso base (parada)
+
+Condição que encerra a recursão
+
+Sem isso → loop infinito → crash 💥
+
+2️⃣ Caso recursivo
+
+A função chama a si mesma
+
+Com o problema menor do que antes
+
+
+
+
+
+
+🔹 Quando usar recursão?
+
+✅ 1. Problemas que se repetem naturalmente
+
+contagem
+soma acumulada
+cálculo progressivo
+
+✅ 2. Estruturas em forma de árvore
+
+DOM
+pastas e arquivos
+menus
+comentários aninhados
+Exemplo mental:
+uma pasta contém pastas, que contêm pastas…
+
+✅ 3. Algoritmos clássicos
+
+fatorial
+Fibonacci
+busca binária
+percorrer arrays aninhados
+
+❌ Quando NÃO usar recursão?
+
+quando um for ou while resolve mais fácil
+quando o problema é simples
+quando há risco de muitas chamadas (stack overflow)

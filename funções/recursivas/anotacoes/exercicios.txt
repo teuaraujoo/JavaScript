@@ -1,0 +1,61 @@
+🟢 Exercício 1 — Contagem regressiva
+
+Crie uma função recursiva que receba um número e imprima no console do número até 0.
+
+🟢 Exercício 2 — Soma de números
+
+Crie uma função recursiva que receba um número n e retorne a soma de 1 até n.
+
+🟢 Exercício 3 — Fatorial
+
+Crie uma função recursiva que calcule o fatorial de um número.
+
+🟡 Exercício 4 — Contar elementos de um array
+
+Crie uma função recursiva que conte quantos elementos existem em um array.
+
+(sem usar .length)
+
+🟡 Exercício 5 — Soma de array
+
+Crie uma função recursiva que some todos os valores de um array numérico.
+
+🟠 Exercício 6 — Verificar número par
+
+Crie uma função recursiva que determine se um número é par ou ímpar.
+
+(sem usar %)
+
+🟠 Exercício 7 — Potência
+
+Crie uma função recursiva que calcule base^expoente.
+
+🔴 Exercício 8 — Array aninhado
+
+Crie uma função recursiva que receba um array com outros arrays dentro e retorne a soma de todos os números.
+
+Exemplo:
+
+[1, [2, 3], [4, [5]]]
+
+🔴 Exercício 9 — Contar propriedades de objeto
+
+Crie uma função recursiva que conte todas as propriedades de um objeto, inclusive objetos aninhados.
+
+🏆 Exercício 10 — DESAFIO (nível real)
+
+Crie uma função recursiva que simule a navegação em uma árvore de pastas.
+
+Cada pasta pode conter:
+
+arquivos
+
+outras pastas
+
+A função deve:
+
+percorrer tudo
+
+exibir os nomes
+
+respeitar o nível de profundidade

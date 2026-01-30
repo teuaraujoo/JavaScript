@@ -16,4 +16,5 @@ function criarAgenda(){
 const agenda = criarAgenda();
 
 agenda.adicionarContato('Mateus', '79988887777');
-console.log(agenda.ListarContatos);
+agenda.adicionarContato('robert', '79988887777');
+console.log(agenda.contatos);

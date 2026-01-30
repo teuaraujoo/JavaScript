@@ -1,0 +1,7 @@
+splice = pop + push + shif + unshif
+- retorna array
+- aceita números negativos
+- altera o array original
+
+SINTAXE: 
+splice(índice/start, deleteCount, item1, item2, /* …, */ itemN)

@@ -1,0 +1,7 @@
+- executa uma dada função em cada elemento de um array.
+- mais uma forma de iterar arrays 
+
+SINTAXE: 
+
+arr.forEach(callback(valorInicial, índice, array), argumento); 
+argumento é opcional

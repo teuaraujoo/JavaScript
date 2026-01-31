@@ -1,4 +1,7 @@
+SINTAXE:
+
 array.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue);
+array.reduce((acumulador, valor, índice, array) => acumulador + valor, valorInicial);
 
 ex: 
 

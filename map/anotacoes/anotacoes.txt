@@ -1,12 +1,12 @@
 utilizado para percorrer arrays
-
 quando precisar trabalhar elemento por elemento da coleção
-
 vai iterar toda a coleção, não tem como "parar no meio" -> vai manipular dados de toda a coleção
-
 o map sempre precisa de return
+nao modifica o array original
 
-arr.map(elemento, índice);
+
+SINTAXE:
+arr.map(elemento, índice, array);
 
 
 ---------------------------

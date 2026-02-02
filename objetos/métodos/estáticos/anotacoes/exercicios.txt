@@ -1,0 +1,135 @@
+🟢 NÍVEL 1 — Entendimento básico
+1️⃣ Utilitário de números
+
+Crie um objeto NumeroUtils com métodos estáticos para:
+
+verificar se é número
+
+verificar se é par
+
+verificar se é positivo
+
+Uso esperado:
+
+NumeroUtils.isPar(10);
+
+2️⃣ Refatoração simples
+
+Você já fez função de soma.
+
+👉 Refatore para:
+
+Calculadora.somar(a, b);
+Calculadora.subtrair(a, b);
+
+
+Tudo como métodos estáticos.
+
+🟡 NÍVEL 2 — Organização e reutilização
+3️⃣ String Utils
+
+Crie um objeto StringUtils com métodos estáticos para:
+
+contar caracteres
+
+remover espaços
+
+transformar em camelCase
+
+4️⃣ Validador genérico
+
+Crie um objeto Validador com métodos estáticos:
+
+isEmail
+
+isCPF
+
+isVazio
+
+📌 Aqui você pode reutilizar lógica de exercícios antigos.
+
+🟡 NÍVEL 3 — Refatoração real
+5️⃣ Refatoração do CPF
+
+Você já fez um validador de CPF.
+
+👉 Refatore para:
+
+CPF.validar(cpf);
+CPF.limpar(cpf);
+
+
+Tudo estático.
+
+6️⃣ Refatoração da validade de produto
+
+Você já validou "08/27".
+
+👉 Crie:
+
+ProdutoUtils.validarValidade(validade);
+
+
+📌 Sem criar instância.
+
+🟠 NÍVEL 4 — Object.defineProperty
+7️⃣ Propriedade protegida
+
+Crie um objeto Usuario e use defineProperty para:
+
+criar cpf
+
+impedir alteração
+
+impedir enumeração
+
+Teste com:
+
+Object.keys(usuario);
+usuario.cpf = "123";
+
+8️⃣ Getter e setter
+
+Use defineProperty para criar:
+
+saldo
+
+depositar
+
+impedir saldo negativo
+
+📌 Não use classes.
+
+🔴 NÍVEL 5 — Object.defineProperties
+9️⃣ Sistema de configuração
+
+Crie um objeto Config com:
+
+ambiente (read-only)
+
+debug (true/false)
+
+versao (não enumerável)
+
+Tudo usando defineProperties.
+
+🏆 DESAFIO — Nível profissional
+🔟 Utils real de projeto
+
+Crie um objeto Utils com métodos estáticos para:
+
+formatar moeda
+
+validar CPF
+
+validar data
+
+gerar ID incremental
+
+Regras:
+
+nada de new
+
+nada de estado
+
+tudo reutilizável

@@ -1,0 +1,19 @@
+Métodos estáticos são funções que pertecem a uma classe/objeto e não a uma instância
+não cria um objeto para usar, usa direto no próprio objeto/classe
+
+ex: 
+
+const p1 = new Produto(parâmetros...);
+p1.keys() // Saída: TyperError
+Objecty.keys(p1); // Saída: chaves do objeto
+
+
+❌ não dependem de um objeto específico
+❌ não precisam de estado interno
+✅ servem como ferramentas gerais
+
+
+FUNCOES UTILITARIAS
+
+são funções auxiliares, resolvem tarefas comuns e específicas (reutilizável)
+

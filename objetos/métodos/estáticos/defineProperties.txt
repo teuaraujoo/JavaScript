@@ -1,0 +1,13 @@
+Quase a mesma coisa do defineProperty porém você consegue modificar várias properiedades ao invés de apenas 1
+
+SINTAXE: 
+Object.defineProperties(obj, props)
+
+Object.defineProperties(obj, {
+    prop1 {
+        ...
+    },
+    prop2 {
+        ...
+    },
+})

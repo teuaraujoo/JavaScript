@@ -1,0 +1,1 @@
+Uma CDN (Content Delivery Network ou Rede de Distribuição de Conteúdo) é um grupo de servidores geograficamente dispersos que armazenam cópias do conteúdo de um site próximo aos usuários finais.

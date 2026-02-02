@@ -1,5 +1,5 @@
 O que é  estado (state)?
-- Estado é o valor atual de algo ao longo do tempo.
+- Estado é um valor que pode mudar al longo do tempo e influência o ccomportamento do código
 
 Em programação:
 Estado = dados que podem mudar conforme o programa roda

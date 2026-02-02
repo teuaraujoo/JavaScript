@@ -1,0 +1,5 @@
+O Object.defineProperty()método estático define uma nova propriedade diretamente em um objeto, ou modifica uma propriedade existente em um objeto, e retorna o objeto.
+
+SINTAXE: 
+
+Object.defineProperty(obj, prop, descriptor)

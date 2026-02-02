@@ -1,0 +1,201 @@
+✅ GABARITO — Métodos Estáticos (JavaScript)
+🟢 1️⃣ NumeroUtils
+const NumeroUtils = {
+    isNumero(valor) {
+        return typeof valor === "number" && !isNaN(valor);
+    },
+    isPar(valor) {
+        return valor % 2 === 0;
+    },
+    isPositivo(valor) {
+        return valor > 0;
+    }
+};
+
+
+📌 Utilitário puro
+📌 Sem estado
+📌 Uso direto
+
+🟢 2️⃣ Calculadora (refatoração)
+const Calculadora = {
+    somar(a, b) {
+        return a + b;
+    },
+    subtrair(a, b) {
+        return a - b;
+    }
+};
+
+
+📌 Antes: funções soltas
+📌 Agora: organizadas por domínio
+
+🟡 3️⃣ StringUtils
+const StringUtils = {
+    contarCaracteres(texto) {
+        return texto.length;
+    },
+    removerEspacos(texto) {
+        return texto.replace(/\s+/g, "");
+    },
+    toCamelCase(texto) {
+        return texto
+            .toLowerCase()
+            .split(" ")
+            .map((p, i) =>
+                i === 0 ? p : p[0].toUpperCase() + p.slice(1)
+            )
+            .join("");
+    }
+};
+
+
+📌 Excelente uso de map + utilitário
+📌 Muito comum em projetos reais
+
+🟡 4️⃣ Validador genérico
+const Validador = {
+    isVazio(valor) {
+        return valor === "" || valor === null || valor === undefined;
+    },
+    isEmail(email) {
+        return /\S+@\S+\.\S+/.test(email);
+    },
+    isCPF(cpf) {
+        cpf = cpf.replace(/\D/g, "");
+        return cpf.length === 11;
+    }
+};
+
+
+📌 Validação ≠ estado
+📌 Método estático é ideal aqui
+
+🟡 5️⃣ CPF Utils (refatoração real)
+const CPF = {
+    limpar(cpf) {
+        return cpf.replace(/\D/g, "");
+    },
+    validar(cpf) {
+        cpf = this.limpar(cpf);
+        if (cpf.length !== 11) return false;
+        if (/^(\d)\1+$/.test(cpf)) return false;
+
+        let soma = 0;
+        for (let i = 0; i < 9; i++) {
+            soma += cpf[i] * (10 - i);
+        }
+
+        let dig1 = (soma * 10) % 11;
+        if (dig1 === 10) dig1 = 0;
+
+        soma = 0;
+        for (let i = 0; i < 10; i++) {
+            soma += cpf[i] * (11 - i);
+        }
+
+        let dig2 = (soma * 10) % 11;
+        if (dig2 === 10) dig2 = 0;
+
+        return dig1 == cpf[9] && dig2 == cpf[10];
+    }
+};
+
+
+📌 Refatoração profissional
+📌 Reutilizável
+📌 Sem instância
+
+🟠 6️⃣ ProdutoUtils (validade)
+const ProdutoUtils = {
+    validarValidade(validade) {
+        const [mes, ano] = validade.split("/");
+        const dataValidade = new Date(`20${ano}`, mes, 0);
+        return dataValidade >= new Date();
+    }
+};
+
+
+📌 Função pura
+📌 Ótimo exemplo de método estático
+
+🟠 7️⃣ defineProperty — propriedade protegida
+const usuario = {};
+
+Object.defineProperty(usuario, "cpf", {
+    value: "12345678900",
+    writable: false,
+    enumerable: false
+});
+
+usuario.cpf = "000"; // não altera
+console.log(Object.keys(usuario)); // não aparece
+
+
+📌 Segurança
+📌 Controle fino
+
+🟠 8️⃣ Getter / Setter com proteção
+const conta = {};
+let saldoInterno = 0;
+
+Object.defineProperty(conta, "saldo", {
+    get() {
+        return saldoInterno;
+    },
+    set(valor) {
+        if (valor < 0) return;
+        saldoInterno = valor;
+    }
+});
+
+
+📌 Encapsulamento
+📌 Controle de estado
+
+🔴 9️⃣ defineProperties — Config
+const Config = {};
+
+Object.defineProperties(Config, {
+    ambiente: {
+        value: "produção",
+        writable: false
+    },
+    debug: {
+        value: true,
+        writable: true
+    },
+    versao: {
+        value: "1.0.0",
+        enumerable: false
+    }
+});
+
+
+📌 Configuração real de projeto
+📌 Muito usado em libs
+
+🏆 🔟 Utils profissional
+const Utils = {
+    formatarMoeda(valor) {
+        return valor.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        });
+    },
+    gerarId() {
+        return Math.floor(Math.random() * 100000);
+    },
+    validarCPF(cpf) {
+        return CPF.validar(cpf);
+    },
+    validarData(data) {
+        return new Date(data) >= new Date();
+    }
+};
+
+
+📌 Organização
+📌 Reutilização
+📌 Padrão de mercado

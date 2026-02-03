@@ -1,0 +1,17 @@
+- método de string 
+- retorna uma nova string com uma, algumas ou todas as ocorrências de um valor pattern determinado substituídas por um valor replacement
+- o valor pattern pode ser uma string ou um Regex
+
+
+SINTAXE: 
+
+replace(pattern, replacement)
+
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+console.log(paragraph.replace("dog", "ferret")) // Output-> "I think Ruth's ferret is cuter than your dog!"
+
+ou 
+
+const regex = /dog/i;
+console.log(paragraph.replace(regex, "ferret")) // Output-> "I think Ruth's ferret is cuter than your dog!"
+

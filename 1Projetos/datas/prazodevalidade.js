@@ -11,10 +11,37 @@
 
 const VALIDITY = "16/08/27";
 
-function productCondition (validity) {
+// function productCondition (validity) {
 
-    const productValidate = () => {
+//     const productValidate = () => {
 
+//         const today = new Date();
+
+//         const [dayV, monthV, yearV] = validity.split('/');
+
+//         const day = Number(dayV);
+//         const month = Number(monthV);
+//         const year = Number('20' + yearV);
+
+//         const VALIDITY_DATE = new Date(year, month - 1, day);
+
+//         return VALIDITY_DATE > today;
+//     };
+
+
+//     return productValidate();
+// };
+
+// const condition = productCondition(VALIDITY);
+
+// if (!condition){
+//     console.log("Invalid Product!");
+// } else {
+//     console.log("Valid Product!");
+// };
+
+const ProductUtils = {
+    validateValidity(validity){
         const today = new Date();
 
         const [dayV, monthV, yearV] = validity.split('/');
@@ -26,16 +53,7 @@ function productCondition (validity) {
         const VALIDITY_DATE = new Date(year, month - 1, day);
 
         return VALIDITY_DATE > today;
-    };
+    }
+}
 
-
-    return productValidate();
-};
-
-const condition = productCondition(VALIDITY);
-
-if (!condition){
-    console.log("Invalid Product!");
-} else {
-    console.log("Valid Product!");
-};
+console.log(ProductUtils.validateValidity(VALIDITY));

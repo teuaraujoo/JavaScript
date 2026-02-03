@@ -1,0 +1,7 @@
+A função isNaN() determina se o valor é NaN ou não
+verifica se o valor pode ser convertido para número
+
+
+SINTAXE:
+
+isNaN(value)

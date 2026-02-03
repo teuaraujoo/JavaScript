@@ -5,7 +5,7 @@ ex:
 
 const p1 = new Produto(parâmetros...);
 p1.keys() // Saída: TyperError
-Objecty.keys(p1); // Saída: chaves do objeto
+Object.keys(p1); // Saída: chaves do objeto
 
 
 ❌ não dependem de um objeto específico

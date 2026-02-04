@@ -125,11 +125,3 @@ validar CPF
 validar data
 
 gerar ID incremental
-
-Regras:
-
-nada de new
-
-nada de estado
-
-tudo reutilizável

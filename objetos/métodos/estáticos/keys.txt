@@ -1,0 +1,7 @@
+- retorna um array de propriedades enumeraveis de um determinado objeto
+Utiliza a mesma ordem do for in, a diferença é que o for..in enumera as propriedades que estarão na cadeia de protótipos
+
+
+SINTAXE:
+
+Object.keys(obj)

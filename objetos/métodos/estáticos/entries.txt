@@ -1,0 +1,5 @@
+- retorna uma array dos próprios pares [key, value] enumeráveis de um dado objeto
+
+SINTAXE: 
+
+Object.entries(obj);

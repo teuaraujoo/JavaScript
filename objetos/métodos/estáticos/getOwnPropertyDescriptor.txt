@@ -1,0 +1,6 @@
+- retorna um descritor de propriedades para uma propriedade
+
+SINTAXE:
+
+Object.getOwnPropertyDescriptor(obj, 'prop');
+

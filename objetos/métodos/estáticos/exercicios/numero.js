@@ -1,3 +1,4 @@
+// CONSTRUTOR
 function Numero(valor) {
     this.valor = valor;
 }
@@ -14,7 +15,7 @@ Numero.isNumber = (valor) => {
     // return 'número válido';
 }
 
-Numero.isPotive = (number) => {
+Numero.isPositive = (number) => {
     if (number < 0) {
         return 'negativo';
     } else if (number === 0) {
@@ -34,6 +35,7 @@ Numero.parOuImpar = (valor) => {
 
 const num = -11;
 
+// EXIBIÇÃO
 const exibir = {
     resultado(){
         if (!Numero.isNumber(num)){
@@ -41,8 +43,26 @@ const exibir = {
             return;
         };
         console.log(Numero.isNumber(num));
-        console.log(`O número é ${Numero.isPotive(num)} e ${Numero.parOuImpar(num)}`);
+        console.log(`O número é ${Numero.isPositive(num)} e ${Numero.parOuImpar(num)}`);
     }
 };
 
 exibir.resultado()
+
+// Prototypes
+// Prototype chain (cadeia de protótipos) -> Processo de busca do(s) método(s)
+Numero.prototype.validar = function () {
+    return Numero.isNumber(this.valor);
+}
+
+Numero.prototype.deescricao = function(){
+    if (!Numero.isNumber(this.valor)){
+        return 'Numero inválido'
+    }
+
+    return `O valor é ${Numero.isPositive(this.valor)} e ${Numero.parOuImpar(this.valor)}`;
+}
+
+const n1 = new Numero(30);
+console.log(n1.validar());
+console.log(n1.deescricao());

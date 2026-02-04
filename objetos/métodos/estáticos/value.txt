@@ -1,0 +1,5 @@
+-  retorna um array com os valores das propriedades de um dado objeto
+
+SINTAXE: 
+
+Object.values(obj);

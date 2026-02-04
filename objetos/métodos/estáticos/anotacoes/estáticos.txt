@@ -17,3 +17,9 @@ FUNCOES UTILITARIAS
 
 são funções auxiliares, resolvem tarefas comuns e específicas (reutilizável)
 
+
+
+📍
+Verbo (depositar, sacar) → método
+Estado (saldo, nome) → propriedade
+Getter/setter → controlar acesso, não executar ações

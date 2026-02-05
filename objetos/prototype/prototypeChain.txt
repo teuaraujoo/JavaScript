@@ -1,3 +1,5 @@
+- Os protótipos são o mecanismo pelo qual os objetos JavaScript herdam características uns dos outros.
+
 ┌──────────────────────┐
 │  p1.falar() chamado  │
 └──────────┬───────────┘

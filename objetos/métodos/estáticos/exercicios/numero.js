@@ -55,7 +55,7 @@ Numero.prototype.validar = function () {
     return Numero.isNumber(this.valor);
 }
 
-Numero.prototype.deescricao = function(){
+Numero.prototype.descricao = function(){
     if (!Numero.isNumber(this.valor)){
         return 'Numero inválido'
     }
@@ -64,5 +64,11 @@ Numero.prototype.deescricao = function(){
 }
 
 const n1 = new Numero(30);
+const n3 = new Numero("dwa");
+console.log(n3.validar())
 console.log(n1.validar());
-console.log(n1.deescricao());
+console.log(n1.descricao());
+
+
+console.log(Numero.prototype)
+console.log(n1.__proto__)

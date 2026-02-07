@@ -1,0 +1,19 @@
+- heranças -> Características de um objeto (pai) são passados para outros objetos (filhos)
+
+- especialização ->   o processo de pegar um objeto genérico (base/pai) e criar uma versão mais específica (filha), adicionando novas propriedades/métodos ou modificando os existentes
+
+
+A delegação no JS OO (orientado a objetos) facilita a reutilização de código de forma horizontal (entre pares) e dinâmica, em contraste com a herança vertical rígida de outras linguagens. 
+
+Herança Clássica (linguagens tipadas): A classe filha copia a estrutura da classe pai. Há acoplamento forte.
+Delegação (JavaScript/linguagens pouco tipadas): Os objetos estão vinculados. O comportamento é compartilhado, não copiado. É mais flexível e consome menos memória. 
+Embora o ES6 tenha introduzido a palavra-chave class, o comportamento no motor do JavaScript ainda é baseado em delegação via prototype.
+
+
+⚠ PROTOTYPE.CALL()
+
+Sintaxe: 
+
+- call(thisArg, arg1, arg2, arg3.... argN)
+
+permit utilizar métodos de um objeto como funções utilitárias genéricas

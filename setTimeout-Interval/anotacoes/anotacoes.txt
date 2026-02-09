@@ -1,5 +1,5 @@
 setInterval - > intervalo de tempo, quanto tempo aquilo vai ficar rodando?
-setTimeout -> executa apenas uma vez
+setTimeout -> executa apenas uma vez, durante x tempo
 
 setTimeout(funcao, tempoEmMs);
 setInterval(funcao, tempoEmMs);

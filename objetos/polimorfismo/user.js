@@ -1,0 +1,3 @@
+function Usuário(nome, telefone) {
+
+}

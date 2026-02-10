@@ -1,0 +1,146 @@
+🟢 Exercício 1 — Sistema de Pagamentos (polimorfismo clássico)
+📌 Contexto real
+
+Em um sistema de vendas, o cliente pode pagar de formas diferentes:
+
+cartão de crédito
+
+PIX
+
+boleto
+
+Cada forma de pagamento:
+
+valida os dados de forma diferente
+
+processa o pagamento de forma diferente
+
+🎯 Seu desafio
+
+Crie um sistema onde:
+
+1️⃣ Exista uma classe base Pagamento
+2️⃣ Ela tenha um método:
+
+processar(valor)
+
+
+3️⃣ Crie classes filhas:
+
+PagamentoCartao
+
+PagamentoPix
+
+PagamentoBoleto
+
+4️⃣ Cada classe filha deve reescrever (override) o método processar
+
+📌 Todas devem poder ser usadas assim:
+
+pagamento.processar(100);
+
+
+👉 Sem if para decidir o tipo de pagamento.
+
+🧠 O que está sendo treinado
+
+herança
+
+sobrescrita de método
+
+polimorfismo real
+
+design limpo
+
+🟡 Exercício 2 — Validação polimórfica (mais sutil)
+📌 Contexto real
+
+Você tem vários tipos de usuários:
+
+Pessoa Física
+
+Pessoa Jurídica
+
+Administrador
+
+Todos precisam ser validados, mas:
+
+regras diferentes
+
+mesma interface
+
+🎯 Seu desafio
+
+1️⃣ Crie uma classe base Usuario com método:
+
+validar()
+
+
+2️⃣ Crie classes:
+
+PessoaFisica
+
+PessoaJuridica
+
+Admin
+
+3️⃣ Cada classe implementa sua própria lógica de validação
+
+4️⃣ Use assim:
+
+usuarios.forEach(u => u.validar());
+
+
+📌 Nenhum if (tipo === ...)
+
+🧠 O que está sendo treinado
+
+polimorfismo em listas
+
+substituição de comportamento
+
+código aberto para extensão
+
+🔴 Exercício 3 — Desafio: Sistema de Notificações
+📌 Contexto real
+
+Um sistema pode notificar usuários por:
+
+Email
+
+SMS
+
+Push Notification
+
+Todos notificam, mas cada um:
+
+usa um meio diferente
+
+tem regras próprias
+
+🎯 Seu desafio
+
+1️⃣ Crie uma classe base Notificacao com método:
+
+enviar(mensagem)
+
+
+2️⃣ Crie:
+
+EmailNotificacao
+
+SmsNotificacao
+
+PushNotificacao
+
+3️⃣ Todas devem funcionar assim:
+
+notificacao.enviar("Pedido confirmado");
+
+
+4️⃣ Crie uma função:
+
+enviarNotificacao(notificacao)
+
+
+Que funcione com qualquer tipo de notificação

@@ -1,0 +1,8 @@
+poli - muitos
+morfo - transformar uma forma em outra
+
+- permite que a mesma função seja chamada com assinaturas diferentes, proporcionando flexibilidade e adaptabilidade no design do código.
+
+- ao tornar classe responsável tanto pelo seu código quanto pelos seus próprios dados, o polimorfismo pode ser alcançado, de forma que cada classe tenha sua própria função que (uma vez chamada) se comporta adequadamente para qualquer objeto 
+
+- fornecimento de uma interface para entidades de diferentes tipos de dados 

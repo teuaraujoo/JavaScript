@@ -1,0 +1,5 @@
+- constrói e retorna uma nova string com um determinado número de cópias concatenadas da string original.
+
+SINTAXE: 
+
+str.repeat(count);

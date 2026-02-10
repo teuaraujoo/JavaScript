@@ -1,0 +1,10 @@
+- cria uma nova instância de um Array quando for passado um array-like ou um iterable object como argumento.
+
+SINTAXE: 
+Array.from(ObjetoIterável[, mapFn[, thisArg]])
+
+mapFn
+Opcional. Função Map que será chamada para cada elemento do array.
+
+thisArg
+Opcional. Valor a ser utilizado como this quando a mapFn for chamada.

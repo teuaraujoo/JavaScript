@@ -1,0 +1,6 @@
+- padrões usados ​​para encontrar combinações de caracteres em strings.
+- As RegEx são baseadas em dois elementos: um padrão e modificadores.
+
+SINTAXE: 
+
+/padrão/modificadores

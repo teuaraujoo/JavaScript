@@ -1,0 +1,39 @@
+Portanto, fez sentido nos últimos anos começar a pensar em fornecer mecanismos para dividir programas JavaScript em módulos separados que podem ser importados quando necessário.
+
+
+ex estrutura: 
+
+index.html
+main.js
+modules/
+    canvas.js
+    square.js
+
+    recomenda-se usar .mjs para especificar que aquilo é realmente um módulo
+- A maioria dos servidores já define o tipo correto para arquivos .js, mas ainda não para arquivos .mjs.
+
+
+ex de uso: 
+
+export const name = "square";
+
+export function draw(ctx, length, x, y, color) {
+  ctx.fillStyle = color;
+  ctx.fillRect(x, y, length, length);
+
+  return {
+    length: length,
+    x: x,
+    y: y,
+    color: color,
+  };
+}
+
+outra maneira de exportar:
+
+export { name, draw, reportArea, reportPerimeter };
+
+maneira de importar: 
+
+import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
+- Depois de importar os recursos para o seu script, você pode usá-los exatamente como eles foram definidos no mesmo arquivo.

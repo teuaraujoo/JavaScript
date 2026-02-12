@@ -1,3 +1,4 @@
+// Super Classe
 function Usuario(nome, cpf, telefone, email, dataNascimento) {
     Object.defineProperty(this, 'nome', {
         enumerable: true,
@@ -25,7 +26,7 @@ function Usuario(nome, cpf, telefone, email, dataNascimento) {
 
             cpfEnviado = this.cpf.replace(/\D+/g, '');
 
-            if (typeof cpfEnviado === 'undefiend') return false;
+            if (typeof cpfEnviado === 'undefined') return false;
             if (!Usuario.tamanhoCpf(cpfEnviado)) {
                 throw new RangeError('Tamanho do CPF inválido');
             }
@@ -37,9 +38,12 @@ function Usuario(nome, cpf, telefone, email, dataNascimento) {
             const digito1 = Usuario.criaDigitoCpf(digitosCpf);
             const digito2 = Usuario.criaDigitoCpf(digitosCpf + digito1);
 
-            if (digito1 === cpfEnviado[9] && digito2 === cpfEnviado[10]) {
+            const novoCpf = digitosCpf + digito1 + digito2;
+            if (novoCpf !== cpfEnviado) {
+                throw new Error('cpf inválido!');
+            } else {
                 return cpf = cpfEnviado;
-            };
+            }
         }
     });
     this.cpf = cpf;
@@ -51,10 +55,12 @@ function Usuario(nome, cpf, telefone, email, dataNascimento) {
             return telefone;
         },
         set: function (tel) {
-            tel = tel.replace(/\D+/g, '');
+            tel = this.telefone.replace(/\D/g, '');
+            const regex = /^([1-9]{2})[2-9][0-9]{7,8}$/;
+            const situacao = regex.test(tel);
 
-            if (tel.length !== 11) {
-                throw new RangeError('Tamanho do n° de Telefone inválido');
+            if (!situacao) {
+                throw new SyntaxError('Formato do telefone inválido!');
             }
 
             telefone = tel;
@@ -69,7 +75,10 @@ function Usuario(nome, cpf, telefone, email, dataNascimento) {
             return email
         },
         set: function (valor) {
-            const condition = valor.includes('@');
+            valor = this.email;
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const condition = regex.test(valor);
+
             if (!condition) {
                 throw new TypeError('Valor do email inválido!');
             };
@@ -86,31 +95,25 @@ function Usuario(nome, cpf, telefone, email, dataNascimento) {
         set: function (dataEnviada) {
 
             const hoje = new Date();
-            dataEnviada = Usuario.formataData(dataEnviada); // *
+            dataEnviada = Usuario.formataData(this.dataNascimento); // *
 
             if (!(dataEnviada instanceof Date) || isNaN(dataEnviada)) {
                 throw new TypeError('Data inválida!');
-            };
-
-            if (dataEnviada.getMonth() > 11) {
-                throw new RangeError('Mês inválido!');
             };
 
             if (dataEnviada.getFullYear() > hoje.getFullYear()) {
                 throw new RangeError('Ano inválido!');
             };
 
-            if (dataEnviada.getDate() > 31) {
-                throw new RangeError('Dia inválido!');
-            };
-
             const idade = hoje.getFullYear() - dataEnviada.getFullYear();
-            dataNascimento = idade;
+            dataNascimento = dataEnviada;
         }
     });
     this.dataNascimento = dataNascimento;
 }
 
+// Métodos estáticos
+// Verifica tamanho de cpf
 Usuario.tamanhoCpf = function (cpf) {
     if (cpf.length !== 11) {
         return false;
@@ -119,6 +122,7 @@ Usuario.tamanhoCpf = function (cpf) {
     return true;
 }
 
+// Verifica se cpf tem nuemros iguais
 Usuario.sequenciaCpf = function (cpf) {
 
     let todosIguais = true;
@@ -132,6 +136,7 @@ Usuario.sequenciaCpf = function (cpf) {
     return todosIguais;
 }
 
+// criacao digito cpf
 Usuario.criaDigitoCpf = function (cpf) {
 
     arrayCpf = Array.from(cpf);
@@ -139,11 +144,10 @@ Usuario.criaDigitoCpf = function (cpf) {
     let multiplicador = cpf.length + 1;
 
     const soma = arrayCpf.reduce((acumulador, valor) => {
-
         acumulador += (multiplicador * Number(valor));
         multiplicador--;
         return acumulador;
-    });
+    }, 0);
 
     let digito = soma % 11;
     if (digito < 2) {
@@ -154,6 +158,7 @@ Usuario.criaDigitoCpf = function (cpf) {
     }
 }
 
+// formatacao da data
 Usuario.formataData = function (data) {
 
     const [diaR, mesR, anoR] = data.split('/');
@@ -166,44 +171,51 @@ Usuario.formataData = function (data) {
     return dataFormatada;
 }
 
+// "banco de dados"
 function BD() {
     this.users = [];
 }
 
-BD.prototype.adicionar = function(usuario) {
+// adiciona novos itens ao BD
+BD.prototype.adicionar = function (usuario) {
     this.users.push(usuario)
 }
 
+// coleta das informações
 function entradaDados() {
     return {
         nome: 'Mateus',
-        cpf: '682.208.730-35',
+        cpf: '070.987.720-03',
         tel: '(79) 98808-1797',
         email: 'mateus@gmail.com',
         dataNascimento: '11/02/2006'
     };
 };
 
+// criacao do usuário 
 function criaUsuario(lista) {
-
     const infos = entradaDados()
-    
-    const user = new Usuario(
-        infos.nome, 
-        infos.cpf, 
-        infos.tel,
-        infos.email,
-        infos.dataNascimento
-    );
 
-    lista.adicionar(user);
+    try {
+        const user = new Usuario(
+            infos.nome,
+            infos.cpf,
+            infos.tel,
+            infos.email,
+            infos.dataNascimento
+        );
+        lista.adicionar(user);
+    } catch (e) {
+        console.log(e.message)
+    }
 }
 
+// Inicialização
 function init() {
     const listaUsers = new BD();
     criaUsuario(listaUsers);
 
-    console.log(listaUsers.users);
+    console.log(listaUsers.users[0].dataNascimento);
 }
 
 init();

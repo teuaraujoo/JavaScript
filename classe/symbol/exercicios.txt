@@ -1,0 +1,127 @@
+🧠 Exercício 1 — Propriedade interna invisível
+📌 Contexto
+
+Você está criando um sistema de produtos.
+
+Cada produto precisa ter:
+
+nome
+
+preço
+
+uma propriedade interna chamada codigoInterno
+
+⚠️ Essa propriedade:
+
+não deve aparecer em Object.keys()
+
+não deve aparecer em JSON.stringify()
+
+só pode ser acessada dentro da classe
+
+🎯 Desafio
+
+1️⃣ Crie um Symbol para representar codigoInterno.
+
+2️⃣ Crie uma classe Produto que:
+
+receba nome, preço e código interno
+
+armazene o código usando Symbol
+
+tenha um método getCodigoInterno()
+
+3️⃣ Teste:
+
+Object.keys(produto)
+
+JSON.stringify(produto)
+
+acessar direto via produto.codigoInterno (não deve funcionar)
+
+🧠 O que está sendo treinado
+
+Symbol como chave
+
+propriedade oculta
+
+comportamento interno
+
+🟡 Exercício 2 — Controle de estado oculto
+📌 Contexto
+
+Você vai criar uma classe SessaoUsuario.
+
+Ela deve:
+
+receber nome do usuário
+
+ter um estado interno chamado ativa
+
+começar como true
+
+poder ser encerrada
+
+Mas:
+
+⚠️ O estado ativa NÃO pode ser acessado diretamente.
+
+🎯 Desafio
+
+1️⃣ Use Symbol para criar a propriedade ativa.
+
+2️⃣ Crie métodos:
+
+encerrarSessao()
+
+estaAtiva()
+
+3️⃣ Teste:
+
+Tentar acessar a propriedade diretamente (não deve funcionar)
+
+Listar chaves do objeto
+
+🧠 O que está sendo treinado
+
+encapsulamento com Symbol
+
+controle interno de estado
+
+proteção de propriedade
+
+🔴 Exercício 3 — Sistema com comportamento customizado (nível mais alto)
+📌 Contexto
+
+Você vai criar uma classe ColecaoNumeros.
+
+Ela deve:
+
+receber um array de números
+
+permitir ser iterada com for...of
+
+Mas você NÃO pode usar método comum.
+
+🎯 Desafio
+
+1️⃣ Use Symbol.iterator para tornar a classe iterável.
+
+2️⃣ Faça funcionar:
+
+const numeros = new ColecaoNumeros([1, 2, 3]);
+
+for (let n of numeros) {
+    console.log(n);
+}
+
+
+3️⃣ Bônus:
+
+faça a coleção retornar apenas números pares durante a iteração
+
+🧠 O que está sendo treinado
+
+🔥 Symbol interno do JavaScript
+🔥 Protocolo de iteração
+🔥 Conceito mais avançado de polimorfismo

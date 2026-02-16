@@ -49,8 +49,8 @@ class Tablet extends Dispositivo {
         this.ligado = true;
     }
 } 
-// -> essa classe nao esta ligada a smartphone mas ligada a Dispositivo
 
+// essa classe nao esta ligada a smartphone mas ligada a Dispositivo
 class Iphone extends Smartphone {
     constructor(nome, cor, modelo, versao) {
         super(nome, cor, modelo);

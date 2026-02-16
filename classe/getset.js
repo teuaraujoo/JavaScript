@@ -1,3 +1,9 @@
+// Você precisa de uma propriedade interna diferente quando:
+
+// Getter e setter têm o mesmo nome da propriedade pública
+// Você precisa armazenar o valor real em outro lugar
+// Quer evitar recursão
+
 const _velocidade = Symbol('velocidade')
 class Carro {
     constructor(nome) {

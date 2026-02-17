@@ -1,11 +1,15 @@
 class Produto {
-    // #id = require('short-uuid').generate();
-    #id = crypto.randomUUID();
+
+    static marcas = ['spigen', 'gshield', 'gocase', 'otterbox', 'nillkin', 'vx Case','samsung', 'apple', 'motorola', 'lg', 'google'];
+    #id = require('short-uuid').generate();
+
     constructor(nome, preco, marca) {
+        if (typeof nome !== 'string') throw new Error('Nome inválido');
+        if (!Produto.marcas.includes(marca.toLowerCase())) throw new Error('Marca não cadastrada');
+        this.id = this.#id;
         this.nome = nome;
         this.preco = preco;
         this.marca = marca;
-        this.id = this.#id;
     };
 
     get preco() {
@@ -41,16 +45,60 @@ class Dispositivo extends Produto {
     set ano(valor) {
         
         const hoje = new Date();
-        if (hoje.getFullYear() <valor) {
+        if (hoje.getFullYear() < valor) {
             throw new Error('Ano do produto inválido!');
         };
 
         this._ano = valor;
     };
+
+    exibirNome() {
+        return this.nome + ' ' + this.modelo;
+    }
 }
 
-const p1 = new Produto('Capinha', 50, 'gocase');
-const d1 = new Dispositivo('Iphone 13', 2100, 'Apple', '13', 2024, 'Preto');
+class Estoque {
+    constructor() {
+        this.estoque = [];
+    }
 
-console.log(p1);
-console.log(d1);
+    adicionar(valor) {
+        this.estoque.push(valor)
+    }
+
+    exibir() {
+        return this.estoque;
+    }
+}
+
+function entradaDados() {
+
+    return {
+        nome: 'Iphone',
+        preco: 2500,
+        marca: 'Apple',
+        modelo: 13,
+        ano: 2023,
+        cor: 'Preto'
+    };
+};
+
+function init() {
+    const infos = entradaDados()
+    const estoque = new Estoque();
+
+    const produto = new Dispositivo(
+        infos.nome,
+        infos.preco,
+        infos.marca,
+        infos.modelo,
+        infos.ano,
+        infos.cor
+    );
+
+    estoque.adicionar(produto);
+    console.log(estoque.exibir());
+}
+
+init();
+

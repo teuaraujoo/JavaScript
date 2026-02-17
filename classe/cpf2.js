@@ -2,7 +2,7 @@ class ValidaCPF {
 
     #cpf;
     constructor(cpf) {
-        this.cpf = cpf;
+        this.cpf = cpf; // chamnando o setter
     };
 
     get cpf() {
@@ -10,7 +10,7 @@ class ValidaCPF {
     }
 
     set cpf(valor) {
-        const cpf = valor.replace(/\D+/g, '')
+        const cpf = valor.replace(/\D+/g, '');
 
         if (typeof cpf === 'undefined' || typeof cpf !== 'string') return false;
         if (cpf.length !== 11) return false;

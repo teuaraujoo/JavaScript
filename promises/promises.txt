@@ -1,0 +1,3 @@
+ - Representa a eventual conclusão (ou falha) de uma operação assíncrona e seu valor resultante.
+- é executado em paralelo
+- permite que métodos assíncronos retornem valores como métodos síncronos: em vez de retornar imediatamente o valor fina

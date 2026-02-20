@@ -18,8 +18,33 @@ class ValidaForms {
     handleSubmit(e) {
         e.preventDefault(); // impede o envio padrão
         const campos = this.checkFields();
+        const senha = this.checkPassword();
+
+        if (campos && senha) {
+            alert('formulário enviado!');
+            this.formulario.submit();
+        }
     }
 
+    checkPassword() {
+        let flag = true;
+
+        const senha = this.formulario.querySelector('.senha');
+        const repetirSenha = this.formulario.querySelector('.repetir-senha');
+
+        if (senha.value !== repetirSenha.value) {
+            flag = false;
+            this.createError(senha, 'Senha e repetir senha precisam ser iguais!');
+            this.createError(repetirSenha, 'Senha e repetir senha precisam ser iguais!');
+        }
+
+        if (senha.value.length < 6 || senha.value.length > 12) {
+            flag = false;
+            this.createError(senha, 'Senha preccisa ter estar entre 6 e 12 caracteres!');
+        }
+
+        return flag;
+    }
     // validacao dos campos
     checkFields() {
         let valid = true; // flag
@@ -48,8 +73,8 @@ class ValidaForms {
                     valid = false;
                 }
             }
-            
         }
+        return valid;
     }
     
     validaUsuario(campo) {
@@ -84,8 +109,6 @@ class ValidaForms {
         div.classList.add('error-text');
         campo.insertAdjacentElement('afterend', div); // insere o elemento  após o alvo, no caso após o input
     }
-
-
 }
 
 const valida = new ValidaForms();

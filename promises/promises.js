@@ -1,5 +1,5 @@
 function esperaAi(msg, tempo) {
-    // encapsulamento do ccódigo em uma promise
+    // encapsulamento do código em uma promise
     return new Promise((resolve, reject) => {
         if (typeof msg !== 'string') {
             // reject -> caso dê errado

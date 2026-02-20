@@ -1,0 +1,5 @@
+- retorna uma única Promise que resolve quando todas as promises no argumento iterável forem resolvidas ou quando o iterável passado como argumento não contém promises.
+
+SINTAXE: 
+
+Promise.all(iterable);

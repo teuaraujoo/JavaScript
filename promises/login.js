@@ -1,24 +1,22 @@
 function validarUsuario(user) {
     return new Promise((resolve, reject) => {
         if (user.senha === 1234 && user.nome === 'Mateus') {
-            resolve('user enccontrado');
-        } 
-        reject('senha incorreta');
+            resolve({...user});
+        } else {
+            return reject('senha incorreta');
+        }
     }); 
 };
 
-function buscarPerfil() {
-    user = dados();
+function buscarPerfil(dados) {
     return new Promise((resolve, reject) => {
-        user.map(e => {
-            if (e.nome === 'Mateus') {
-                if (e.perfil === 'admin') {
-                    resolve('Perfil correto');
-                };
-            };
-        });
-        reject('Perfil incorreto');
-        return false;
+        const acharPerfil = dados.find(e => e.nome === 'Mateus' && e.perfil === 'admin');
+
+        if (!acharPerfil) {
+            return reject('Perfil incorreto');
+        }
+
+        resolve(acharPerfil);
     });
 };
 
@@ -27,7 +25,7 @@ function dados() {
     const senha = 1234;
     const perfil = 'admin';
 
-    return user = {
+    return {
         nome,
         senha,
         perfil
@@ -35,20 +33,18 @@ function dados() {
 };
 
 function login() {
-    return new Promise((resolve, reject) => {
-        if (buscarPerfil()) {
-            resolve('buscando perfil...');
-        }
-        reject('perfil não encontrado');
-    });
+    return new Promise((resolve) => {
+    setTimeout(() => {
+            resolve('inciando login...');
+        }, 1000);
+    })
 };
 
 login().then(resposta => {
     console.log(resposta);
     return validarUsuario(dados());
 }).then(resposta => {
-    console.log(resposta);
-    return buscarPerfil();
+    return buscarPerfil([resposta]);
 }).then(resposta => {
-    console.log(resposta);
+    console.log('Usuario logado: ', resposta);
 })

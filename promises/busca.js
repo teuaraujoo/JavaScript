@@ -8,15 +8,17 @@ const produtos = [
 
 const prompt = require('prompt-sync')();
 
-function entradaDados() {
+async function entradaDados() {
     const id = Number(prompt('Digite o id: '));
     const nome = prompt('Digite o nome: ');
-    buscaProduto(id, nome, 2).then((resposta) => {
-        console.log(resposta);
-    }).catch((error) => {
-        console.log(error);
-    })
+    const buscarProduto = await buscaProduto(id, nome, 2);
 
+    try {
+        console.log('Produto encontrado:');
+        console.log(buscarProduto);
+    } catch(e) {
+        console.log(e.message);
+    }
 }
 
 function buscaProduto(id, nome, tempo) {

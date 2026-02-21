@@ -53,3 +53,8 @@ esperaAi('ola1', numAleatorio(1, 3))
 
 // esse log é executado 1° pois o outro código é executado em paralelo
 console.log('O outro código é executado em paralelo!');
+
+// 3 estados de promises
+// pending: estado inicial, nem cumprido nem rejeitado.
+// fulfilled: significa que a operação foi concluída com sucesso.
+// rejected: significa que a operação falhou.

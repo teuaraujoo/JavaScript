@@ -1,0 +1,1 @@
+- A declaração de função assíncrona cria uma associação de uma nova função assíncrona a um nome específico. A palavra-chave `await` é permitida dentro do corpo da função, possibilitando que o comportamento assíncrono baseado em promessas seja escrito de forma mais limpa e evitando a necessidade de configurar explicitamente cadeias de promessas.

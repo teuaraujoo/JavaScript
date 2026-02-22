@@ -1,0 +1,2 @@
+AJAX (Asynchronous JavaScript and XML) 
+- técnica de desenvolvimento web que permite atualizar partes de uma página sem recarregá-la inteira, utilizando JavaScript e o objeto XMLHttpRequest

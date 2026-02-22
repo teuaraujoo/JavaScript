@@ -1,0 +1,17 @@
+protocolo para transmissão de documentos hipermídea. Foi desenvolvido para comunicação entre navegadores web e servidores web
+
+O protocolo HTTP define um conjunto de métodos de requisição responsáveis por indicar a ação a ser executada para um dado recurso.
+
+Verbos HTTP 
+
+GET: Solicita/recupera dados de um recurso. Seguro e idempotente (não altera o estado).
+POST: Cria um novo recurso ou envia dados para processamento no servidor.
+PUT: Atualiza um recurso existente por completo. Substitui todas as representações.
+PATCH: Aplica modificações parciais em um recurso.
+DELETE: Remove um recurso específico do servidor. 
+
+Crud -> create + read + update + delete
+1- create -> POST
+2- read -> GET
+3- upadate -> PUT ou PATCH
+4- delete -> DELETE

@@ -6,3 +6,5 @@ apexcharts
 sccrollreveal
 typed.js
 animes.js
+lenis js
+swap

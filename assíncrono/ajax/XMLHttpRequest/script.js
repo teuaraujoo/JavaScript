@@ -1,44 +1,27 @@
-const request = obj => {
-    return new Promise((resolve, reject) => {
-        const xhr = new XMLHttpRequest();
-        xhr.open(obj.method, obj.url, true);
-        xhr.send(null);
-    
-        xhr.addEventListener('load', () => {
-            if (xhr.status >= 200 && xhr.status < 300) {
-                resolve(xhr.responseText);
-            } else {
-                reject(xhr.statusText);
-            };
-        });
-    })
-};
+const a = document.querySelectorAll('.container a');
 
-document.addEventListener("click", (e) => {
-    const el = e.target;
-    const tag = el.tagName.toLowerCase();
-
-    if (tag === "a") {
+a.forEach(a => {
+    a.addEventListener("click", (e) => {
         e.preventDefault();
-        carregaPagina(el);
-    };
+        carregaPagina(a);
+    });
 });
 
 async function carregaPagina(el) {
-    const href = el.getAttribute('href');
-
     try {
-        const response = await request({
-            method: 'GET',
-            url: href
-        });
-        carregaResultado(response);
-    } catch(e) {
+        const href = el.getAttribute('href');
+        const response = await fetch(href);
+        if (response.status !== 200) throw new Error('NOSSO ERRO: 404');
+        const conteudo = await response.text();
+        carregaResultado(conteudo);
+    }
+    catch(e) {
+        alert('Página não encontrada!');
         console.log(e);
     }
-};
-
-function carregaResultado(response) {
-    const resultado = document.querySelector('.resultado');
-    resultado.innerHTML = response; 
 }
+
+function carregaResultado(conteudo) {
+    const div = document.querySelector('.resultado');
+    div.innerHTML = conteudo;
+};

@@ -2,7 +2,7 @@ protocolo para transmissão de documentos hipermídea. Foi desenvolvido para com
 
 O protocolo HTTP define um conjunto de métodos de requisição responsáveis por indicar a ação a ser executada para um dado recurso.
 
-Verbos HTTP 
+✅ Verbos HTTP 
 
 GET: Solicita/recupera dados de um recurso. Seguro e idempotente (não altera o estado).
 POST: Cria um novo recurso ou envia dados para processamento no servidor.
@@ -15,3 +15,90 @@ Crud -> create + read + update + delete
 2- read -> GET
 3- upadate -> PUT ou PATCH
 4- delete -> DELETE
+
+🔄️ Códigos de status HTTP 
+
+Informativa -> 1xx
+-> indica que a requisição foi recebida e entendida.
+
+100 - Continuar
+- Isso significa que o servidor recebeu os cabeçalhos da solicitação; e que o cliente deve proceder para enviar
+    o corpo do pedido
+
+101 - Mudando protocolo
+- Isso significa que o solicitante pediu ao servidor para mudar os protocolos
+
+Sucesso -> 2xx
+-> a ação solicitada pelo cliente foi reccebida, aceita e processada com êxito
+
+200 - 0K
+- Padrão de resposta para solicitações HTTP sucesso, a resposta dependerá do método solicitado (get, post...)
+
+201 - Criado
+- O pedido foi cumprido e resultou em um novo recurso que está sendo criado
+
+202 - Aceito
+O pedido foi aceito para processamento, mas o tratamento não foi concluido
+
+203 - Não autorizado
+- O servidor processou a solicitação com sucesso, mas está retornando informações que podem ser de outra fonte.
+
+204 - Nenhum conteúdo
+- O servidor processou a solicitação com sucesso, mas não é necessária nenhuma resposta.
+
+205 - Reset
+- O servidor processou a solicitação com sucesso, mas não está retornando nenhum conteúdo
+- Precisa que a exibição do documneto seja redefinida
+
+🔄️ Respostas HTTP
+
+ERROR de cliente  -> 4xx
+-> destina-se a casos em que o cliente parece ter erro
+
+400 - Bad Request
+- solicitação inválida
+- sintaxe incorreta
+- o cliente não deve repetir o pedido sem modificações
+
+401 - Anauthorized 
+- Não autenticado, logo, não autorizado
+- a solicitação requer autenticação do usuário, para ter a autorização de acessar a resposta solicitada
+
+402 - Paymente required
+- Pagamento necessário
+
+403 - Forbidden
+- Acesso proibido
+- o servidor atendeu a solicitação, porém se recusa a atendê-lá. O cliente não tem 
+    autorização para acessar a resposta
+
+404 - Not Found
+- Não encontrado
+- O servidor não pode encontrar o recurso solicitado
+
+ERROR no servidor -> 5xx
+-> destina-se a casos em que o servidor esta ciente que errou ou 
+    é incapaz de executar a solicitação
+
+500 - Internal server error
+- Erro interno do servidor
+- o servidor encontrou uma condição inesperada que o impediu de realizar à solicitação
+
+501 - Not implemented
+- Não implementado 
+- O método da requisição não é suportado pelo servidor e nao pode ser manipulado
+
+502 - Bad Gateway 
+- Gateway inválido
+- recebeu uma resposta inválida do servidor acessado ao tentar atender à solicitação
+
+503 - Service Unavaliable
+- Serviço indisponível temporariamente
+- Por causa de sobrecarga ou manutenção
+
+504 - Gateway timeout 
+- Tempo limite para o Gateway
+- não obtem uma resposta dentro de um tempo definido
+
+505 - HTTP Version Not supported
+- O servidor não suporta ou se recusa a suportar a versão do protocolo http que foi usada na requisição

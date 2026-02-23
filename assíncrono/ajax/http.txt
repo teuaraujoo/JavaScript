@@ -50,6 +50,21 @@ O pedido foi aceito para processamento, mas o tratamento não foi concluido
 - O servidor processou a solicitação com sucesso, mas não está retornando nenhum conteúdo
 - Precisa que a exibição do documneto seja redefinida
 
+Redirecionamento - 3xx
+
+300 Múltipla escolha
+- Indica várias opções para o recurso que o cliente pode acompanhar. 
+É, por exemplo, usado para apresentar opções de formato diferente para o vídeo
+
+301 - Movido
+- Esta e todas as solicitações futuras devem ser direcionadas para o URL.
+
+303 - Consulte Outros
+- A resposta a esta requisição pode ser encontrada sob outro URI usando o método GET.
+
+304 - Não modficado
+- Indica que o recurso não foi modificado desde o último pedido. 
+
 🔄️ Respostas HTTP
 
 ERROR de cliente  -> 4xx

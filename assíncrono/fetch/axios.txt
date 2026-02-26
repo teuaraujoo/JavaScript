@@ -1,0 +1,27 @@
+- biblioteca externa para fazer reuqisições HTTP
+- já converte dados automaticamente
+- rejeita erro automaticamente
+
+ex: 
+fetch -> 
+const response = await fetch('/api')
+const data = await response.json()
+
+axios -> 
+const response = await axios.get('/api')
+console.log(response.data)
+
+ex: 
+
+fetch -> 
+fetch("rota errada")
+if (!response.ok) {
+    throw new error(...)
+}
+
+axios -> 
+try {
+   await axios.get('/rota-errada')
+} catch (e) {
+   console.log("Erro capturado")
+}

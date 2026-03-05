@@ -1,35 +1,39 @@
-const arquivo  = './pessoas.json';
-const nome = document.getElementById('nome')
-const form = document.querySelector('form');
 const btn = document.querySelector('button');
-const div = document.querySelector('.resultado');
 
 btn.addEventListener("click", (e) => {
+    const nome = document.getElementById('nome');
+    const div = document.querySelector('.resultado');
+
     e.preventDefault();
     const valor = nome.value;
-    if (!verificacoes(valor)) return;
+    if (!verificacoes(valor)) {
+        nome.value = '';
+        div.innerHTML = '';
+        return;
+    };
     getData(valor);
     nome.value = '';
 })
 
 
 function getData(nome) {
+    const arquivo  = './pessoas.json';
+
     fetch(arquivo).then(res => {
         return res.json();
     }).then(json => {
 
-        const resultado = []
+        const resultado = [];
 
-        Object.values(json).filter((item) => {
+        json.filter((item) => {
             if (item.nome.toUpperCase().includes(nome.toUpperCase())) {
                 resultado.push(item);
             }
         });
-        console.log(resultado);
 
         const div = document.querySelector('.resultado');
         div.innerHTML = '';
-
+        
         if (resultado.length === 0) {
             alert('Nome nao encontrado!');
             return;

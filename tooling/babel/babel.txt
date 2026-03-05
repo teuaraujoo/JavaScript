@@ -1,0 +1,5 @@
+transpilador javascript -> pega  o código JS moderno e transforma em uam versão javascript mais antiga para que navegadores antigos consigam entender
+
+preset-ev -> converte autoimaticamente o JS (ES6+) para um vbersão compatível com navegadores antigos
+
+polyfill -> é um trecho de código usado no desenvolvimento web para fornecer funcionalidades modernas em navegadores mais antigos que não as suportam nativamente.

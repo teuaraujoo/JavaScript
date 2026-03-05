@@ -1,0 +1,25 @@
+module bundler -> pega vários arquivos do seu projeto e "empacota" tudo em poucos arquivos finais para rodar no navegador
+
+monta um grafo de dependências
+
+1. bundling -> junta vários arquivos em poucos bundles
+
+2. loaders -> usar loaders para transformar arquivos
+- babel loaders- sass loaders
+
+3. otimização
+- pode minificar código, remover código morto...
+
+
+
+diferenças importantes 
+
+1. compiler = transforma uma linguagem em outra
+- typerscript - javascript
+
+2. transpiler = transforma código em versões da mesma linguagem
+- babel -> javascript moderno - javascript antigo
+
+3. bundler = organiza e junta os arquivos
+
+4. polyfill = adiciona funcionalidades que não existem ao navegador

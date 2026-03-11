@@ -1,0 +1,18 @@
+SRC -> pasta mais importante do projeto
+- contém todo o código que será processado pelas ferramentas de build
+
+PUBLIC -> contém arquivos que o navegador pode acessar diretamente
+
+COMPONENTS -> componentes reutilizáveis
+
+PAGES -> telas da aplicação 
+
+SERVICES -> comunicação com APIS
+
+UTILS -> funções auxiliares
+
+CONTROLLERRS -> lógica da aplicação / oque o sistema deve fazer?
+
+MODELS -> modelos/entidades do banco 
+
+ROUTES -> rotas (get/post/put/delete) / qual url o usuário acessou?

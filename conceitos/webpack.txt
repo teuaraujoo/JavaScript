@@ -14,12 +14,14 @@ monta um grafo de dependências
 
 diferenças importantes 
 
-1. compiler = transforma uma linguagem em outra
+1. compiler = converte o código de uma linguagem em outra (traduz tudo de uma vez)
 - typerscript - javascript
 
 2. transpiler = transforma código em versões da mesma linguagem
 - babel -> javascript moderno - javascript antigo
 
-3. bundler = organiza e junta os arquivos
+3. interpretador = converte, sob demanda, código de uma linguagem em outra (traduz linha por linha)
 
-4. polyfill = adiciona funcionalidades que não existem ao navegador
+4. bundler = organiza e junta os arquivos
+
+5. polyfill = adiciona funcionalidades que não existem ao navegador

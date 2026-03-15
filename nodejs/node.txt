@@ -1,0 +1,22 @@
+existem várias formas de exportar para trabalhar com modulos
+
+ex: 
+
+function saudar() {
+ reuturn 'Ola Mundo';
+}
+
+modules.exports = saudar();
+exports.saudar = saudar();
+
+
+existem várias formas de importar para trabalhar com modulos
+
+ex: 
+
+const saudar = require('./saudar);
+const { saudar, outraCoisa } = require('arquivo');
+
+modulos criados pelo proprio desenvolvedor precisa utilizar o caminho './....'
+modulos do proprio node modules nao precisa utilizar caminho, apenas o nome 
+ex: const express = require('express');

@@ -7,7 +7,7 @@ COMPONENTS -> componentes reutilizáveis
 
 PAGES -> telas da aplicação 
 
-SERVICES -> comunicação com APIS
+SERVICES -> comunicação com APIS (frontend)
 
 UTILS -> funções auxiliares
 
@@ -16,3 +16,7 @@ CONTROLLERRS -> lógica da aplicação / oque o sistema deve fazer?
 MODELS -> modelos/entidades do banco 
 
 ROUTES -> rotas (get/post/put/delete) / qual url o usuário acessou?
+
+REPOSITORY -> comunicação com o banco de dados
+
+SERVICES -> lógica do negócio, regras de negócio, intermédio entre os controllers e o banco de dados(backend)

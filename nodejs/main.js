@@ -1,11 +1,7 @@
 // const axios = require('axios');
-const { saudar, nome } = require('./test');
-const Classe = require('./test');
-console.log(saudar);
-console.log(nome);
+const db = require('./test');
 
-const p1 = new Classe('Mateus');
-console.log(p1);
+console.log(db);
 
 // const CEP = '49095815';
 

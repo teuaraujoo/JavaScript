@@ -20,3 +20,28 @@ const { saudar, outraCoisa } = require('arquivo');
 modulos criados pelo proprio desenvolvedor precisa utilizar o caminho './....'
 modulos do proprio node modules nao precisa utilizar caminho, apenas o nome 
 ex: const express = require('express');
+
+
+
+npm update -> atualiza os pacotes
+npm unistall pacote -> desinstala algum pacote baixado
+npm ls -> lista os pacotes instalados
+npm ls --depth=0 (indica a profundidade de pastas que voce quer ver, nesse caso apenas o que você instalou e as pastas main, se colocar igual 1 vai aparecer a main e as pastas que fazem parte dela e assim por diante)
+npm outdated -> lista todos os pacotes desatualziados
+npm i pacote numero -> instal a ultima versão da major que foi passada
+
+version: '^4.17.1.0'
+-> esse circunflexo indica que ele irá atualizar automaticamente qualquer versão a partir dessa para frente (atualiza apenas a minor e a patch)
+-> caso queira uma versão específica (a mais atual) terá que passar um -E no momento da instalação
+ex: npm i express -E (baixa a ultima versão e deixa ela "fixa")
+-> caso queira qualquer outra versão específica passa um @versao após o pacote que esta sendo instalado
+ex: npm i express@4.17.1.0 -E (baixa a versão que foi passada, se passar o "-E" irá fixar na versão instalada, caso não será atualizada)
+
+MAJOR -> Mudanças incompatíveis (quebram a API)
+Incrementado quando há alterações drásticas que podem quebrar a compatibilidade com versões anteriores, exigindo que os usuários façam modificações para atualizar.
+
+MINOR -> Novas funcionalidades retrocompatíveis
+Incrementado quando funcionalidades novas são adicionadas de forma retrocompatível, o que significa que o código existente continua funcionando, mas novas opções estão disponíveis.
+
+PATCH -> Correções de bugs retrocompatíveis
+Incrementado apenas quando correções de bugs ou pequenas melhorias internas são feitas, garantindo que não haja impacto funcional na API pública

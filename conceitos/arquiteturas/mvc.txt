@@ -1,0 +1,45 @@
+Uma arquitetura de organização de código
+MVC = Model-View-Controller
+
+Separa a plicação em 3 componentes principais -> models, views e controllers
+
+usuário interage com view, controller é responsável pelo processo da solicitação, model é responsável pela conexão direta com o banco
+view -> controller -> model -> bd
+
+1. Model: 
+
+Responsabilidade: 
+Representa os dados e a lógica de negócios da aplicação. 
+O Model gerencia o comportamento e os dados da aplicação, responde a solicitações de informações, manipula dados e notifica as mudanças para a View.
+
+Exemplo: Em um sistema de gerenciamento de usuários, o Model seria responsável por interagir com o banco de dados para recuperar, adicionar, atualizar ou excluir informações dos usuários.
+
+2. View:
+
+Responsabilidade: Trata da apresentação dos dados ao usuário. 
+A View é a camada de interface com o usuário, responsável por exibir a informação ao usuário de forma compreensível e esteticamente agradável. 
+Ela recebe os dados do Model e os apresenta de acordo com a lógica definida.
+
+Exemplo: A interface gráfica onde o usuário visualiza e interage com as informações dos usuários, como uma página web que lista todos os usuários cadastrados.
+
+3. Controllers:
+
+Responsabilidade: Atua como intermediário entre o Model e a View. 
+O Controller processa a entrada do usuário, interage com o Model para manipular os dados e seleciona a View apropriada para exibir os resultados.
+
+Exemplo: Quando um usuário submete um formulário para adicionar um novo usuário, o Controller processa essa entrada, manda o Model adicionar o usuário ao banco de dados e depois direciona o usuário para a View correspondente.
+
+Resumo:
+
+🟩 View
+Interface (o que o usuário vê)
+Ex: HTML, frontend
+
+🟥 Controller
+Recebe requisição
+Chama o Model
+Retorna resposta
+
+🟦 Model
+Dados + regras de negócio
+Ex: Produto, Estoque, Venda

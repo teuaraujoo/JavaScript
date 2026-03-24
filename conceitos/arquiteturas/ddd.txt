@@ -1,0 +1,42 @@
+Domain drive design -> Promove um foco profundo na complexidade do negócio e no domínio
+
+1. Domínio: 
+
+Refere-se ao contexto principal ou área de conhecimento sobre a qual a aplicação é construída. Por exemplo, o domínio de um sistema bancário incluiria conceitos como contas, transações e clientes.
+
+1.1 Modelagem do Domínio: 
+
+Envolve a criação de um modelo abstrato que representa os conceitos e regras de negócio do domínio. Esse modelo deve ser construído em colaboração com especialistas do domínio para garantir que ele reflita com precisão a realidade do negócio.
+
+2. Linguagem ubiqua
+
+Uma linguagem compartilhada e utilizada por desenvolvedores e especialistas do domínio para descrever o modelo e os processos de negócio. A linguagem ubíqua elimina ambiguidade e garante que todos os membros do projeto compartilhem o mesmo entendimento dos conceitos do domínio.
+
+
+3. Entidades: 
+
+Objetos que possuem uma identidade distinta e contínua ao longo do tempo, como um “Cliente” em um sistema de CRM.
+
+4. Value Objects: 
+
+Objetos que são definidos por seus atributos e não têm uma identidade única, como um “Endereço”.
+
+5. Aggregates: 
+
+Grupos de entidades e value objects que são tratados como uma unidade consistente para operações de negócio, como uma “Conta Bancária” que inclui transações e saldo.
+
+6. Repositórios 
+
+Interfaces que encapsulam a lógica necessária para acessar dados persistentes e fornecer uma coleção de objetos de domínio.
+
+7. Serviços 
+
+Operações que não pertencem a uma entidade ou value object específico, mas que desempenham uma função importante no domínio, como “Processar Pagamento”.
+
+8. Contextos Delimitados (Bounded Contexts)
+
+Divisões no modelo de domínio que delimitam os limites onde uma certa linguagem ubíqua e um certo modelo de domínio são aplicáveis. Isso ajuda a gerenciar a complexidade em sistemas grandes, onde diferentes partes do sistema podem ter significados diferentes para os mesmos termos.
+
+Exemplo: Em uma aplicação de comércio eletrônico, “Produto” pode significar algo diferente para o departamento de vendas em comparação com o departamento de logística.
+
+

@@ -1,0 +1,17 @@
+Arquitetura em Camadas (Layered architecture)
+
+
+o sistema dividindo em diferentes níveis de abstrações (camadas), cada uma com responsabilidades específicas.
+    - isola responsabilidades
+    - facilita manutenção
+    - melhor escalabildiade
+
+Cada camada oferece serviços à camada imediatamente superior e consome serviços da camada inferior.
+
+barreiras devem existir de forma implícita entre ela -> uma camada não se precocupa com a responsabilidade da outra, logo, cada camada é inteiramente responsável por si prórpria
+
+Camada Fechada
+Seguem uma hierarquia rígida, onde cada camada acessa apenas a camada diretamente inferior
+
+Camada Aberta
+Permitem que uma camada acesse qualquer camada abaixo dela, favorecendo a flexibilidade me alguma situações.

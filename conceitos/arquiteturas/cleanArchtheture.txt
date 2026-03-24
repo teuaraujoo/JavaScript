@@ -1,0 +1,25 @@
+Principal característica -> separação e independência das camadas
+
+A separação clara das camadas facilita a escrita de testes automatizados, pois você pode testar a lógica de negócios sem se preocupar com os detalhes da interface do usuário ou dos frameworks externos
+
+como cada camada tem uma responsabilidade bem definida, uma mudança em uma camada não deve afetar a outra
+
+CAMADAS
+
+1. Enterprise Business (camada de domínio):
+
+Ela abriga as regras de negócios centrais e as entidades principais da aplicação. Nesta camada, você define as entidades de domínio, que representam os objetos de negócios, e implementa as regras de negócios essenciais. 
+
+Essas entidades e regras são independentes de qualquer detalhe técnico e não devem depender de frameworks ou tecnologias externas.
+
+2. Application Business Rules:
+
+Ela coordena a execução dos casos de uso (use cases) e gerencia o fluxo da aplicação.
+
+3. Interface Adapters:
+
+Aqui, você adapta os detalhes técnicos e as interfaces de entrada e saída para atender às necessidades das camadas de negócios.
+
+4. Framework & Drivers:
+
+Nesta camada, você implementa a interação com frameworks externos, como bancos de dados, bibliotecas de interface gráfica entre outros. 

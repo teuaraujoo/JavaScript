@@ -45,3 +45,9 @@ Incrementado quando funcionalidades novas são adicionadas de forma retrocompat�
 
 PATCH -> Correções de bugs retrocompatíveis
 Incrementado apenas quando correções de bugs ou pequenas melhorias internas são feitas, garantindo que não haja impacto funcional na API pública
+
+express.urlencode()-> serve para parsear dados utilizados por formulário HTML via POST. Com isso, o express consegue "povoar" o objeto (corpo da requisição).
+
+{ extended: false } -> Usa a biblioteca querystring. Ela é mais simples e não permite objetos aninhados (ex: pessoa[nome]=Joao).
+
+{ extended: true } -> Usa a biblioteca qs. Permite objetos ricos e aninhados, parecidos com JSON. 

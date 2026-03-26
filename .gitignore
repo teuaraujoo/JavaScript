@@ -1,6 +1,4 @@
-projetos.txt
-.marscode
-estudos.txt
-desafios.txt
-node_modules
 .vscode
+.marscode
+node_modules
+estudos.txt

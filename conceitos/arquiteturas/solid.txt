@@ -1,0 +1,33 @@
+SOLID
+
+- serve para escrever um código mais limpo e flexível que seja mais fácil de manter
+
+S — Single Responsiblity Principle (Princípio da responsabilidade única)
+O — Open-Closed Principle (Princípio Aberto-Fechado)
+L — Liskov Substitution Principle (Princípio da substituição de Liskov)
+I — Interface Segregation Principle (Princípio da Segregação da Interface)
+D — Dependency Inversion Principle (Princípio da inversão da dependência) 
+
+
+S -> uma classe, método, entidade deve ter apenas uma responsabilidade ou motivo para mudar
+
+O -> As classes devem estar abertas para extensão mas fechada para modificação
+
+L -> no seu código deve ser possível substituir uma subclasse por uma superclasse sem afetar a integridade do programa -> não descaracterizar tanto a subclasse
+
+I -> Uma classe não deve ser obrigada a implementar métodos e interfaces que não serão utilizados
+
+D -> Dependa de abstrações e não de implementações -> módulos de alto nível não devem depender de módulos de baixo nível
+https://medium.com/desenvolvendo-com-paixao/o-que-%C3%A9-solid-o-guia-completo-para-voc%C3%AA-entender-os-5-princ%C3%ADpios-da-poo-2b937b3fc530
+
+
+interface -> um contrato que define os métodos que quem estende essa interface ou assina o contrato deve usar
+classe abstrata ->
+https://www.devmedia.com.br/interfaces-x-classes-abstratas/13337
+
+
+Abstrações -> interfaces ou classes abstratas. Elas definem um contrato ou conjunto de métodos que as classes concreta devem implementar
+implementações -> são ou estão nas classes concretas onde usa-se os métodos definidos pelas abstrações  
+módulos de alto nível -> módulos que contêm a lógica do negócio. Eles definem o que a aplicação deve fazer
+módulos de baixo nível -> lidam com os detalhes mais técnicos (poderia ser a conexão como uma fonte externa de dados), dão suporte aos métodos de alto nível
+detalhes -> são as implementações dos métodos definidos pelas abstrações
